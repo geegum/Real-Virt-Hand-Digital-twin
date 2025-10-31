@@ -1,0 +1,364 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>VagabondK.Protocols.Channels</name>
+    </assembly>
+    <members>
+        <member name="T:VagabondK.Protocols.Channels.StreamChannel">
+            <summary>
+            스트림 기반 채널
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Channels.StreamChannel.#ctor(System.IO.Stream)">
+            <summary>
+            생성자
+            </summary>
+            <param name="stream">입/출력에 사용할 스트림</param>
+        </member>
+        <member name="M:VagabondK.Protocols.Channels.StreamChannel.#ctor(System.IO.Stream,System.IO.Stream)">
+            <summary>
+            생성자
+            </summary>
+            <param name="inputStream">입력(읽기)에 사용할 스트림</param>
+            <param name="outputStream">출력(쓰기)에 사용할 스트림</param>
+        </member>
+        <member name="P:VagabondK.Protocols.Channels.StreamChannel.Description">
+            <summary>
+            채널 설명
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Channels.StreamChannel.Finalize">
+            <summary>
+            소멸자
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Channels.StreamChannel.Dispose">
+            <summary>
+            리소스 해제
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Channels.StreamChannel.Read(System.Int32)">
+            <summary>
+            1 바이트 읽기
+            </summary>
+            <param name="timeout">제한시간(밀리초)</param>
+            <returns>읽은 바이트</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.Channels.StreamChannel.Read(System.UInt32,System.Int32)">
+            <summary>
+            여러 개의 바이트 읽기
+            </summary>
+            <param name="count">읽을 개수</param>
+            <param name="timeout">제한시간(밀리초)</param>
+            <returns>읽은 바이트 열거</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.Channels.StreamChannel.ReadAllRemain">
+            <summary>
+            채널에 남아있는 모든 바이트 읽기
+            </summary>
+            <returns>읽은 바이트 열거</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.Channels.StreamChannel.Write(System.Byte[])">
+            <summary>
+            바이트 배열 쓰기
+            </summary>
+            <param name="bytes">바이트 배열</param>
+        </member>
+        <member name="P:VagabondK.Protocols.Channels.StreamChannel.BytesToRead">
+            <summary>
+            수신 버퍼에 있는 데이터의 바이트 수입니다.
+            </summary>
+        </member>
+        <member name="T:VagabondK.Protocols.Channels.TcpChannel">
+            <summary>
+            TCP 클라이언트 기반 통신 채널
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Channels.TcpChannel.#ctor(System.String,System.Int32)">
+            <summary>
+            생성자
+            </summary>
+            <param name="host">호스트</param>
+            <param name="port">포트</param>
+        </member>
+        <member name="M:VagabondK.Protocols.Channels.TcpChannel.#ctor(System.String,System.Int32,System.Int32)">
+            <summary>
+            생성자
+            </summary>
+            <param name="host">호스트</param>
+            <param name="port">포트</param>
+            <param name="connectTimeout">연결 제한시간(밀리초)</param>
+        </member>
+        <member name="P:VagabondK.Protocols.Channels.TcpChannel.Host">
+            <summary>
+            호스트
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.Channels.TcpChannel.Port">
+            <summary>
+            포트
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.Channels.TcpChannel.ConnectTimeout">
+            <summary>
+            연결 제한시간(밀리초)
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.Channels.TcpChannel.Connected">
+            <summary>
+            TCP 채널 연결 여부
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.Channels.TcpChannel.Description">
+            <summary>
+            채널 설명
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Channels.TcpChannel.Finalize">
+            <summary>
+            소멸자
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Channels.TcpChannel.Dispose">
+            <summary>
+            리소스 해제
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Channels.TcpChannel.Write(System.Byte[])">
+            <summary>
+            바이트 배열 쓰기
+            </summary>
+            <param name="bytes">바이트 배열</param>
+        </member>
+        <member name="M:VagabondK.Protocols.Channels.TcpChannel.Read(System.Int32)">
+            <summary>
+            1 바이트 읽기
+            </summary>
+            <param name="timeout">제한시간(밀리초)</param>
+            <returns>읽은 바이트</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.Channels.TcpChannel.Read(System.UInt32,System.Int32)">
+            <summary>
+            여러 개의 바이트 읽기
+            </summary>
+            <param name="count">읽을 개수</param>
+            <param name="timeout">제한시간(밀리초)</param>
+            <returns>읽은 바이트 열거</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.Channels.TcpChannel.ReadAllRemain">
+            <summary>
+            채널에 남아있는 모든 바이트 읽기
+            </summary>
+            <returns>읽은 바이트 열거</returns>
+        </member>
+        <member name="P:VagabondK.Protocols.Channels.TcpChannel.BytesToRead">
+            <summary>
+            수신 버퍼에 있는 데이터의 바이트 수입니다.
+            </summary>
+        </member>
+        <member name="T:VagabondK.Protocols.Channels.TcpChannelProvider">
+            <summary>
+            TCP 서버 기반 통신 채널 공급자
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Channels.TcpChannelProvider.#ctor">
+            <summary>
+            생성자
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Channels.TcpChannelProvider.#ctor(System.Int32)">
+            <summary>
+            생성자
+            </summary>
+            <param name="port">TCP 연결 수신 포트</param>
+        </member>
+        <member name="M:VagabondK.Protocols.Channels.TcpChannelProvider.#ctor(System.Net.IPAddress,System.Int32)">
+            <summary>
+            생성자
+            </summary>
+            <param name="ipAddress">로컬 IP 주소</param>
+            <param name="port">TCP 연결 수신 포트</param>
+        </member>
+        <member name="P:VagabondK.Protocols.Channels.TcpChannelProvider.IPAddress">
+            <summary>
+            로컬 IP 주소
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.Channels.TcpChannelProvider.Port">
+            <summary>
+            TCP 연결 수신 포트
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.Channels.TcpChannelProvider.Channels">
+            <summary>
+            연결 요청 들어온 TCP 클라이언트 채널 목록
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.Channels.TcpChannelProvider.Description">
+            <summary>
+            채널 공급자 설명
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Channels.TcpChannelProvider.Dispose">
+            <summary>
+            리소스 해제
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Channels.TcpChannelProvider.Start">
+            <summary>
+            TCP 서버 수신 시작
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Channels.TcpChannelProvider.Stop">
+            <summary>
+            TCP 서버 수신 정지
+            </summary>
+        </member>
+        <member name="T:VagabondK.Protocols.Channels.UdpChannel">
+            <summary>
+            UCP 소켓 기반 통신 채널
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Channels.UdpChannel.#ctor(System.String,System.Int32)">
+            <summary>
+            생성자
+            </summary>
+            <param name="host">호스트</param>
+            <param name="remotePort">원격 포트</param>
+        </member>
+        <member name="M:VagabondK.Protocols.Channels.UdpChannel.#ctor(System.String,System.Int32,System.Int32)">
+            <summary>
+            생성자
+            </summary>
+            <param name="host">호스트</param>
+            <param name="remotePort">원격 포트</param>
+            <param name="localPort">로컬 포트</param>
+        </member>
+        <member name="M:VagabondK.Protocols.Channels.UdpChannel.#ctor(System.Int32)">
+            <summary>
+            생성자
+            </summary>
+            <param name="localPort">로컬 포트</param>
+        </member>
+        <member name="P:VagabondK.Protocols.Channels.UdpChannel.Host">
+            <summary>
+            호스트
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.Channels.UdpChannel.RemotePort">
+            <summary>
+            원격 포트
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.Channels.UdpChannel.LocalPort">
+            <summary>
+            로컬 포트
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.Channels.UdpChannel.Description">
+            <summary>
+            채널 설명
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Channels.UdpChannel.Finalize">
+            <summary>
+            소멸자
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Channels.UdpChannel.Dispose">
+            <summary>
+            리소스 해제
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Channels.UdpChannel.Write(System.Byte[])">
+            <summary>
+            바이트 배열 쓰기
+            </summary>
+            <param name="bytes">바이트 배열</param>
+        </member>
+        <member name="M:VagabondK.Protocols.Channels.UdpChannel.Read(System.Int32)">
+            <summary>
+            1 바이트 읽기
+            </summary>
+            <param name="timeout">제한시간(밀리초)</param>
+            <returns>읽은 바이트</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.Channels.UdpChannel.Read(System.UInt32,System.Int32)">
+            <summary>
+            여러 개의 바이트 읽기
+            </summary>
+            <param name="count">읽을 개수</param>
+            <param name="timeout">제한시간(밀리초)</param>
+            <returns>읽은 바이트 열거</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.Channels.UdpChannel.ReadAllRemain">
+            <summary>
+            채널에 남아있는 모든 바이트 읽기
+            </summary>
+            <returns>읽은 바이트 열거</returns>
+        </member>
+        <member name="P:VagabondK.Protocols.Channels.UdpChannel.BytesToRead">
+            <summary>
+            수신 버퍼에 있는 데이터의 바이트 수입니다.
+            </summary>
+        </member>
+        <member name="T:VagabondK.Protocols.Channels.UdpChannelProvider">
+            <summary>
+            UDP 소켓 기반 통신 채널 공급자
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Channels.UdpChannelProvider.#ctor">
+            <summary>
+            생성자
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Channels.UdpChannelProvider.#ctor(System.Int32,System.Net.Sockets.AddressFamily)">
+            <summary>
+            생성자
+            </summary>
+            <param name="port">UDP 메시지 수신 포트</param>
+            <param name="addressFamily">주소 지정 체계</param>
+        </member>
+        <member name="M:VagabondK.Protocols.Channels.UdpChannelProvider.#ctor(System.Int32)">
+            <summary>
+            생성자
+            </summary>
+            <param name="port">UDP 메시지 수신 포트</param>
+        </member>
+        <member name="P:VagabondK.Protocols.Channels.UdpChannelProvider.AddressFamily">
+            <summary>
+            주소 지정 체계
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.Channels.UdpChannelProvider.Port">
+            <summary>
+            UDP 메시지 수신 포트
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.Channels.UdpChannelProvider.Channels">
+            <summary>
+            수신된 UDP 메시지의 원격 엔드포인트 기반 채널 목록
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.Channels.UdpChannelProvider.Description">
+            <summary>
+            채널 공급자 설명
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Channels.UdpChannelProvider.Dispose">
+            <summary>
+            리소스 해제
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Channels.UdpChannelProvider.Start">
+            <summary>
+            UDP 메시지 수신 시작
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Channels.UdpChannelProvider.Stop">
+            <summary>
+            UDP 메시지 수신 정지
+            </summary>
+        </member>
+    </members>
+</doc>

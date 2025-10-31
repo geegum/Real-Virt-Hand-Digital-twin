@@ -1,0 +1,3868 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>VagabondK.Protocols.LSElectric</name>
+    </assembly>
+    <members>
+        <member name="T:VagabondK.Protocols.LSElectric.Cnet.CnetClient">
+            <summary>
+            LS ELECTRIC(구 LS산전) Cnet 프로토콜 기반 클라이언트입니다.
+            XGT 시리즈 제품의 Cnet I/F 모듈과 통신 가능합니다.
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetClient.#ctor">
+            <summary>
+            생성자
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetClient.#ctor(VagabondK.Protocols.Channels.IChannel)">
+            <summary>
+            생성자
+            </summary>
+            <param name="channel">통신 채널</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetClient.Dispose">
+            <summary>
+            리소스 해제
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.Cnet.CnetClient.Channel">
+            <summary>
+            통신 채널
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.Cnet.CnetClient.DefaultUseBCC">
+            <summary>
+            기본적으로 BCC를 사용할 것인지 여부, 기본값은 true
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.Cnet.CnetClient.Timeout">
+            <summary>
+            응답 제한시간(밀리초)
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.Cnet.CnetClient.ThrowsExceptionFromNAK">
+            <summary>
+            NAK에 대한 예외 발생 여부
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetClient.Request(VagabondK.Protocols.LSElectric.Cnet.CnetRequest)">
+            <summary>
+            Cnet 요청하기
+            </summary>
+            <param name="request">Cnet 요청</param>
+            <returns>Cnet 응답</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetClient.Request(System.Boolean,VagabondK.Protocols.LSElectric.Cnet.CnetRequest)">
+            <summary>
+            Cnet 요청하기
+            </summary>
+            <param name="useBCC">BCC 사용 여부</param>
+            <param name="request">Cnet 요청</param>
+            <returns>Cnet 응답</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetClient.Request(System.Int32,VagabondK.Protocols.LSElectric.Cnet.CnetRequest)">
+            <summary>
+            Cnet 요청하기
+            </summary>
+            <param name="timeout">응답 제한시간(밀리초)</param>
+            <param name="request">Cnet 요청</param>
+            <returns>Cnet 응답</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetClient.Request(System.Boolean,System.Int32,VagabondK.Protocols.LSElectric.Cnet.CnetRequest)">
+            <summary>
+            Cnet 요청하기
+            </summary>
+            <param name="useBCC">BCC 사용 여부</param>
+            <param name="timeout">응답 제한시간(밀리초)</param>
+            <param name="request">Cnet 요청</param>
+            <returns>Cnet 응답</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetClient.Read(System.Byte,VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceVariable[])">
+            <summary>
+            개별 디바이스 변수 읽기
+            </summary>
+            <param name="stationNumber">국번</param>
+            <param name="deviceVariable">디바이스 변수</param>
+            <param name="moreDeviceVariables">추가 디바이스 변수 목록</param>
+            <returns>읽은 디바이스 변수/값 Dictionary</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetClient.Read(System.Boolean,System.Byte,VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceVariable[])">
+            <summary>
+            개별 디바이스 변수 읽기
+            </summary>
+            <param name="useBCC">BCC 사용 여부</param>
+            <param name="stationNumber">국번</param>
+            <param name="deviceVariable">디바이스 변수</param>
+            <param name="moreDeviceVariables">추가 디바이스 변수 목록</param>
+            <returns>읽은 디바이스 변수/값 Dictionary</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetClient.Read(System.Int32,System.Byte,VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceVariable[])">
+            <summary>
+            개별 디바이스 변수 읽기
+            </summary>
+            <param name="timeout">응답 제한시간(밀리초)</param>
+            <param name="stationNumber">국번</param>
+            <param name="deviceVariable">디바이스 변수</param>
+            <param name="moreDeviceVariables">추가 디바이스 변수 목록</param>
+            <returns>읽은 디바이스 변수/값 Dictionary</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetClient.Read(System.Boolean,System.Int32,System.Byte,VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceVariable[])">
+            <summary>
+            개별 디바이스 변수 읽기
+            </summary>
+            <param name="useBCC">BCC 사용 여부</param>
+            <param name="timeout">응답 제한시간(밀리초)</param>
+            <param name="stationNumber">국번</param>
+            <param name="deviceVariable">디바이스 변수</param>
+            <param name="moreDeviceVariables">추가 디바이스 변수 목록</param>
+            <returns>읽은 디바이스 변수/값 Dictionary</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetClient.Read(System.Byte,VagabondK.Protocols.LSElectric.DeviceVariable,System.Int32)">
+            <summary>
+            연속 디바이스 변수 읽기
+            </summary>
+            <param name="stationNumber">국번</param>
+            <param name="startDeviceVariable">시작 디바이스 변수</param>
+            <param name="count">읽을 개수</param>
+            <returns>읽은 디바이스 변수/값 Dictionary</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetClient.Read(System.Boolean,System.Byte,VagabondK.Protocols.LSElectric.DeviceVariable,System.Int32)">
+            <summary>
+            연속 디바이스 변수 읽기
+            </summary>
+            <param name="useBCC">BCC 사용 여부</param>
+            <param name="stationNumber">국번</param>
+            <param name="startDeviceVariable">시작 디바이스 변수</param>
+            <param name="count">읽을 개수</param>
+            <returns>읽은 디바이스 변수/값 Dictionary</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetClient.Read(System.Int32,System.Byte,VagabondK.Protocols.LSElectric.DeviceVariable,System.Int32)">
+            <summary>
+            연속 디바이스 변수 읽기
+            </summary>
+            <param name="timeout">응답 제한시간(밀리초)</param>
+            <param name="stationNumber">국번</param>
+            <param name="startDeviceVariable">시작 디바이스 변수</param>
+            <param name="count">읽을 개수</param>
+            <returns>읽은 디바이스 변수/값 Dictionary</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetClient.Read(System.Boolean,System.Int32,System.Byte,VagabondK.Protocols.LSElectric.DeviceVariable,System.Int32)">
+            <summary>
+            연속 디바이스 변수 읽기
+            </summary>
+            <param name="useBCC">BCC 사용 여부</param>
+            <param name="timeout">응답 제한시간(밀리초)</param>
+            <param name="stationNumber">국번</param>
+            <param name="startDeviceVariable">시작 디바이스 변수</param>
+            <param name="count">읽을 개수</param>
+            <returns>읽은 디바이스 변수/값 Dictionary</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetClient.Write(System.Byte,VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceValue)">
+            <summary>
+            개별 디바이스 변수 쓰기
+            </summary>
+            <param name="stationNumber">국번</param>
+            <param name="deviceVariable">디바이스 변수</param>
+            <param name="deviceValue">디바이스 변수에 쓸 값</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetClient.Write(System.Boolean,System.Byte,VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceValue)">
+            <summary>
+            개별 디바이스 변수 쓰기
+            </summary>
+            <param name="useBCC">BCC 사용 여부</param>
+            <param name="stationNumber">국번</param>
+            <param name="deviceVariable">디바이스 변수</param>
+            <param name="deviceValue">디바이스 변수에 쓸 값</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetClient.Write(System.Int32,System.Byte,VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceValue)">
+            <summary>
+            개별 디바이스 변수 쓰기
+            </summary>
+            <param name="timeout">응답 제한시간(밀리초)</param>
+            <param name="stationNumber">국번</param>
+            <param name="deviceVariable">디바이스 변수</param>
+            <param name="deviceValue">디바이스 변수에 쓸 값</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetClient.Write(System.Boolean,System.Int32,System.Byte,VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceValue)">
+            <summary>
+            개별 디바이스 변수 쓰기
+            </summary>
+            <param name="useBCC">BCC 사용 여부</param>
+            <param name="timeout">응답 제한시간(밀리초)</param>
+            <param name="stationNumber">국번</param>
+            <param name="deviceVariable">디바이스 변수</param>
+            <param name="deviceValue">디바이스 변수에 쓸 값</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetClient.Write(System.Byte,System.ValueTuple{VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceValue},System.ValueTuple{VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceValue}[])">
+            <summary>
+            개별 디바이스 변수 쓰기
+            </summary>
+            <param name="stationNumber">국번</param>
+            <param name="valueTuple">디바이스 변수에 쓸 값</param>
+            <param name="moreValueTuples">추가 디바이스 변수에 쓸 값들</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetClient.Write(System.Boolean,System.Byte,System.ValueTuple{VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceValue},System.ValueTuple{VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceValue}[])">
+            <summary>
+            개별 디바이스 변수 쓰기
+            </summary>
+            <param name="useBCC">BCC 사용 여부</param>
+            <param name="stationNumber">국번</param>
+            <param name="valueTuple">디바이스 변수에 쓸 값</param>
+            <param name="moreValueTuples">추가 디바이스 변수에 쓸 값들</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetClient.Write(System.Int32,System.Byte,System.ValueTuple{VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceValue},System.ValueTuple{VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceValue}[])">
+            <summary>
+            개별 디바이스 변수 쓰기
+            </summary>
+            <param name="timeout">응답 제한시간(밀리초)</param>
+            <param name="stationNumber">국번</param>
+            <param name="valueTuple">디바이스 변수에 쓸 값</param>
+            <param name="moreValueTuples">추가 디바이스 변수에 쓸 값들</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetClient.Write(System.Boolean,System.Int32,System.Byte,System.ValueTuple{VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceValue},System.ValueTuple{VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceValue}[])">
+            <summary>
+            개별 디바이스 변수 쓰기
+            </summary>
+            <param name="useBCC">BCC 사용 여부</param>
+            <param name="timeout">응답 제한시간(밀리초)</param>
+            <param name="stationNumber">국번</param>
+            <param name="valueTuple">디바이스 변수에 쓸 값</param>
+            <param name="moreValueTuples">추가 디바이스 변수에 쓸 값들</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetClient.Write(System.Byte,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceValue}})">
+            <summary>
+            개별 디바이스 변수 쓰기
+            </summary>
+            <param name="stationNumber">국번</param>
+            <param name="values">디바이스 변수에 쓸 값들</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetClient.Write(System.Boolean,System.Byte,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceValue}})">
+            <summary>
+            개별 디바이스 변수 쓰기
+            </summary>
+            <param name="useBCC">BCC 사용 여부</param>
+            <param name="stationNumber">국번</param>
+            <param name="values">디바이스 변수에 쓸 값들</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetClient.Write(System.Int32,System.Byte,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceValue}})">
+            <summary>
+            개별 디바이스 변수 쓰기
+            </summary>
+            <param name="timeout">응답 제한시간(밀리초)</param>
+            <param name="stationNumber">국번</param>
+            <param name="values">디바이스 변수에 쓸 값들</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetClient.Write(System.Boolean,System.Int32,System.Byte,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceValue}})">
+            <summary>
+            개별 디바이스 변수 쓰기
+            </summary>
+            <param name="useBCC">BCC 사용 여부</param>
+            <param name="timeout">응답 제한시간(밀리초)</param>
+            <param name="stationNumber">국번</param>
+            <param name="values">디바이스 변수에 쓸 값들</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetClient.Write(System.Byte,VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceValue,VagabondK.Protocols.LSElectric.DeviceValue[])">
+            <summary>
+            연속 디바이스 변수 쓰기
+            </summary>
+            <param name="stationNumber">국번</param>
+            <param name="startDeviceVariable">시작 디바이스 변수</param>
+            <param name="deviceValue">쓰기 요청할 디바이스 값</param>
+            <param name="moreDeviceValues">추가로 쓸 디바이스 값들</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetClient.Write(System.Boolean,System.Byte,VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceValue,VagabondK.Protocols.LSElectric.DeviceValue[])">
+            <summary>
+            연속 디바이스 변수 쓰기
+            </summary>
+            <param name="useBCC">BCC 사용 여부</param>
+            <param name="stationNumber">국번</param>
+            <param name="startDeviceVariable">시작 디바이스 변수</param>
+            <param name="deviceValue">쓰기 요청할 디바이스 값</param>
+            <param name="moreDeviceValues">추가로 쓸 디바이스 값들</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetClient.Write(System.Int32,System.Byte,VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceValue,VagabondK.Protocols.LSElectric.DeviceValue[])">
+            <summary>
+            연속 디바이스 변수 쓰기
+            </summary>
+            <param name="timeout">응답 제한시간(밀리초)</param>
+            <param name="stationNumber">국번</param>
+            <param name="startDeviceVariable">시작 디바이스 변수</param>
+            <param name="deviceValue">쓰기 요청할 디바이스 값</param>
+            <param name="moreDeviceValues">추가로 쓸 디바이스 값들</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetClient.Write(System.Boolean,System.Int32,System.Byte,VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceValue,VagabondK.Protocols.LSElectric.DeviceValue[])">
+            <summary>
+            연속 디바이스 변수 쓰기
+            </summary>
+            <param name="useBCC">BCC 사용 여부</param>
+            <param name="timeout">응답 제한시간(밀리초)</param>
+            <param name="stationNumber">국번</param>
+            <param name="startDeviceVariable">시작 디바이스 변수</param>
+            <param name="deviceValue">쓰기 요청할 디바이스 값</param>
+            <param name="moreDeviceValues">추가로 쓸 디바이스 값들</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetClient.RegisterMonitor(System.Byte,System.Byte,VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceVariable[])">
+            <summary>
+            직접변수 개별 읽기 모니터 등록
+            </summary>
+            <param name="stationNumber">국번</param>
+            <param name="monitorNumber">모니터 번호</param>
+            <param name="deviceVariable">디바이스 변수</param>
+            <param name="moreDeviceVariables">추가로 읽을 디바이스 변수 목록</param>
+            <returns>모니터 실행 요청</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetClient.RegisterMonitor(System.Boolean,System.Byte,System.Byte,VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceVariable[])">
+            <summary>
+            직접변수 개별 읽기 모니터 등록
+            </summary>
+            <param name="useBCC">BCC 사용 여부</param>
+            <param name="stationNumber">국번</param>
+            <param name="monitorNumber">모니터 번호</param>
+            <param name="deviceVariable">디바이스 변수</param>
+            <param name="moreDeviceVariables">추가로 읽을 디바이스 변수 목록</param>
+            <returns>모니터 실행 요청</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetClient.RegisterMonitor(System.Int32,System.Byte,System.Byte,VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceVariable[])">
+            <summary>
+            직접변수 개별 읽기 모니터 등록
+            </summary>
+            <param name="timeout">응답 제한시간(밀리초)</param>
+            <param name="stationNumber">국번</param>
+            <param name="monitorNumber">모니터 번호</param>
+            <param name="deviceVariable">디바이스 변수</param>
+            <param name="moreDeviceVariables">추가로 읽을 디바이스 변수 목록</param>
+            <returns>모니터 실행 요청</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetClient.RegisterMonitor(System.Boolean,System.Int32,System.Byte,System.Byte,VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceVariable[])">
+            <summary>
+            직접변수 개별 읽기 모니터 등록
+            </summary>
+            <param name="useBCC">BCC 사용 여부</param>
+            <param name="timeout">응답 제한시간(밀리초)</param>
+            <param name="stationNumber">국번</param>
+            <param name="monitorNumber">모니터 번호</param>
+            <param name="deviceVariable">디바이스 변수</param>
+            <param name="moreDeviceVariables">추가로 읽을 디바이스 변수 목록</param>
+            <returns>모니터 실행 요청</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetClient.RegisterMonitor(System.Byte,System.Byte,VagabondK.Protocols.LSElectric.DeviceVariable,System.Int32)">
+            <summary>
+            직접변수 연속 읽기 모니터 등록
+            </summary>
+            <param name="stationNumber">국번</param>
+            <param name="monitorNumber">모니터 번호</param>
+            <param name="startDeviceVariable">시작 디바이스 변수</param>
+            <param name="count">읽을 개수</param>
+            <returns>모니터 실행 요청</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetClient.RegisterMonitor(System.Boolean,System.Byte,System.Byte,VagabondK.Protocols.LSElectric.DeviceVariable,System.Int32)">
+            <summary>
+            직접변수 연속 읽기 모니터 등록
+            </summary>
+            <param name="useBCC">BCC 사용 여부</param>
+            <param name="stationNumber">국번</param>
+            <param name="monitorNumber">모니터 번호</param>
+            <param name="startDeviceVariable">시작 디바이스 변수</param>
+            <param name="count">읽을 개수</param>
+            <returns>모니터 실행 요청</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetClient.RegisterMonitor(System.Int32,System.Byte,System.Byte,VagabondK.Protocols.LSElectric.DeviceVariable,System.Int32)">
+            <summary>
+            직접변수 연속 읽기 모니터 등록
+            </summary>
+            <param name="timeout">응답 제한시간(밀리초)</param>
+            <param name="stationNumber">국번</param>
+            <param name="monitorNumber">모니터 번호</param>
+            <param name="startDeviceVariable">시작 디바이스 변수</param>
+            <param name="count">읽을 개수</param>
+            <returns>모니터 실행 요청</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetClient.RegisterMonitor(System.Boolean,System.Int32,System.Byte,System.Byte,VagabondK.Protocols.LSElectric.DeviceVariable,System.Int32)">
+            <summary>
+            직접변수 연속 읽기 모니터 등록
+            </summary>
+            <param name="useBCC">BCC 사용 여부</param>
+            <param name="timeout">응답 제한시간(밀리초)</param>
+            <param name="stationNumber">국번</param>
+            <param name="monitorNumber">모니터 번호</param>
+            <param name="startDeviceVariable">시작 디바이스 변수</param>
+            <param name="count">읽을 개수</param>
+            <returns>모니터 실행 요청</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetClient.Read(VagabondK.Protocols.LSElectric.Cnet.CnetExecuteMonitorRequest)">
+            <summary>
+            모니터 변수 읽기
+            </summary>
+            <param name="executeMonitorRequest">모니터 실행 요청</param>
+            <returns>읽은 디바이스 변수/값 Dictionary</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetClient.Read(System.Boolean,VagabondK.Protocols.LSElectric.Cnet.CnetExecuteMonitorRequest)">
+            <summary>
+            모니터 변수 읽기
+            </summary>
+            <param name="useBCC">BCC 사용 여부</param>
+            <param name="executeMonitorRequest">모니터 실행 요청</param>
+            <returns>읽은 디바이스 변수/값 Dictionary</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetClient.Read(System.Int32,VagabondK.Protocols.LSElectric.Cnet.CnetExecuteMonitorRequest)">
+            <summary>
+            모니터 변수 읽기
+            </summary>
+            <param name="timeout">응답 제한시간(밀리초)</param>
+            <param name="executeMonitorRequest">모니터 실행 요청</param>
+            <returns>읽은 디바이스 변수/값 Dictionary</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetClient.Read(System.Boolean,System.Int32,VagabondK.Protocols.LSElectric.Cnet.CnetExecuteMonitorRequest)">
+            <summary>
+            모니터 변수 읽기
+            </summary>
+            <param name="useBCC">BCC 사용 여부</param>
+            <param name="timeout">응답 제한시간(밀리초)</param>
+            <param name="executeMonitorRequest">모니터 실행 요청</param>
+            <returns>읽은 디바이스 변수/값 Dictionary</returns>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.Cnet.CnetMessage">
+            <summary>
+            LS ELECTRIC(구 LS산전) Cnet 프로토콜 메시지
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetMessage.ToAsciiBytes(System.Int64,System.Int32)">
+            <summary>
+            1바이트를 16진수 아스키 문자의 바이트로 열거합니다.
+            </summary>
+            <param name="value">1바이트 값</param>
+            <param name="size">자릿수</param>
+            <returns>16진수 아스키 문자의 바이트 목록</returns>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.Cnet.CnetMessage.ENQ">
+            <summary>
+            요청 프레임 시작 코드
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.Cnet.CnetMessage.EOT">
+            <summary>
+            요청 프레임 종료 코드
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.Cnet.CnetMessage.ACK">
+            <summary>
+            ACK 응답 프레임 시작 코드
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.Cnet.CnetMessage.NAK">
+            <summary>
+            NAK 응답 프레임 시작 코드
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.Cnet.CnetMessage.ETX">
+            <summary>
+            응답 프레임 종료 코드
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.Cnet.CnetMessage.Header">
+            <summary>
+            프레임 시작 헤더
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.Cnet.CnetMessage.Tail">
+            <summary>
+            프레임 종료 테일
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetMessage.InvalidateFrameData">
+            <summary>
+            내부 프레임 데이터 무효화
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetMessage.SetProperty``1(``0@,``0)">
+            <summary>
+            속성 값 설정
+            </summary>
+            <typeparam name="TProperty">속성 형식</typeparam>
+            <param name="target">설정할 멤버 변수</param>
+            <param name="value">새로 설정하는 값</param>
+            <returns>설정 여부</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetMessage.OnCreateFrame(System.Collections.Generic.List{System.Byte},System.Boolean)">
+            <summary>
+            프레임 생성
+            </summary>
+            <param name="byteList">프레임 데이터를 추가할 바이트 리스트</param>
+            <param name="useBCC">BCC 사용 여부</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetMessage.Serialize(System.Boolean)">
+            <summary>
+            직렬화
+            </summary>
+            <param name="useBCC">BCC 사용 여부</param>
+            <returns>직렬화 된 바이트 열거</returns>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.Cnet.CnetMonitor">
+            <summary>
+            Cnet 프로토콜에서 사용하는 모니터를 정의합니다.
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.Cnet.CnetMonitor.StationNumber">
+            <summary>
+            국번
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.Cnet.CnetMonitor.MonitorNumber">
+            <summary>
+            모니터 번호
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.Cnet.CnetMonitor.CommandType">
+            <summary>
+            커맨드 타입
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetMonitor.CreateRegisterRequest">
+            <summary>
+            모니터 등록 요청 생성
+            </summary>
+            <returns>모니터 등록 요청</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetMonitor.CreateExecuteRequest">
+            <summary>
+            모니터 실행 요청 생성
+            </summary>
+            <returns>모니터 실행 요청</returns>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.Cnet.CnetMonitorByIndividualAccess">
+            <summary>
+            직접변수 개별 읽기 모니터
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetMonitorByIndividualAccess.#ctor(System.Byte,System.Byte,VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceVariable[])">
+            <summary>
+            생성자
+            </summary>
+            <param name="stationNumber">국번</param>
+            <param name="monitorNumber">모니터 번호</param>
+            <param name="deviceVariable">디바이스 변수</param>
+            <param name="moreDeviceVariables">추가로 읽을 디바이스 변수 목록</param>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.Cnet.CnetMonitorByIndividualAccess.DeviceVariables">
+            <summary>
+            디바이스 변수 목록
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetMonitorByIndividualAccess.CreateRegisterRequest">
+            <summary>
+            모니터 등록 요청 생성
+            </summary>
+            <returns>모니터 등록 요청</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetMonitorByIndividualAccess.CreateExecuteRequest">
+            <summary>
+            모니터 실행 요청 생성
+            </summary>
+            <returns>모니터 실행 요청</returns>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.Cnet.CnetMonitorByContinuousAccess">
+            <summary>
+            직접변수 연속 읽기 모니터
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetMonitorByContinuousAccess.#ctor(System.Byte,System.Byte,VagabondK.Protocols.LSElectric.DeviceVariable,System.Int32)">
+            <summary>
+            생성자
+            </summary>
+            <param name="stationNumber">국번</param>
+            <param name="monitorNumber">모니터 번호</param>
+            <param name="startDeviceVariable">시작 디바이스 변수</param>
+            <param name="count">읽을 개수</param>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.Cnet.CnetMonitorByContinuousAccess.StartDeviceVariable">
+            <summary>
+            시작 디바이스 변수
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.Cnet.CnetMonitorByContinuousAccess.Count">
+            <summary>
+            읽을 개수
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetMonitorByContinuousAccess.CreateRegisterRequest">
+            <summary>
+            모니터 등록 요청 생성
+            </summary>
+            <returns>모니터 등록 요청</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetMonitorByContinuousAccess.CreateExecuteRequest">
+            <summary>
+            모니터 실행 요청 생성
+            </summary>
+            <returns>모니터 실행 요청</returns>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.Cnet.CnetNAKException">
+            <summary>
+            Cnet 요청 오류 예외
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetNAKException.#ctor(VagabondK.Protocols.LSElectric.Cnet.CnetNAKCode)">
+            <summary>
+            생성자
+            </summary>
+            <param name="nakCode">NAK 에러 코드</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetNAKException.#ctor(VagabondK.Protocols.LSElectric.Cnet.CnetNAKCode,System.UInt16)">
+            <summary>
+            생성자
+            </summary>
+            <param name="nakCode">NAK 에러 코드</param>
+            <param name="nakCodeValue">오류 코드 원본 값</param>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.Cnet.CnetNAKException.NAKCodeValue">
+            <summary>
+            오류 코드 원본 값
+            </summary>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.Cnet.CnetRequest">
+            <summary>
+            LS ELECTRIC(구 LS산전) Cnet 프로토콜 요청 메시지
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetRequest.#ctor(System.Byte,VagabondK.Protocols.LSElectric.Cnet.CnetCommand)">
+            <summary>
+            생성자
+            </summary>
+            <param name="stationNumber">국번</param>
+            <param name="command">커맨드</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetRequest.Clone">
+            <summary>
+            요청 메시지 복제
+            </summary>
+            <returns>복제된 요청 메시지</returns>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.Cnet.CnetRequest.Header">
+            <summary>
+            프레임 시작 헤더
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.Cnet.CnetRequest.StationNumber">
+            <summary>
+            국번
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.Cnet.CnetRequest.Command">
+            <summary>
+            커맨드
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.Cnet.CnetRequest.Tail">
+            <summary>
+            프레임 종료 테일
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetRequest.OnCreateFrame(System.Collections.Generic.List{System.Byte},System.Boolean)">
+            <summary>
+            프레임 생성
+            </summary>
+            <param name="byteList">프레임 데이터를 추가할 바이트 리스트</param>
+            <param name="useBCC">BCC 사용 여부</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetRequest.OnCreateFrameData(System.Collections.Generic.List{System.Byte})">
+            <summary>
+            프레임 데이터 생성
+            </summary>
+            <param name="byteList">프레임 데이터를 추가할 바이트 리스트</param>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.Cnet.CnetIncludeCommandTypeRequest">
+            <summary>
+            커맨드 타입을 포함하는 요청, 커맨드 타입은 개별 디바이스 변수 액세스와 연속 디바이스 변수 액세스가 있음.
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetIncludeCommandTypeRequest.#ctor(System.Byte,VagabondK.Protocols.LSElectric.Cnet.CnetCommand,VagabondK.Protocols.LSElectric.Cnet.CnetCommandType)">
+            <summary>
+            생성자
+            </summary>
+            <param name="stationNumber">국번</param>
+            <param name="command">커맨드</param>
+            <param name="commandType">커맨드 타입</param>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.Cnet.CnetIncludeCommandTypeRequest.CommandType">
+            <summary>
+            커맨드 타입
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetIncludeCommandTypeRequest.OnCreateFrameData(System.Collections.Generic.List{System.Byte})">
+            <summary>
+            프레임 데이터 생성
+            </summary>
+            <param name="byteList">프레임 데이터를 추가할 바이트 리스트</param>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.Cnet.CnetReadRequest">
+            <summary>
+            디바이스 읽기 요청
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetReadRequest.#ctor(System.Byte,VagabondK.Protocols.LSElectric.Cnet.CnetCommandType)">
+            <summary>
+            생성자
+            </summary>
+            <param name="stationNumber">국번</param>
+            <param name="commandType">커맨드</param>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.Cnet.CnetReadIndividualRequest">
+            <summary>
+            개별 디바이스 변수 읽기 요청
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetReadIndividualRequest.#ctor(System.Byte)">
+            <summary>
+            생성자
+            </summary>
+            <param name="stationNumber">국번</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetReadIndividualRequest.#ctor(System.Byte,System.Collections.Generic.IEnumerable{VagabondK.Protocols.LSElectric.DeviceVariable})">
+            <summary>
+            생성자
+            </summary>
+            <param name="stationNumber">국번</param>
+            <param name="deviceVariables">디바이스 변수 목록</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetReadIndividualRequest.#ctor(System.Byte,VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceVariable[])">
+            <summary>
+            생성자
+            </summary>
+            <param name="stationNumber">국번</param>
+            <param name="deviceVariable">디바이스 변수</param>
+            <param name="moreDeviceVariables">추가 디바이스 변수 목록</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetReadIndividualRequest.Clone">
+            <summary>
+            요청 메시지 복제
+            </summary>
+            <returns>복제된 요청 메시지</returns>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.Cnet.CnetReadIndividualRequest.Count">
+            <summary>
+            디바이스 변수 개수
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.Cnet.CnetReadIndividualRequest.IsReadOnly">
+            <summary>
+            디바이스 변수 컬렉션이 읽기 전용인지 여부를 나타내는 값을 가져옵니다.
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetReadIndividualRequest.Contains(VagabondK.Protocols.LSElectric.DeviceVariable)">
+            <summary>
+            디바이스 변수가 존재하는지 여부를 가져옵니다.
+            </summary>
+            <param name="deviceVariable">디바이스 변수</param>
+            <returns>디바이스 변수 존재 여부</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetReadIndividualRequest.IndexOf(VagabondK.Protocols.LSElectric.DeviceVariable)">
+            <summary>
+            디바이스 변수의 순서상 위치를 가져옵니다.
+            </summary>
+            <param name="deviceVariable">디바이스 변수</param>
+            <returns>디바이스 변수의 순서상 위치</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetReadIndividualRequest.GetEnumerator">
+            <summary>
+            디바이스 변수를 반복하는 열거자를 반환합니다.
+            </summary>
+            <returns>디바이스 변수를 반복하는 열거자</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetReadIndividualRequest.CopyTo(VagabondK.Protocols.LSElectric.DeviceVariable[],System.Int32)">
+            <summary>
+            대상 배열의 지정된 인덱스에서 시작하여 전체 디바이스 변수들을 복사합니다.
+            </summary>
+            <param name="array">디바이스 변수 배열</param>
+            <param name="arrayIndex">시작 인덱스</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetReadIndividualRequest.Clear">
+            <summary>
+            모든 디바이스 변수들을 제거합니다.
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.Cnet.CnetReadIndividualRequest.Item(System.Int32)">
+            <summary>
+            디바이스 변수를 지정된 인덱스에 지정하거나 제거합니다.
+            </summary>
+            <param name="index">인덱스</param>
+            <returns>디바이스 변수</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetReadIndividualRequest.Add(VagabondK.Protocols.LSElectric.DeviceVariable)">
+            <summary>
+            디바이스 변수를 추가합니다.
+            </summary>
+            <param name="deviceVariable">디바이스 변수</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetReadIndividualRequest.Insert(System.Int32,VagabondK.Protocols.LSElectric.DeviceVariable)">
+            <summary>
+            지정된 인덱스에 디바이스 변수를 삽입합니다.
+            </summary>
+            <param name="index">인덱스</param>
+            <param name="deviceVariable">디바이스 변수</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetReadIndividualRequest.Remove(VagabondK.Protocols.LSElectric.DeviceVariable)">
+            <summary>
+            맨 처음 발견되는 디바이스 변수를 제거합니다.
+            </summary>
+            <param name="deviceVariable">디바이스 변수</param>
+            <returns>제거 여부</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetReadIndividualRequest.RemoveAt(System.Int32)">
+            <summary>
+            지정된 인덱스에 있는 디바이스 변수를 제거합니다.
+            </summary>
+            <param name="index">인덱스</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetReadIndividualRequest.OnCreateFrameData(System.Collections.Generic.List{System.Byte})">
+            <summary>
+            프레임 데이터 생성
+            </summary>
+            <param name="byteList">프레임 데이터를 추가할 바이트 리스트</param>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.Cnet.CnetReadContinuousRequest">
+            <summary>
+            연속 디바이스 변수 읽기 요청
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetReadContinuousRequest.#ctor(System.Byte,VagabondK.Protocols.LSElectric.DeviceVariable,System.Int32)">
+            <summary>
+            생성자
+            </summary>
+            <param name="stationNumber">국번</param>
+            <param name="startDeviceVariable">시작 디바이스 변수</param>
+            <param name="count">읽을 개수</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetReadContinuousRequest.Clone">
+            <summary>
+            요청 메시지 복제
+            </summary>
+            <returns>복제된 요청 메시지</returns>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.Cnet.CnetReadContinuousRequest.StartDeviceVariable">
+            <summary>
+            시작 디바이스 변수
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.Cnet.CnetReadContinuousRequest.Count">
+            <summary>
+            읽을 개수
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetReadContinuousRequest.OnCreateFrameData(System.Collections.Generic.List{System.Byte})">
+            <summary>
+            프레임 데이터 생성
+            </summary>
+            <param name="byteList">프레임 데이터를 추가할 바이트 리스트</param>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.Cnet.CnetWriteRequest">
+            <summary>
+            디바이스 쓰기 요청
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetWriteRequest.#ctor(System.Byte,VagabondK.Protocols.LSElectric.Cnet.CnetCommandType)">
+            <summary>
+            생성자
+            </summary>
+            <param name="stationNumber">국번</param>
+            <param name="commandType">커맨드 타입</param>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.Cnet.CnetWriteIndividualRequest">
+            <summary>
+            개별 디바이스 변수 쓰기 요청
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetWriteIndividualRequest.#ctor(System.Byte)">
+            <summary>
+            생성자
+            </summary>
+            <param name="stationNumber">국번</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetWriteIndividualRequest.#ctor(System.Byte,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceValue}})">
+            <summary>
+            생성자
+            </summary>
+            <param name="stationNumber">국번</param>
+            <param name="values">디바이스 변수에 쓸 값들</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetWriteIndividualRequest.#ctor(System.Byte,System.ValueTuple{VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceValue},System.ValueTuple{VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceValue}[])">
+            <summary>
+            생성자
+            </summary>
+            <param name="stationNumber">국번</param>
+            <param name="valueTuple">디바이스 변수에 쓸 값</param>
+            <param name="moreValueTuples">추가 디바이스 변수에 쓸 값들</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetWriteIndividualRequest.Clone">
+            <summary>
+            요청 메시지 복제
+            </summary>
+            <returns>복제된 요청 메시지</returns>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.Cnet.CnetWriteIndividualRequest.Keys">
+            <summary>
+            키로 사용되는 디바이스 변수들
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.Cnet.CnetWriteIndividualRequest.Values">
+            <summary>
+            쓰기 요청할 디바이스 변수 값들
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.Cnet.CnetWriteIndividualRequest.Count">
+            <summary>
+            쓰기 요청할 디바이스 값 개수
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.Cnet.CnetWriteIndividualRequest.IsReadOnly">
+            <summary>
+            디바이스 변수/디바이스 값 쌍 컬렉션이 읽기 전용인지 여부를 나타내는 값을 가져옵니다.
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetWriteIndividualRequest.Contains(System.Collections.Generic.KeyValuePair{VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceValue})">
+            <summary>
+            디바이스 변수/디바이스 값 쌍이 존재하는지 여부를 가져옵니다.
+            </summary>
+            <param name="item">디바이스 변수</param>
+            <returns>디바이스 변수 존재 여부</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetWriteIndividualRequest.ContainsKey(VagabondK.Protocols.LSElectric.DeviceVariable)">
+            <summary>
+            지정한 디바이스 변수가 포함하는지 여부를 가져옵니다.
+            </summary>
+            <param name="deviceVariable">디바이스 변수</param>
+            <returns>디바이스 변수 포함 여부</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetWriteIndividualRequest.CopyTo(System.Collections.Generic.KeyValuePair{VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceValue}[],System.Int32)">
+            <summary>
+            대상 배열의 지정된 인덱스에서 시작하여 전체 항목들을 복사합니다.
+            </summary>
+            <param name="array">디바이스 변수/디바이스 값 쌍 배열</param>
+            <param name="arrayIndex">시작 인덱스</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetWriteIndividualRequest.GetEnumerator">
+            <summary>
+            디바이스 변수/디바이스 값 쌍을 반복하는 열거자을 반환합니다.
+            </summary>
+            <returns>디바이스 변수/디바이스 값 쌍을 반복하는 열거자</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetWriteIndividualRequest.TryGetValue(VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceValue@)">
+            <summary>
+            지정한 디바이스 변수의 값을 가져옵니다.
+            </summary>
+            <param name="deviceVariable">디바이스 변수</param>
+            <param name="deviceValue">디바이스 값</param>
+            <returns>디바이스 변수 포함 여부</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetWriteIndividualRequest.Clear">
+            <summary>
+            모든 디바이스 변수 값들을 제거합니다.
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.Cnet.CnetWriteIndividualRequest.Item(VagabondK.Protocols.LSElectric.DeviceVariable)">
+            <summary>
+            지정한 디바이스 변수의 값을 가져오거나 설정합니다.
+            </summary>
+            <param name="deviceVariable">디바이스 변수</param>
+            <returns>디바이스 값</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetWriteIndividualRequest.Add(VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceValue)">
+            <summary>
+            디바이스 변수 값을 추가합니다.
+            </summary>
+            <param name="deviceVariable">디바이스 변수</param>
+            <param name="deviceValue">디바이스 값</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetWriteIndividualRequest.Add(System.Collections.Generic.KeyValuePair{VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceValue})">
+            <summary>
+            디바이스 변수 값을 추가합니다.
+            </summary>
+            <param name="item">디바이스 변수/디바이스 값 쌍</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetWriteIndividualRequest.Remove(VagabondK.Protocols.LSElectric.DeviceVariable)">
+            <summary>
+            디바이스 변수 및 값을 제거합니다.
+            </summary>
+            <param name="deviceVariable">디바이스 변수</param>
+            <returns>제거 여부</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetWriteIndividualRequest.Remove(System.Collections.Generic.KeyValuePair{VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceValue})">
+            <summary>
+            디바이스 변수/디바이스 값 쌍을 제거합니다.
+            </summary>
+            <param name="item">디바이스 변수/디바이스 값 쌍</param>
+            <returns>제거 여부</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetWriteIndividualRequest.OnCreateFrameData(System.Collections.Generic.List{System.Byte})">
+            <summary>
+            프레임 데이터 생성
+            </summary>
+            <param name="byteList">프레임 데이터를 추가할 바이트 리스트</param>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.Cnet.CnetWriteContinuousRequest">
+            <summary>
+            연속 디바이스 변수 쓰기 요청
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetWriteContinuousRequest.#ctor(System.Byte,VagabondK.Protocols.LSElectric.DeviceVariable)">
+            <summary>
+            생성자
+            </summary>
+            <param name="stationNumber">국번</param>
+            <param name="startDeviceVariable">시작 디바이스 변수</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetWriteContinuousRequest.#ctor(System.Byte,VagabondK.Protocols.LSElectric.DeviceVariable,System.Collections.Generic.IEnumerable{VagabondK.Protocols.LSElectric.DeviceValue})">
+            <summary>
+            생성자
+            </summary>
+            <param name="stationNumber">국번</param>
+            <param name="startDeviceVariable">시작 디바이스 변수</param>
+            <param name="deviceValues">쓰기 요청할 디바이스 값들</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetWriteContinuousRequest.Clone">
+            <summary>
+            요청 메시지 복제
+            </summary>
+            <returns>복제된 요청 메시지</returns>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.Cnet.CnetWriteContinuousRequest.StartDeviceVariable">
+            <summary>
+            시작 디바이스 변수
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.Cnet.CnetWriteContinuousRequest.Count">
+            <summary>
+            쓰기 요청할 디바이스 값 개수
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.Cnet.CnetWriteContinuousRequest.IsReadOnly">
+            <summary>
+            디바이스 값 컬렉션이 읽기 전용인지 여부를 나타내는 값을 가져옵니다.
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetWriteContinuousRequest.Contains(VagabondK.Protocols.LSElectric.DeviceValue)">
+            <summary>
+            디바이스 값이 존재하는지 여부를 가져옵니다.
+            </summary>
+            <param name="deviceValue">디바이스 값</param>
+            <returns>디바이스 값 존재 여부</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetWriteContinuousRequest.IndexOf(VagabondK.Protocols.LSElectric.DeviceValue)">
+            <summary>
+            디바이스 값의 순서상 위치를 가져옵니다.
+            </summary>
+            <param name="deviceValue">디바이스 값</param>
+            <returns>디바이스 값의 순서상 위치</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetWriteContinuousRequest.GetEnumerator">
+            <summary>
+            디바이스 값을 반복하는 열거자를 반환합니다.
+            </summary>
+            <returns>디바이스 값을 반복하는 열거자</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetWriteContinuousRequest.CopyTo(VagabondK.Protocols.LSElectric.DeviceValue[],System.Int32)">
+            <summary>
+            대상 배열의 지정된 인덱스에서 시작하여 전체 디바이스 값들을 복사합니다.
+            </summary>
+            <param name="array">디바이스 값 배열</param>
+            <param name="arrayIndex">시작 인덱스</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetWriteContinuousRequest.Clear">
+            <summary>
+            모든 디바이스 값들을 제거합니다.
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.Cnet.CnetWriteContinuousRequest.Item(System.Int32)">
+            <summary>
+            디바이스 값을 지정된 인덱스에 지정하거나 제거합니다.
+            </summary>
+            <param name="index">인덱스</param>
+            <returns>디바이스 값</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetWriteContinuousRequest.Add(VagabondK.Protocols.LSElectric.DeviceValue)">
+            <summary>
+            디바이스 값을 추가합니다.
+            </summary>
+            <param name="deviceValue">디바이스 값</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetWriteContinuousRequest.Insert(System.Int32,VagabondK.Protocols.LSElectric.DeviceValue)">
+            <summary>
+            지정된 인덱스에 디바이스 값을 삽입합니다.
+            </summary>
+            <param name="index">인덱스</param>
+            <param name="deviceValue">디바이스 값</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetWriteContinuousRequest.Remove(VagabondK.Protocols.LSElectric.DeviceValue)">
+            <summary>
+            맨 처음 발견되는 디바이스 값을 제거합니다.
+            </summary>
+            <param name="deviceValue">디바이스 값</param>
+            <returns>제거 여부</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetWriteContinuousRequest.RemoveAt(System.Int32)">
+            <summary>
+            지정된 인덱스에 있는 디바이스 값을 제거합니다.
+            </summary>
+            <param name="index">인덱스</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetWriteContinuousRequest.OnCreateFrameData(System.Collections.Generic.List{System.Byte})">
+            <summary>
+            프레임 데이터 생성
+            </summary>
+            <param name="byteList">프레임 데이터를 추가할 바이트 리스트</param>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.Cnet.CnetRegisterMonitorRequest">
+            <summary>
+            모니터 등록 요청
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetRegisterMonitorRequest.#ctor(System.Byte,System.Byte,VagabondK.Protocols.LSElectric.Cnet.CnetCommandType)">
+            <summary>
+            생성자
+            </summary>
+            <param name="stationNumber">국번</param>
+            <param name="monitorNumber">모니터 번호</param>
+            <param name="commandType">커맨드 타입</param>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.Cnet.CnetRegisterMonitorRequest.MonitorNumber">
+            <summary>
+            모니터 번호
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetRegisterMonitorRequest.OnCreateFrameData(System.Collections.Generic.List{System.Byte})">
+            <summary>
+            프레임 데이터 생성
+            </summary>
+            <param name="byteList">프레임 데이터를 추가할 바이트 리스트</param>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.Cnet.CnetRegisterMonitorIndividualRequest">
+            <summary>
+            개별 변수 모니터 등록 요청
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetRegisterMonitorIndividualRequest.#ctor(System.Byte,System.Byte)">
+            <summary>
+            생성자
+            </summary>
+            <param name="stationNumber">국번</param>
+            <param name="monitorNumber">모니터 번호</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetRegisterMonitorIndividualRequest.#ctor(System.Byte,System.Byte,System.Collections.Generic.IEnumerable{VagabondK.Protocols.LSElectric.DeviceVariable})">
+            <summary>
+            생성자
+            </summary>
+            <param name="stationNumber">국번</param>
+            <param name="monitorNumber">모니터 번호</param>
+            <param name="deviceVariables">디바이스 변수 목록</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetRegisterMonitorIndividualRequest.#ctor(System.Byte,System.Byte,VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceVariable[])">
+            <summary>
+            생성자
+            </summary>
+            <param name="stationNumber">국번</param>
+            <param name="monitorNumber">모니터 번호</param>
+            <param name="deviceVariable">디바이스 변수</param>
+            <param name="moreDeviceVariables">추가 디바이스 변수 목록</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetRegisterMonitorIndividualRequest.Clone">
+            <summary>
+            요청 메시지 복제
+            </summary>
+            <returns>복제된 요청 메시지</returns>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.Cnet.CnetRegisterMonitorIndividualRequest.Count">
+            <summary>
+            디바이스 변수 개수
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetRegisterMonitorIndividualRequest.GetEnumerator">
+            <summary>
+            디바이스 변수를 반복하는 열거자를 반환합니다.
+            </summary>
+            <returns>디바이스 변수를 반복하는 열거자</returns>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.Cnet.CnetRegisterMonitorIndividualRequest.Item(System.Int32)">
+            <summary>
+            지정된 인덱스의 디바이스 변수를 가져옵니다.
+            </summary>
+            <param name="index">인덱스</param>
+            <returns>디바이스 변수</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetRegisterMonitorIndividualRequest.OnCreateFrameData(System.Collections.Generic.List{System.Byte})">
+            <summary>
+            프레임 데이터 생성
+            </summary>
+            <param name="byteList">프레임 데이터를 추가할 바이트 리스트</param>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.Cnet.CnetRegisterMonitorContinuousRequest">
+            <summary>
+            연속 모니터 변수 등록 요청
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetRegisterMonitorContinuousRequest.#ctor(System.Byte,System.Byte,VagabondK.Protocols.LSElectric.DeviceVariable,System.Int32)">
+            <summary>
+            생성자
+            </summary>
+            <param name="stationNumber">국번</param>
+            <param name="monitorNumber">모니터 번호</param>
+            <param name="startDeviceVariable">시작 디바이스 변수</param>
+            <param name="count">읽을 개수</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetRegisterMonitorContinuousRequest.Clone">
+            <summary>
+            요청 메시지 복제
+            </summary>
+            <returns>복제된 요청 메시지</returns>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.Cnet.CnetRegisterMonitorContinuousRequest.StartDeviceVariable">
+            <summary>
+            시작 디바이스 변수
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.Cnet.CnetRegisterMonitorContinuousRequest.Count">
+            <summary>
+            읽을 개수
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetRegisterMonitorContinuousRequest.OnCreateFrameData(System.Collections.Generic.List{System.Byte})">
+            <summary>
+            프레임 데이터 생성
+            </summary>
+            <param name="byteList">프레임 데이터를 추가할 바이트 리스트</param>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.Cnet.CnetExecuteMonitorRequest">
+            <summary>
+            모니터 실행 요청
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetExecuteMonitorRequest.#ctor(System.Byte,System.Byte,VagabondK.Protocols.LSElectric.Cnet.CnetCommandType)">
+            <summary>
+            생성자
+            </summary>
+            <param name="stationNumber">국번</param>
+            <param name="monitorNumber">모니터 번호</param>
+            <param name="commandType">커맨드 타입</param>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.Cnet.CnetExecuteMonitorRequest.MonitorNumber">
+            <summary>
+            모니터 번호
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetExecuteMonitorRequest.OnCreateFrameData(System.Collections.Generic.List{System.Byte})">
+            <summary>
+            프레임 데이터 생성
+            </summary>
+            <param name="byteList">프레임 데이터를 추가할 바이트 리스트</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetExecuteMonitorIndividualRequest.Clone">
+            <summary>
+            요청 메시지 복제
+            </summary>
+            <returns>복제된 요청 메시지</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetExecuteMonitorContinuousRequest.Clone">
+            <summary>
+            요청 메시지 복제
+            </summary>
+            <returns>복제된 요청 메시지</returns>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.Cnet.CnetResponse">
+            <summary>
+            LS ELECTRIC(구 LS산전) Cnet 프로토콜 응답 메시지
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetResponse.#ctor(VagabondK.Protocols.LSElectric.Cnet.CnetRequest)">
+            <summary>
+            생성자
+            </summary>
+            <param name="request">요청 메시지</param>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.Cnet.CnetResponse.Request">
+            <summary>
+            LS ELECTRIC Cnet 프로토콜 요청 메시지
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.Cnet.CnetResponse.Tail">
+            <summary>
+            프레임 종료 테일
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetResponse.OnCreateFrame(System.Collections.Generic.List{System.Byte},System.Boolean)">
+            <summary>
+            프레임 생성
+            </summary>
+            <param name="byteList">프레임 데이터를 추가할 바이트 리스트</param>
+            <param name="useBCC">BCC 사용 여부</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetResponse.OnCreateFrameData(System.Collections.Generic.List{System.Byte})">
+            <summary>
+            프레임 데이터 생성
+            </summary>
+            <param name="byteList">프레임 데이터를 추가할 바이트 리스트</param>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.Cnet.CnetACKResponse">
+            <summary>
+            정상 처리 응답 메시지
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.Cnet.CnetACKResponse.Header">
+            <summary>
+            프레임 시작 헤더
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetACKResponse.OnCreateFrameData(System.Collections.Generic.List{System.Byte})">
+            <summary>
+            프레임 데이터 생성
+            </summary>
+            <param name="byteList">프레임 데이터를 추가할 바이트 리스트</param>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.Cnet.CnetReadResponse">
+            <summary>
+            디바이스 읽기 응답
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.Cnet.CnetReadResponse.Keys">
+            <summary>
+            키로 사용되는 디바이스 변수들
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.Cnet.CnetReadResponse.Values">
+            <summary>
+            읽은 디바이스 변수 값들
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.Cnet.CnetReadResponse.Count">
+            <summary>
+            디바이스 변수 및 값 개수
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.Cnet.CnetReadResponse.Item(VagabondK.Protocols.LSElectric.DeviceVariable)">
+            <summary>
+            지정한 디바이스 변수의 값을 가져옵니다.
+            </summary>
+            <param name="deviceVariable">디바이스 변수</param>
+            <returns>디바이스 값</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetReadResponse.ContainsKey(VagabondK.Protocols.LSElectric.DeviceVariable)">
+            <summary>
+            지정한 디바이스 변수가 포함하는지 여부를 가져옵니다.
+            </summary>
+            <param name="deviceVariable">디바이스 변수</param>
+            <returns>디바이스 변수 포함 여부</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetReadResponse.TryGetValue(VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceValue@)">
+            <summary>
+            지정한 디바이스 변수의 값을 가져옵니다.
+            </summary>
+            <param name="deviceVariable">디바이스 변수</param>
+            <param name="deviceValue">디바이스 값</param>
+            <returns>디바이스 변수 포함 여부</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetReadResponse.GetEnumerator">
+            <summary>
+            디바이스 변수/디바이스 값 쌍을 반복하는 열거자을 반환합니다.
+            </summary>
+            <returns>디바이스 변수/디바이스 값 쌍을 반복하는 열거자</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetReadResponse.OnCreateFrameData(System.Collections.Generic.List{System.Byte})">
+            <summary>
+            프레임 데이터 생성
+            </summary>
+            <param name="byteList">프레임 데이터를 추가할 바이트 리스트</param>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.Cnet.CnetNAKResponse">
+            <summary>
+            오류 응답
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.Cnet.CnetNAKResponse.Header">
+            <summary>
+            프레임 시작 헤더
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.Cnet.CnetNAKResponse.NAKCode">
+            <summary>
+            오류 코드
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.Cnet.CnetNAKResponse.NAKCodeValue">
+            <summary>
+            오류 코드 원본 값
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetNAKResponse.OnCreateFrameData(System.Collections.Generic.List{System.Byte})">
+            <summary>
+            프레임 데이터 생성
+            </summary>
+            <param name="byteList">프레임 데이터를 추가할 바이트 리스트</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetNAKResponse.CnetRequestError.Clone">
+            <summary>
+            요청 메시지 복제
+            </summary>
+            <returns>복제된 요청 메시지</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.CnetNAKResponse.CnetRequestError.OnCreateFrameData(System.Collections.Generic.List{System.Byte})">
+            <summary>
+            프레임 데이터 생성
+            </summary>
+            <param name="byteList">프레임 데이터를 추가할 바이트 리스트</param>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.Cnet.CnetCommand">
+            <summary>
+            LS ELECTRIC(구 LS산전) Cnet 프로토콜 커맨드
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.Cnet.CnetCommand.Read">
+            <summary>
+            읽기
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.Cnet.CnetCommand.Write">
+            <summary>
+            쓰기
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.Cnet.CnetCommand.RegisterMonitor">
+            <summary>
+            모니터 변수 등록
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.Cnet.CnetCommand.ExecuteMonitor">
+            <summary>
+            모니터 실행
+            </summary>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.Cnet.CnetCommandType">
+            <summary>
+            LS ELECTRIC(구 LS산전) Cnet 프로토콜 커맨드 타입
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.Cnet.CnetCommandType.Unknown">
+            <summary>
+            알 수 없음
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.Cnet.CnetCommandType.Individual">
+            <summary>
+            개별 변수 액세스
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.Cnet.CnetCommandType.Continuous">
+            <summary>
+            연속 변수 액세스
+            </summary>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.Cnet.CnetNAKCode">
+            <summary>
+            LS ELECTRIC(구 LS산전) Cnet 프로토콜 NAK 에러 코드
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.Cnet.CnetNAKCode.Unknown">
+            <summary>
+            알 수 없음
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.Cnet.CnetNAKCode.OverRequestReadBlockCount">
+            <summary>
+            요청 블록 수 초과(최대 16개)
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.Cnet.CnetNAKCode.OverVariableLength">
+            <summary>
+            변수 길이 초과(최대 12자리)
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.Cnet.CnetNAKCode.DeviceVariableTypeError">
+            <summary>
+            데이터 타입 오류
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.Cnet.CnetNAKCode.DataError">
+            <summary>
+            데이터 오류
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.Cnet.CnetNAKCode.NotExistsMonitorNumber">
+            <summary>
+            존재하지 않는 모니터 번호
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.Cnet.CnetNAKCode.OutOfRangeExecuteMonitorNumber">
+            <summary>
+            모니터 등록 번호 범위 초과
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.Cnet.CnetNAKCode.OutOfRangeRegisterMonitorNumber">
+            <summary>
+            모니터 실행 번호 범위 초과
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.Cnet.CnetNAKCode.IlegalDeviceMemory">
+            <summary>
+            지원하지 않는 디바이스 메모리
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.Cnet.CnetNAKCode.OverDataLength">
+            <summary>
+            데이터 길이 초과(최대 60워드)
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.Cnet.CnetNAKCode.UnnecessaryDataInFrame">
+            <summary>
+            필요 없는 데이터가 프레임에 존재함
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.Cnet.CnetNAKCode.DeviceVariableTypeIsDifferent">
+            <summary>
+            개별 디바이스 변수들에 서로 다른 타입이 발견됨
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.Cnet.CnetNAKCode.DataParsingError">
+            <summary>
+            16진수로 파싱할 수 없는 문자가 발견됨
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.Cnet.CnetNAKCode.OutOfRangeDeviceVariable">
+            <summary>
+            디바이스 요구 영역 초과
+            </summary>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.Cnet.CnetCommErrorCode">
+            <summary>
+            LS ELECTRIC(구 LS산전) Cnet 통신 오류 코드
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.Cnet.CnetCommErrorCode.NotDefined">
+            <summary>
+            Not Defined
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.Cnet.CnetCommErrorCode.ResponseHeaderError">
+            <summary>
+            응답 헤더가 ACK나 NAK가 아님
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.Cnet.CnetCommErrorCode.ResponseStationNumberDoNotMatch">
+            <summary>
+            요청과 응답의 국번이 일치하지 않음.
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.Cnet.CnetCommErrorCode.ResponseCommandDoNotMatch">
+            <summary>
+            요청과 응답의 커맨드가 일치하지 않음.
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.Cnet.CnetCommErrorCode.ResponseCommandTypeDoNotMatch">
+            <summary>
+            요청과 응답의 커맨드 타입이 일치하지 않음.
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.Cnet.CnetCommErrorCode.ResponseMonitorNumberDoNotMatch">
+            <summary>
+            요청과 응답의 모니터 번호가 일치하지 않음.
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.Cnet.CnetCommErrorCode.ResponseDataBlockCountDoNotMatch">
+            <summary>
+            요청과 응답의 데이터 블록 개수가 일치하지 않음.
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.Cnet.CnetCommErrorCode.ResponseDataCountNotMatch">
+            <summary>
+            요청과 응답의 데이터 개수가 일치하지 않음.
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.Cnet.CnetCommErrorCode.ResponseTailError">
+            <summary>
+            응답 종결이 EOT가 아님.
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.Cnet.CnetCommErrorCode.ResponseParseHexError">
+            <summary>
+            응답 메시지에서 16진수 문자열 파싱 중 오류 발생.
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.Cnet.CnetCommErrorCode.ErrorDataCount">
+            <summary>
+            잘못된 데이터 개수.
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.Cnet.CnetCommErrorCode.ErrorBCC">
+            <summary>
+            BCC 오류
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.Cnet.CnetCommErrorCode.ResponseTimeout">
+            <summary>
+            응답 타임아웃
+            </summary>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.Cnet.Simulation.CnetSimulationService">
+            <summary>
+            LS ELECTRIC(구 LS산전) Cnet 프로토콜 시뮬레이터 서비스입니다.
+            Cnet 클라이언트를 테스트하는 용도로 사용 가능합니다.
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.Simulation.CnetSimulationService.#ctor">
+            <summary>
+            생성자
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.Simulation.CnetSimulationService.#ctor(VagabondK.Protocols.Channels.IChannel)">
+            <summary>
+            생성자
+            </summary>
+            <param name="channel">통신 채널</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.Simulation.CnetSimulationService.Dispose">
+            <summary>
+            리소스 해제
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.Cnet.Simulation.CnetSimulationService.Item(System.Byte)">
+            <summary>
+            시뮬레이션 스테이션 가져오기
+            </summary>
+            <param name="stationNumber">국번</param>
+            <returns>시뮬레이션 스테이션</returns>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.Cnet.Simulation.CnetSimulationService.StationsNumbers">
+            <summary>
+            시뮬레이션 스테이션 국번 목록
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.Cnet.Simulation.CnetSimulationService.SimulationStations">
+            <summary>
+            시뮬레이션 스테이션 목록
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.Simulation.CnetSimulationService.ContainsStationsNumber(System.Byte)">
+            <summary>
+            시뮬레이션 스테이션 포함 여부
+            </summary>
+            <param name="stationNumber">시뮬레이션 스테이션 국번</param>
+            <returns>시뮬레이션 스테이션 포함 여부</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.Simulation.CnetSimulationService.TryGetValue(System.Byte,VagabondK.Protocols.LSElectric.Cnet.Simulation.CnetSimulationStation@)">
+            <summary>
+            시뮬레이션 스테이션 가져오기
+            </summary>
+            <param name="stationNumber">국번</param>
+            <param name="simulationStation">시뮬레이션 스테이션</param>
+            <returns>시뮬레이션 스테이션 포함 여부</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.Cnet.Simulation.CnetSimulationService.GetEnumerator">
+            <summary>
+            시뮬레이션 스테이션 열거
+            </summary>
+            <returns>시뮬레이션 스테이션 목록 열거</returns>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.Cnet.Simulation.CnetSimulationService.Channel">
+            <summary>
+            통신 채널
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.Cnet.Simulation.CnetSimulationService.ChannelTimeout">
+            <summary>
+            채널 유지 제한시간(밀리세컨드 단위). 이 시간 동안 요청이 발생하지 않으면 채널을 닫습니다. 기본값은 10000(10초)이고, 0이면 채널을 항상 유지합니다.
+            </summary>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.Cnet.Simulation.CnetRequestedEventArgs">
+            <summary>
+            Cnet 요청 발생 이벤트 매개변수
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.Cnet.Simulation.CnetRequestedEventArgs.Channel">
+            <summary>
+            통신 채널
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.Cnet.Simulation.CnetRequestedEventArgs.NAKCode">
+            <summary>
+            NAK 에러 코드
+            </summary>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.Cnet.Simulation.CnetRequestedReadEventArgs">
+            <summary>
+            읽기 요청 발생 이벤트 매개변수
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.Cnet.Simulation.CnetRequestedReadEventArgs.ResponseValues">
+            <summary>
+            응답할 값 목록
+            </summary>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.Cnet.Simulation.CnetRequestedWriteEventArgs">
+            <summary>
+            쓰기 요청 발생 이벤트 매개변수
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.Cnet.Simulation.CnetRequestedWriteEventArgs.Values">
+            <summary>
+            쓰기 위해 받은 값 목록
+            </summary>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.Cnet.Simulation.CnetSimulationStation">
+            <summary>
+            LS ELECTRIC(구 LS산전) Cnet 프로토콜 가상 스테이션입니다.
+            Cnet 클라이언트를 테스트하는 용도로 사용 가능합니다.
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.Cnet.Simulation.CnetSimulationStation.Monitors">
+            <summary>
+            클라이언트에서 등록한 모니터 사전
+            </summary>
+        </member>
+        <member name="E:VagabondK.Protocols.LSElectric.Cnet.Simulation.CnetSimulationStation.RequestedRead">
+            <summary>
+            읽기 요청 이벤트
+            </summary>
+        </member>
+        <member name="E:VagabondK.Protocols.LSElectric.Cnet.Simulation.CnetSimulationStation.RequestedWrite">
+            <summary>
+            쓰기 요청 이벤트
+            </summary>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.Cnet.Simulation.NamespaceDoc">
+            <summary>
+            LS ELECTRIC(구 LS산전) Cnet 프로토콜 시뮬레이션 관련 기능들을 제공합니다.
+            </summary>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.Cnet.NamespaceDoc">
+            <summary>
+            LS ELECTRIC(구 LS산전) Cnet 프로토콜 라이브러리에서 기본적으로 사용되는 프로그래밍 요소들이 포함되어 있습니다.
+            </summary>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.DataType">
+            <summary>
+            LS ELECTRIC(구 LS산전) PLC 데이터 형식
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.DataType.Unknown">
+            <summary>
+            알 수 없음
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.DataType.Bit">
+            <summary>
+            비트
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.DataType.Byte">
+            <summary>
+            바이트
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.DataType.Word">
+            <summary>
+            워드, 2바이트
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.DataType.DoubleWord">
+            <summary>
+            더블 워드, 4바이트
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.DataType.LongWord">
+            <summary>
+            롱 워드, 8바이트
+            </summary>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.DeviceType">
+            <summary>
+            LS ELECTRIC(구 LS산전) PLC 디바이스 영역
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.DeviceType.Unknown">
+            <summary>
+            알 수 없음
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.DeviceType.P">
+            <summary>
+            P, 입출력 릴레이
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.DeviceType.M">
+            <summary>
+            M, 내부 릴레이
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.DeviceType.K">
+            <summary>
+            K, 정전시 상태 유지 릴레이
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.DeviceType.F">
+            <summary>
+            F, 특수 릴레이
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.DeviceType.T">
+            <summary>
+            T, 타이머
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.DeviceType.C">
+            <summary>
+            C, 카운터
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.DeviceType.L">
+            <summary>
+            L, 링크 릴레이
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.DeviceType.D">
+            <summary>
+            D, 데이터 레지스터
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.DeviceType.S">
+            <summary>
+            S, 스텝 릴레이
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.DeviceType.Z">
+            <summary>
+            Z, 인덱스 전용 레지스터
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.DeviceType.N">
+            <summary>
+            통신 모듈의 P2P 서비스 주소 영역
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.DeviceType.R">
+            <summary>
+            플래시 메모리 전용 영역
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.DeviceType.U">
+            <summary>
+            U, 아날로그 리프레시
+            </summary>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.DeviceValue">
+            <summary>
+            LS ELECTRIC(구 LS산전) PLC 디바이스 값 
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.DeviceValue.#ctor(System.Boolean)">
+            <summary>
+            생성자
+            </summary>
+            <param name="bitValue">비트 값</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.DeviceValue.#ctor(System.Byte)">
+            <summary>
+            생성자
+            </summary>
+            <param name="byteValue">바이트 값</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.DeviceValue.#ctor(System.Int16)">
+            <summary>
+            생서자
+            </summary>
+            <param name="wordValue">부호 있는 워드 값</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.DeviceValue.#ctor(System.Int32)">
+            <summary>
+            생성자
+            </summary>
+            <param name="doubleWordValue">부호 있는 더블 워드 값</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.DeviceValue.#ctor(System.Int64)">
+            <summary>
+            생성자
+            </summary>
+            <param name="longWordValue">부호 있는 롱 워드 값</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.DeviceValue.#ctor(System.SByte)">
+            <summary>
+            생성자
+            </summary>
+            <param name="signedByteValue">부호 있는 바이트 값</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.DeviceValue.#ctor(System.UInt16)">
+            <summary>
+            생성자
+            </summary>
+            <param name="unsignedWordValue">부호 없는 워드 값</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.DeviceValue.#ctor(System.UInt32)">
+            <summary>
+            생성자
+            </summary>
+            <param name="unsignedDoubleWordValue">부호 없는 더블 워드 값</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.DeviceValue.#ctor(System.UInt64)">
+            <summary>
+            생성자
+            </summary>
+            <param name="unsignedLongWordValue">부호 없는 롱 워드 값</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.DeviceValue.#ctor(System.Single)">
+            <summary>
+            생성자
+            </summary>
+            <param name="singleFloatingPointValue">단정밀도 부동소수 값</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.DeviceValue.#ctor(System.Double)">
+            <summary>
+            생성자
+            </summary>
+            <param name="doubleFloatingPointValue">배정밀도 부동소수 값</param>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.DeviceValue.BitValue">
+            <summary>
+            비트 값
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.DeviceValue.ByteValue">
+            <summary>
+            바이트 값
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.DeviceValue.WordValue">
+            <summary>
+            부호 있는 워드 값
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.DeviceValue.DoubleWordValue">
+            <summary>
+            부호 있는 더블 워드 값
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.DeviceValue.LongWordValue">
+            <summary>
+            부호 있는 롱 워드 값
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.DeviceValue.SignedByteValue">
+            <summary>
+            부호 있는 바이트 값
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.DeviceValue.UnsignedWordValue">
+            <summary>
+            부호 없는 워드 값
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.DeviceValue.UnsignedDoubleWordValue">
+            <summary>
+            부호 없는 더블 워드 값
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.DeviceValue.UnsignedLongWordValue">
+            <summary>
+            부호 없는 롱 워드 값
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.DeviceValue.SingleFloatingPointValue">
+            <summary>
+            단정밀도 부동소수 값
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.DeviceValue.DoubleFloatingPointValue">
+            <summary>
+            배정밀도 부동소수 값
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.DeviceValue.op_Implicit(VagabondK.Protocols.LSElectric.DeviceValue)~System.Boolean">
+            <summary>
+            디바이스 값의 bool 형식으로의 변환
+            </summary>
+            <param name="deviceValue">디바이스 값</param>
+            <returns>bool 형식 값</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.DeviceValue.op_Implicit(VagabondK.Protocols.LSElectric.DeviceValue)~System.Byte">
+            <summary>
+            디바이스 값의 byte 형식으로의 변환
+            </summary>
+            <param name="deviceValue">디바이스 값</param>
+            <returns>byte 형식 값</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.DeviceValue.op_Implicit(VagabondK.Protocols.LSElectric.DeviceValue)~System.Int16">
+            <summary>
+            디바이스 값의 short 형식으로의 변환
+            </summary>
+            <param name="deviceValue">디바이스 값</param>
+            <returns>short 형식 값</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.DeviceValue.op_Implicit(VagabondK.Protocols.LSElectric.DeviceValue)~System.Int32">
+            <summary>
+            디바이스 값의 int 형식으로의 변환
+            </summary>
+            <param name="deviceValue">디바이스 값</param>
+            <returns>int 형식 값</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.DeviceValue.op_Implicit(VagabondK.Protocols.LSElectric.DeviceValue)~System.Int64">
+            <summary>
+            디바이스 값의 long 형식으로의 변환
+            </summary>
+            <param name="deviceValue">디바이스 값</param>
+            <returns>long 형식 값</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.DeviceValue.op_Implicit(VagabondK.Protocols.LSElectric.DeviceValue)~System.SByte">
+            <summary>
+            디바이스 값의 sbyte 형식으로의 변환
+            </summary>
+            <param name="deviceValue">디바이스 값</param>
+            <returns>sbyte 형식 값</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.DeviceValue.op_Implicit(VagabondK.Protocols.LSElectric.DeviceValue)~System.UInt16">
+            <summary>
+            디바이스 값의 ushort 형식으로의 변환
+            </summary>
+            <param name="deviceValue">디바이스 값</param>
+            <returns>ushort 형식 값</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.DeviceValue.op_Implicit(VagabondK.Protocols.LSElectric.DeviceValue)~System.UInt32">
+            <summary>
+            디바이스 값의 uint 형식으로의 변환
+            </summary>
+            <param name="deviceValue">디바이스 값</param>
+            <returns>uint 형식 값</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.DeviceValue.op_Implicit(VagabondK.Protocols.LSElectric.DeviceValue)~System.UInt64">
+            <summary>
+            디바이스 값의 ulong 형식으로의 변환
+            </summary>
+            <param name="deviceValue">디바이스 값</param>
+            <returns>ulong 형식 값</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.DeviceValue.op_Implicit(VagabondK.Protocols.LSElectric.DeviceValue)~System.Single">
+            <summary>
+            디바이스 값의 float 형식으로의 변환
+            </summary>
+            <param name="deviceValue">디바이스 값</param>
+            <returns>float 형식 값</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.DeviceValue.op_Implicit(VagabondK.Protocols.LSElectric.DeviceValue)~System.Double">
+            <summary>
+            디바이스 값의 double 형식으로의 변환
+            </summary>
+            <param name="deviceValue">디바이스 값</param>
+            <returns>double 형식 값</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.DeviceValue.op_Implicit(System.Boolean)~VagabondK.Protocols.LSElectric.DeviceValue">
+            <summary>
+            bool 형식 값의 디바이스 값으로의 변환
+            </summary>
+            <param name="value">bool 형식 값</param>
+            <returns>디바이스 값</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.DeviceValue.op_Implicit(System.Byte)~VagabondK.Protocols.LSElectric.DeviceValue">
+            <summary>
+            byte 형식 값의 디바이스 값으로의 변환
+            </summary>
+            <param name="value">byte 형식 값</param>
+            <returns>디바이스 값</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.DeviceValue.op_Implicit(System.Int16)~VagabondK.Protocols.LSElectric.DeviceValue">
+            <summary>
+            short 형식 값의 디바이스 값으로의 변환
+            </summary>
+            <param name="value">short 형식 값</param>
+            <returns>디바이스 값</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.DeviceValue.op_Implicit(System.Int32)~VagabondK.Protocols.LSElectric.DeviceValue">
+            <summary>
+            int 형식 값의 디바이스 값으로의 변환
+            </summary>
+            <param name="value">int 형식 값</param>
+            <returns>디바이스 값</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.DeviceValue.op_Implicit(System.Int64)~VagabondK.Protocols.LSElectric.DeviceValue">
+            <summary>
+            long 형식 값의 디바이스 값으로의 변환
+            </summary>
+            <param name="value">long 형식 값</param>
+            <returns>디바이스 값</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.DeviceValue.op_Implicit(System.SByte)~VagabondK.Protocols.LSElectric.DeviceValue">
+            <summary>
+            sbyte 형식 값의 디바이스 값으로의 변환
+            </summary>
+            <param name="value">sbyte 형식 값</param>
+            <returns>디바이스 값</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.DeviceValue.op_Implicit(System.UInt16)~VagabondK.Protocols.LSElectric.DeviceValue">
+            <summary>
+            ushort 형식 값의 디바이스 값으로의 변환
+            </summary>
+            <param name="value">ushort 형식 값</param>
+            <returns>디바이스 값</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.DeviceValue.op_Implicit(System.UInt32)~VagabondK.Protocols.LSElectric.DeviceValue">
+            <summary>
+            uint 형식 값의 디바이스 값으로의 변환
+            </summary>
+            <param name="value">uint 형식 값</param>
+            <returns>디바이스 값</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.DeviceValue.op_Implicit(System.UInt64)~VagabondK.Protocols.LSElectric.DeviceValue">
+            <summary>
+            ulong 형식 값의 디바이스 값으로의 변환
+            </summary>
+            <param name="value">ulong 형식 값</param>
+            <returns>디바이스 값</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.DeviceValue.op_Implicit(System.Single)~VagabondK.Protocols.LSElectric.DeviceValue">
+            <summary>
+            float 형식 값의 디바이스 값으로의 변환
+            </summary>
+            <param name="value">float 형식 값</param>
+            <returns>디바이스 값</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.DeviceValue.op_Implicit(System.Double)~VagabondK.Protocols.LSElectric.DeviceValue">
+            <summary>
+            double 형식 값의 디바이스 값으로의 변환
+            </summary>
+            <param name="value">double 형식 값</param>
+            <returns>디바이스 값</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.DeviceValue.op_Equality(VagabondK.Protocols.LSElectric.DeviceValue,VagabondK.Protocols.LSElectric.DeviceValue)">
+            <summary>
+            ModbusEndian의 지정된 두 인스턴스가 같은지를 확인합니다.
+            </summary>
+            <param name="value1">비교할 첫 번째 개체입니다.</param>
+            <param name="value2">비교할 두 번째 개체입니다.</param>
+            <returns>value1 및 value2가 동일하면 true이고, 그렇지 않으면 false입니다.</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.DeviceValue.op_Inequality(VagabondK.Protocols.LSElectric.DeviceValue,VagabondK.Protocols.LSElectric.DeviceValue)">
+            <summary>
+            ModbusEndian의 지정된 두 인스턴스가 다른지를 확인합니다.
+            </summary>
+            <param name="value1">비교할 첫 번째 개체입니다.</param>
+            <param name="value2">비교할 두 번째 개체입니다.</param>
+            <returns>value1 및 value2가 동일하지 않으면 true이고, 그렇지 않으면 false입니다.</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.DeviceValue.Equals(System.Object)">
+            <summary>
+            이 인스턴스와 지정된 개체가 같은지 여부를 나타냅니다.
+            </summary>
+            <param name="obj">현재 인스턴스와 비교할 개체입니다.</param>
+            <returns>true와 이 인스턴스가 동일한 형식이고 동일한 값을 나타내면 obj이고, 그렇지 않으면 false입니다.</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.DeviceValue.GetHashCode">
+            <summary>
+            이 인스턴스의 해시 코드를 반환합니다.
+            </summary>
+            <returns>이 인스턴스의 해시 코드인 32비트 부호 있는 정수입니다.</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.DeviceValue.GetBytes(VagabondK.Protocols.LSElectric.DataType)">
+            <summary>
+            디바이스 값의 바이트 배열을 가져옵니다.
+            </summary>
+            <param name="dataType">PLC 데이터 형식</param>
+            <returns>바이트 배열</returns>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.DeviceVariable">
+            <summary>
+            LS ELECTRIC(구 LS산전) PLC 디바이스 변수
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.DeviceVariable.#ctor(VagabondK.Protocols.LSElectric.DeviceType,VagabondK.Protocols.LSElectric.DataType,System.UInt32,System.Byte[])">
+            <summary>
+            생성자
+            </summary>
+            <param name="deviceType">LS ELECTRIC PLC 디바이스 영역</param>
+            <param name="dataType">LS ELECTRIC PLC 데이터 형식</param>
+            <param name="index">인덱스</param>
+            <param name="subIndices">세부 인덱스 목록(U 영역의 .을 이용한 분리 인덱스)</param>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.DeviceVariable.DeviceType">
+            <summary>
+            LS ELECTRIC PLC 디바이스 영역
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.DeviceVariable.DataType">
+            <summary>
+            LS ELECTRIC PLC 데이터 형식
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.DeviceVariable.Index">
+            <summary>
+            인덱스
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.DeviceVariable.SubIndices">
+            <summary>
+            세부 인덱스 목록
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.DeviceVariable.ToString">
+            <summary>
+            이 인스턴스의 정규화된 형식 이름을 반환합니다.
+            </summary>
+            <returns>정규화된 형식 이름입니다.</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.DeviceVariable.ToString(System.Boolean)">
+            <summary>
+            이 인스턴스의 정규화된 형식 이름을 반환합니다.
+            </summary>
+            <param name="useHexBitIndex">비트 변수의 인덱스를 16진수로 표시할지 여부를 결정합니다.</param>
+            <returns>정규화된 형식 이름입니다.</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.DeviceVariable.ToBytes">
+            <summary>
+            변수 문자열을 바이트 배열로 반환합니다.
+            </summary>
+            <returns>변수 문자열을 바이트 배열</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.DeviceVariable.ToBytes(System.Boolean)">
+            <summary>
+            변수 문자열을 바이트 배열로 반환합니다.
+            </summary>
+            <param name="useHexBitIndex">비트 변수의 인덱스를 16진수로 표시할지 여부를 결정합니다.</param>
+            <returns>변수 문자열을 바이트 배열</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.DeviceVariable.Parse(System.String)">
+            <summary>
+            문자열을 디바이스 변수로 해석합니다.
+            </summary>
+            <param name="text">문자열</param>
+            <returns>디바이스 변수</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.DeviceVariable.Parse(System.String,System.Boolean)">
+            <summary>
+            문자열을 디바이스 변수로 해석합니다.
+            </summary>
+            <param name="text">문자열</param>
+            <param name="useHexBitIndex">비트 변수의 인덱스를 16진수로 인식할지 여부를 결정합니다.</param>
+            <returns>디바이스 변수</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.DeviceVariable.TryParse(System.String,VagabondK.Protocols.LSElectric.DeviceVariable@)">
+            <summary>
+            문자열을 디바이스 변수로 해석 시도합니다.
+            </summary>
+            <param name="text">문자열</param>
+            <param name="deviceVariable">디바이스 변수</param>
+            <returns>성공 여부</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.DeviceVariable.TryParse(System.String,System.Boolean,VagabondK.Protocols.LSElectric.DeviceVariable@)">
+            <summary>
+            문자열을 디바이스 변수로 해석 시도합니다.
+            </summary>
+            <param name="text">문자열</param>
+            <param name="useHexBitIndex">비트 변수의 인덱스를 16진수로 인식할지 여부를 결정합니다.</param>
+            <param name="deviceVariable">디바이스 변수</param>
+            <returns>성공 여부</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.DeviceVariable.op_Implicit(System.String)~VagabondK.Protocols.LSElectric.DeviceVariable">
+            <summary>
+            문자열에 대한 디바이스 변수 형 변환
+            </summary>
+            <param name="text">문자열</param>
+            <returns>디바이스 변수</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.DeviceVariable.op_Equality(VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceVariable)">
+            <summary>
+            ModbusEndian의 지정된 두 인스턴스가 같은지를 확인합니다.
+            </summary>
+            <param name="variable1">비교할 첫 번째 개체입니다.</param>
+            <param name="variable2">비교할 두 번째 개체입니다.</param>
+            <returns>variable1 및 variable2가 동일하면 true이고, 그렇지 않으면 false입니다.</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.DeviceVariable.op_Inequality(VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceVariable)">
+            <summary>
+            ModbusEndian의 지정된 두 인스턴스가 다른지를 확인합니다.
+            </summary>
+            <param name="variable1">비교할 첫 번째 개체입니다.</param>
+            <param name="variable2">비교할 두 번째 개체입니다.</param>
+            <returns>variable1 및 variable2가 동일하지 않으면 true이고, 그렇지 않으면 false입니다.</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.DeviceVariable.Equals(System.Object)">
+            <summary>
+            이 인스턴스와 지정된 개체가 같은지 여부를 나타냅니다.
+            </summary>
+            <param name="obj">현재 인스턴스와 비교할 개체입니다.</param>
+            <returns>true와 이 인스턴스가 동일한 형식이고 동일한 값을 나타내면 obj이고, 그렇지 않으면 false입니다.</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.DeviceVariable.GetHashCode">
+            <summary>
+            이 인스턴스의 해시 코드를 반환합니다.
+            </summary>
+            <returns>이 인스턴스의 해시 코드인 32비트 부호 있는 정수입니다.</returns>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.DeviceVariableValue">
+            <summary>
+            디바이스 변수의 값을 정의합니다.
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.DeviceVariableValue.#ctor(VagabondK.Protocols.LSElectric.DeviceVariable)">
+            <summary>
+            생성자
+            </summary>
+            <param name="deviceVariable">디바이스 변수</param>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.DeviceVariableValue.DeviceVariable">
+            <summary>
+            디바이스 변수
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.DeviceVariableValue.DeviceValue">
+            <summary>
+            디바이스 값
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.DeviceVariableValue.DeviceValueBytes">
+            <summary>
+            디바이스 값의 바이트 배열을 가져옵니다.
+            </summary>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.FEnet.FEnetCommand">
+            <summary>
+            LS ELECTRIC(구 LS산전) FEnet 프로토콜 커맨드
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.FEnet.FEnetCommand.Read">
+            <summary>
+            읽기
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.FEnet.FEnetCommand.Write">
+            <summary>
+            쓰기
+            </summary>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.FEnet.FEnetDataType">
+            <summary>
+            LS ELECTRIC(구 LS산전) FEnet 프로토콜 커맨드의 데이터 타입
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.FEnet.FEnetDataType.Bit">
+            <summary>
+            비트
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.FEnet.FEnetDataType.Byte">
+            <summary>
+            바이트
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.FEnet.FEnetDataType.Word">
+            <summary>
+            워드, 2바이트
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.FEnet.FEnetDataType.DoubleWord">
+            <summary>
+            더블 워드, 4바이트
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.FEnet.FEnetDataType.LongWord">
+            <summary>
+            롱 워드, 8바이트
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.FEnet.FEnetDataType.Continuous">
+            <summary>
+            연속 데이터, 가변 길이
+            </summary>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.FEnet.FEnetNAKCode">
+            <summary>
+            LS ELECTRIC(구 LS산전) FEnet 프로토콜 NAK 에러 코드
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.FEnet.FEnetNAKCode.Unknown">
+            <summary>
+            알 수 없음
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.FEnet.FEnetNAKCode.OverRequestReadBlockCount">
+            <summary>
+            요청 블록 수 초과(최대 16개)
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.FEnet.FEnetNAKCode.DeviceVariableTypeError">
+            <summary>
+            데이터 타입 오류
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.FEnet.FEnetNAKCode.IlegalDeviceMemory">
+            <summary>
+            지원하지 않는 디바이스 메모리
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.FEnet.FEnetNAKCode.OutOfRangeDeviceVariable">
+            <summary>
+            디바이스 요구 영역 초과
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.FEnet.FEnetNAKCode.OverDataLengthIndividual">
+            <summary>
+            개별 블록 데이터 길이 초과(최대 1400바이트)
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.FEnet.FEnetNAKCode.OverDataLengthTotal">
+            <summary>
+            블록별 총 데이터 길이 초과(최대 1400바이트)
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.FEnet.FEnetNAKCode.IlegalCompanyID">
+            <summary>
+            잘못된 CompanyID
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.FEnet.FEnetNAKCode.IlegalLength">
+            <summary>
+            프레임 헤더의 Length 가 잘못됨
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.FEnet.FEnetNAKCode.ErrorChacksum">
+            <summary>
+            프레임 헤더의 Chacksum이 잘못됨
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.FEnet.FEnetNAKCode.IlegalCommand">
+            <summary>
+            명령어 오류
+            </summary>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.FEnet.FEnetCommErrorCode">
+            <summary>
+            LS ELECTRIC(구 LS산전) FEnet 통신 오류 코드
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.FEnet.FEnetCommErrorCode.NotDefined">
+            <summary>
+            Not Defined
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.FEnet.FEnetCommErrorCode.ResponseLengthDoNotMatch">
+            <summary>
+            응답의 길이 정보와 실제 길이가 일치하지 않음.
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.FEnet.FEnetCommErrorCode.ResponseCommandDoNotMatch">
+            <summary>
+            요청과 응답의 커맨드가 일치하지 않음.
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.FEnet.FEnetCommErrorCode.ResponseDataTypeDoNotMatch">
+            <summary>
+            요청과 응답의 데이터 타입이 일치하지 않음.
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.FEnet.FEnetCommErrorCode.ResponseDataBlockCountDoNotMatch">
+            <summary>
+            요청과 응답의 데이터 블록 개수가 일치하지 않음.
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.FEnet.FEnetCommErrorCode.ResponseDataCountNotMatch">
+            <summary>
+            요청과 응답의 데이터 개수가 일치하지 않음.
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.FEnet.FEnetCommErrorCode.ErrorDataCount">
+            <summary>
+            잘못된 데이터 개수.
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.FEnet.FEnetCommErrorCode.ErrorChecksum">
+            <summary>
+            BCC 오류
+            </summary>
+        </member>
+        <member name="F:VagabondK.Protocols.LSElectric.FEnet.FEnetCommErrorCode.ResponseTimeout">
+            <summary>
+            응답 타임아웃
+            </summary>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.FEnet.FEnetClient">
+            <summary>
+            LS ELECTRIC(구 LS산전) FEnet 프로토콜 기반 클라이언트입니다.
+            XGT 시리즈 제품의 FEnet I/F 모듈과 통신 가능합니다.
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetClient.#ctor">
+            <summary>
+            생성자
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetClient.#ctor(VagabondK.Protocols.Channels.IChannel)">
+            <summary>
+            생성자
+            </summary>
+            <param name="channel">통신 채널</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetClient.Dispose">
+            <summary>
+            리소스 해제
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.FEnetClient.Channel">
+            <summary>
+            통신 채널
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.FEnetClient.CompanyID">
+            <summary>
+            메시지 헤더의 CompanyID. 기본값은 LSIS-XGT. 단종된 모델에서는 LGIS-GLOFA를 사용할 수도 있음.
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.FEnetClient.UseChecksum">
+            <summary>
+            기본적으로 체크섬을 사용할 것인지 여부, 기본값은 true
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.FEnetClient.Timeout">
+            <summary>
+            응답 제한시간(밀리초)
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.FEnetClient.ThrowsExceptionFromNAK">
+            <summary>
+            NAK에 대한 예외 발생 여부
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.FEnetClient.UseHexBitIndex">
+            <summary>
+            비트 변수의 인덱스를 16진수로 통신할지 여부를 결정합니다.
+            P, M, L, K, F 이면서 Bit일 경우 16진수로 전송합니다.
+            그 외에는 인덱스가 .으로 나누어져있고 Bit일 경우 마지막 자리만 16진수로 전송합니다.
+            XGB PLC에서 비트를 읽거나 쓸 때 엉뚱한 비트가 읽히거나 쓰인다면 true로 설정해서 테스트 해보시기 바랍니다.
+            '라이스'님의 제보로 추가한 옵션입니다. 감사합니다.
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetClient.Request(VagabondK.Protocols.LSElectric.FEnet.FEnetRequest)">
+            <summary>
+            FEnet 요청하기
+            </summary>
+            <param name="request">FEnet 요청</param>
+            <returns>FEnet 응답</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetClient.Request(System.Int32,VagabondK.Protocols.LSElectric.FEnet.FEnetRequest)">
+            <summary>
+            FEnet 요청하기
+            </summary>
+            <param name="timeout">응답 제한시간(밀리초)</param>
+            <param name="request">FEnet 요청</param>
+            <returns>FEnet 응답</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetClient.Read(VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceVariable[])">
+            <summary>
+            개별 디바이스 변수 읽기
+            </summary>
+            <param name="deviceVariable">디바이스 변수</param>
+            <param name="moreDeviceVariables">추가 디바이스 변수 목록</param>
+            <returns>읽은 디바이스 변수/값 Dictionary</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetClient.Read(System.Int32,VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceVariable[])">
+            <summary>
+            개별 디바이스 변수 읽기
+            </summary>
+            <param name="timeout">응답 제한시간(밀리초)</param>
+            <param name="deviceVariable">디바이스 변수</param>
+            <param name="moreDeviceVariables">추가 디바이스 변수 목록</param>
+            <returns>읽은 디바이스 변수/값 Dictionary</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetClient.Read(System.Collections.Generic.IEnumerable{VagabondK.Protocols.LSElectric.DeviceVariable})">
+            <summary>
+            개별 디바이스 변수 읽기
+            </summary>
+            <param name="deviceVariables">디바이스 변수 목록</param>
+            <returns>읽은 디바이스 변수/값 Dictionary</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetClient.Read(System.Int32,System.Collections.Generic.IEnumerable{VagabondK.Protocols.LSElectric.DeviceVariable})">
+            <summary>
+            개별 디바이스 변수 읽기
+            </summary>
+            <param name="timeout">응답 제한시간(밀리초)</param>
+            <param name="deviceVariables">디바이스 변수 목록</param>
+            <returns>읽은 디바이스 변수/값 Dictionary</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetClient.Read(VagabondK.Protocols.LSElectric.DeviceType,System.UInt32,System.Int32)">
+            <summary>
+            연속 바이트 디바이스 변수 읽기
+            </summary>
+            <param name="deviceType">읽기 요청할 디바이스 영역</param>
+            <param name="index">읽기 요청 시작 디바이스 인덱스</param>
+            <param name="count">읽을 개수</param>
+            <returns>읽은 디바이스 데이터 블록</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetClient.Read(System.Int32,VagabondK.Protocols.LSElectric.DeviceType,System.UInt32,System.Int32)">
+            <summary>
+            연속 바이트 디바이스 변수 읽기
+            </summary>
+            <param name="timeout">응답 제한시간(밀리초)</param>
+            <param name="deviceType">읽기 요청할 디바이스 영역</param>
+            <param name="index">읽기 요청 시작 디바이스 인덱스</param>
+            <param name="count">읽을 개수</param>
+            <returns>읽은 디바이스 데이터 블록</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetClient.Read(VagabondK.Protocols.LSElectric.DeviceVariable,System.Int32)">
+            <summary>
+            연속 디바이스 변수 읽기
+            </summary>
+            <param name="deviceVariable">연속 읽기 요청 시작 디바이스 변수</param>
+            <param name="count">읽을 개수</param>
+            <returns>읽은 디바이스 데이터 블록</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetClient.Read(System.Int32,VagabondK.Protocols.LSElectric.DeviceVariable,System.Int32)">
+            <summary>
+            연속 디바이스 변수 읽기
+            </summary>
+            <param name="timeout">응답 제한시간(밀리초)</param>
+            <param name="deviceVariable">연속 읽기 요청 시작 디바이스 변수</param>
+            <param name="count">읽을 개수</param>
+            <returns>읽은 디바이스 데이터 블록</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetClient.Write(VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceValue)">
+            <summary>
+            개별 디바이스 변수 쓰기
+            </summary>
+            <param name="deviceVariable">디바이스 변수</param>
+            <param name="deviceValue">디바이스 변수에 쓸 값</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetClient.Write(System.Int32,VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceValue)">
+            <summary>
+            개별 디바이스 변수 쓰기
+            </summary>
+            <param name="timeout">응답 제한시간(밀리초)</param>
+            <param name="deviceVariable">디바이스 변수</param>
+            <param name="deviceValue">디바이스 변수에 쓸 값</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetClient.Write(System.ValueTuple{VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceValue},System.ValueTuple{VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceValue}[])">
+            <summary>
+            개별 디바이스 변수 쓰기
+            </summary>
+            <param name="valueTuple">디바이스 변수에 쓸 값</param>
+            <param name="moreValueTuples">추가 디바이스 변수에 쓸 값들</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetClient.Write(System.Int32,System.ValueTuple{VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceValue},System.ValueTuple{VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceValue}[])">
+            <summary>
+            개별 디바이스 변수 쓰기
+            </summary>
+            <param name="timeout">응답 제한시간(밀리초)</param>
+            <param name="valueTuple">디바이스 변수에 쓸 값</param>
+            <param name="moreValueTuples">추가 디바이스 변수에 쓸 값들</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetClient.Write(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceValue}})">
+            <summary>
+            개별 디바이스 변수 쓰기
+            </summary>
+            <param name="values">디바이스 변수에 쓸 값들</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetClient.Write(System.Int32,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceValue}})">
+            <summary>
+            개별 디바이스 변수 쓰기
+            </summary>
+            <param name="timeout">응답 제한시간(밀리초)</param>
+            <param name="values">디바이스 변수에 쓸 값들</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetClient.Write(VagabondK.Protocols.LSElectric.DeviceType,System.UInt32,System.Byte,System.Byte[])">
+            <summary>
+            연속 디바이스 변수 쓰기
+            </summary>
+            <param name="deviceType">읽기 요청 시작 디바이스</param>
+            <param name="index">읽기 요청 시작 디바이스 인덱스</param>
+            <param name="deviceValue">쓰기 요청할 디바이스 값</param>
+            <param name="moreDeviceValues">추가로 쓸 디바이스 값들</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetClient.Write(System.Int32,VagabondK.Protocols.LSElectric.DeviceType,System.UInt32,System.Byte,System.Byte[])">
+            <summary>
+            연속 디바이스 변수 쓰기
+            </summary>
+            <param name="timeout">응답 제한시간(밀리초)</param>
+            <param name="deviceType">읽기 요청 시작 디바이스</param>
+            <param name="index">읽기 요청 시작 디바이스 인덱스</param>
+            <param name="deviceValue">쓰기 요청할 디바이스 값</param>
+            <param name="moreDeviceValues">추가로 쓸 디바이스 값들</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetClient.Write(VagabondK.Protocols.LSElectric.DeviceType,System.UInt32,System.Collections.Generic.IEnumerable{System.Byte})">
+            <summary>
+            연속 디바이스 변수 쓰기
+            </summary>
+            <param name="deviceType">읽기 요청 시작 디바이스</param>
+            <param name="index">읽기 요청 시작 디바이스 인덱스</param>
+            <param name="deviceValues">쓰기 요청할 디바이스 값들</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetClient.Write(System.Int32,VagabondK.Protocols.LSElectric.DeviceType,System.UInt32,System.Collections.Generic.IEnumerable{System.Byte})">
+            <summary>
+            연속 디바이스 변수 쓰기
+            </summary>
+            <param name="timeout">응답 제한시간(밀리초)</param>
+            <param name="deviceType">읽기 요청 시작 디바이스</param>
+            <param name="index">읽기 요청 시작 디바이스 인덱스</param>
+            <param name="deviceValues">쓰기 요청할 디바이스 값들</param>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.FEnet.FEnetMessage">
+            <summary>
+            LS ELECTRIC(구 LS산전) FEnet 프로토콜 메시지
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetMessage.#ctor(VagabondK.Protocols.LSElectric.FEnet.FEnetCommand,VagabondK.Protocols.LSElectric.FEnet.FEnetDataType)">
+            <summary>
+            생성자
+            </summary>
+            <param name="command">커맨드</param>
+            <param name="dataType">커맨드 데이터 타입</param>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.FEnetMessage.InvokeID">
+            <summary>
+            요청과 응답 메시지간의 순서를 구별하기 위한 ID
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.FEnetMessage.SourceOfFrame">
+            <summary>
+            통신 메시지의 소스. 클라이언트(HMI): 0x33, 서버(PLC): 0x11
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.FEnetMessage.Command">
+            <summary>
+            커맨드
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.FEnetMessage.DataType">
+            <summary>
+            커맨드 데이터 타입
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetMessage.InvalidateFrameData">
+            <summary>
+            내부 프레임 데이터 무효화
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetMessage.SetProperty``1(``0@,``0)">
+            <summary>
+            속성 값 설정
+            </summary>
+            <typeparam name="TProperty">속성 형식</typeparam>
+            <param name="target">설정할 멤버 변수</param>
+            <param name="value">새로 설정하는 값</param>
+            <returns>설정 여부</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetMessage.OnCreateDataFrame">
+            <summary>
+            데이터 프레임 생성
+            </summary>
+            <returns>데이터의 직렬화 된 바이트 열거</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetMessage.Serialize(System.String,System.Boolean)">
+            <summary>
+            직렬화
+            </summary>
+            <param name="companyID">Company ID, 메시지의 헤더. LSIS-XGT나 LGIS-GLOFA를 사용함.</param>
+            <param name="useChecksum">Application Header에 체크섬 사용 여부</param>
+            <returns>직렬화 된 바이트 열거</returns>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.FEnet.FEnetNAKException">
+            <summary>
+            FEnet 요청 오류 예외
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetNAKException.#ctor(VagabondK.Protocols.LSElectric.FEnet.FEnetNAKCode)">
+            <summary>
+            생성자
+            </summary>
+            <param name="nakCode">NAK 에러 코드</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetNAKException.#ctor(VagabondK.Protocols.LSElectric.FEnet.FEnetNAKCode,System.UInt16)">
+            <summary>
+            생성자
+            </summary>
+            <param name="nakCode">NAK 에러 코드</param>
+            <param name="nakCodeValue">오류 코드 원본 값</param>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.FEnetNAKException.NAKCodeValue">
+            <summary>
+            오류 코드 원본 값
+            </summary>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.FEnet.FEnetRequest">
+            <summary>
+            LS ELECTRIC(구 LS산전) FEnet 프로토콜 요청 메시지
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetRequest.#ctor(VagabondK.Protocols.LSElectric.FEnet.FEnetCommand,VagabondK.Protocols.LSElectric.FEnet.FEnetDataType)">
+            <summary>
+            생성자
+            </summary>
+            <param name="command">커맨드</param>
+            <param name="dataType">커맨드 데이터 타입</param>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.FEnetRequest.SourceOfFrame">
+            <summary>
+            통신 메시지의 소스. 클라이언트(HMI): 0x33
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.FEnetRequest.BlockCount">
+            <summary>
+            블록 수
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.FEnetRequest.UseHexBitIndex">
+            <summary>
+            비트 변수의 인덱스를 16진수로 통신할지 여부를 결정합니다.
+            P, M, L, K, F 이면서 Bit일 경우 16진수로 전송합니다.
+            그 외에는 인덱스가 .으로 나누어져있고 Bit일 경우 마지막 자리만 16진수로 전송합니다.
+            이 속성을 null로 설정하면 FEnetClient의 UseHexBitIndex 값을 따릅니다.
+            XGB PLC에서 비트를 읽거나 쓸 때 엉뚱한 비트가 읽히거나 쓰인다면 true로 설정해서 테스트 해보시기 바랍니다.
+            '라이스'님의 제보로 추가한 옵션입니다. 감사합니다.
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetRequest.Clone">
+            <summary>
+            요청 메시지 복제
+            </summary>
+            <returns>복제된 요청 메시지</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetRequest.OnCreateDataFrame">
+            <summary>
+            데이터 프레임 생성
+            </summary>
+            <returns>데이터의 직렬화 된 바이트 열거</returns>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.FEnet.FEnetReadRequest">
+            <summary>
+            디바이스 읽기 요청
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetReadRequest.#ctor(VagabondK.Protocols.LSElectric.FEnet.FEnetDataType)">
+            <summary>
+            생성자
+            </summary>
+            <param name="dataType">커맨드 데이터 타입</param>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.FEnet.FEnetReadIndividualRequest">
+            <summary>
+            개별 디바이스 변수 읽기 요청
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetReadIndividualRequest.#ctor(VagabondK.Protocols.LSElectric.DataType)">
+            <summary>
+            생성자
+            </summary>
+            <param name="dataType">커맨드 데이터 타입</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetReadIndividualRequest.#ctor(VagabondK.Protocols.LSElectric.DataType,System.Collections.Generic.IEnumerable{VagabondK.Protocols.LSElectric.DeviceVariable})">
+            <summary>
+            생성자
+            </summary>
+            <param name="dataType">커맨드 데이터 타입</param>
+            <param name="deviceVariables">디바이스 변수 목록</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetReadIndividualRequest.#ctor(VagabondK.Protocols.LSElectric.DataType,VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceVariable[])">
+            <summary>
+            생성자
+            </summary>
+            <param name="dataType">커맨드 데이터 타입</param>
+            <param name="deviceVariable">디바이스 변수</param>
+            <param name="moreDeviceVariables">추가 디바이스 변수 목록</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetReadIndividualRequest.#ctor(VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceVariable[])">
+            <summary>
+            생성자
+            </summary>
+            <param name="deviceVariable">디바이스 변수</param>
+            <param name="moreDeviceVariables">추가 디바이스 변수 목록</param>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.FEnetReadIndividualRequest.BlockCount">
+            <summary>
+            블록 수
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetReadIndividualRequest.Clone">
+            <summary>
+            요청 메시지 복제
+            </summary>
+            <returns>복제된 요청 메시지</returns>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.FEnetReadIndividualRequest.Count">
+            <summary>
+            디바이스 변수 개수
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.FEnetReadIndividualRequest.IsReadOnly">
+            <summary>
+            디바이스 변수 컬렉션이 읽기 전용인지 여부를 나타내는 값을 가져옵니다.
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetReadIndividualRequest.Contains(VagabondK.Protocols.LSElectric.DeviceVariable)">
+            <summary>
+            디바이스 변수가 존재하는지 여부를 가져옵니다.
+            </summary>
+            <param name="deviceVariable">디바이스 변수</param>
+            <returns>디바이스 변수 존재 여부</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetReadIndividualRequest.IndexOf(VagabondK.Protocols.LSElectric.DeviceVariable)">
+            <summary>
+            디바이스 변수의 순서상 위치를 가져옵니다.
+            </summary>
+            <param name="deviceVariable">디바이스 변수</param>
+            <returns>디바이스 변수의 순서상 위치</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetReadIndividualRequest.GetEnumerator">
+            <summary>
+            디바이스 변수를 반복하는 열거자를 반환합니다.
+            </summary>
+            <returns>디바이스 변수를 반복하는 열거자</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetReadIndividualRequest.CopyTo(VagabondK.Protocols.LSElectric.DeviceVariable[],System.Int32)">
+            <summary>
+            대상 배열의 지정된 인덱스에서 시작하여 전체 디바이스 변수들을 복사합니다.
+            </summary>
+            <param name="array">디바이스 변수 배열</param>
+            <param name="arrayIndex">시작 인덱스</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetReadIndividualRequest.Clear">
+            <summary>
+            모든 디바이스 변수들을 제거합니다.
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.FEnetReadIndividualRequest.Item(System.Int32)">
+            <summary>
+            디바이스 변수를 지정된 인덱스에 지정하거나 제거합니다.
+            </summary>
+            <param name="index">인덱스</param>
+            <returns>디바이스 변수</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetReadIndividualRequest.Add(VagabondK.Protocols.LSElectric.DeviceVariable)">
+            <summary>
+            디바이스 변수를 추가합니다.
+            </summary>
+            <param name="deviceVariable">디바이스 변수</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetReadIndividualRequest.Insert(System.Int32,VagabondK.Protocols.LSElectric.DeviceVariable)">
+            <summary>
+            지정된 인덱스에 디바이스 변수를 삽입합니다.
+            </summary>
+            <param name="index">인덱스</param>
+            <param name="deviceVariable">디바이스 변수</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetReadIndividualRequest.Remove(VagabondK.Protocols.LSElectric.DeviceVariable)">
+            <summary>
+            맨 처음 발견되는 디바이스 변수를 제거합니다.
+            </summary>
+            <param name="deviceVariable">디바이스 변수</param>
+            <returns>제거 여부</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetReadIndividualRequest.RemoveAt(System.Int32)">
+            <summary>
+            지정된 인덱스에 있는 디바이스 변수를 제거합니다.
+            </summary>
+            <param name="index">인덱스</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetReadIndividualRequest.OnCreateDataFrame">
+            <summary>
+            데이터 프레임 생성
+            </summary>
+            <returns>데이터의 직렬화 된 바이트 열거</returns>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.FEnet.FEnetReadContinuousRequest">
+            <summary>
+            연속 디바이스 변수 읽기 요청
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetReadContinuousRequest.#ctor(VagabondK.Protocols.LSElectric.DeviceType,System.UInt32,System.Int32)">
+            <summary>
+            생성자
+            </summary>
+            <param name="deviceType">읽기 요청할 디바이스 영역</param>
+            <param name="index">읽기 요청 시작 디바이스 인덱스</param>
+            <param name="count">읽을 개수</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetReadContinuousRequest.#ctor(VagabondK.Protocols.LSElectric.DeviceVariable,System.Int32)">
+            <summary>
+            생성자
+            </summary>
+            <param name="deviceVariable">연속 읽기 요청 시작 디바이스 변수, Bit 형식일 경우 주소와 개수는 8의 배수여야만 함.</param>
+            <param name="count">읽을 개수</param>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.FEnetReadContinuousRequest.BlockCount">
+            <summary>
+            블록 수
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetReadContinuousRequest.Clone">
+            <summary>
+            요청 메시지 복제
+            </summary>
+            <returns>복제된 요청 메시지</returns>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.FEnetReadContinuousRequest.StartDeviceVariable">
+            <summary>
+            읽기 요청 시작 디바이스 변수
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.FEnetReadContinuousRequest.Count">
+            <summary>
+            읽을 개수
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetReadContinuousRequest.OnCreateDataFrame">
+            <summary>
+            데이터 프레임 생성
+            </summary>
+            <returns>데이터의 직렬화 된 바이트 열거</returns>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.FEnet.FEnetWriteRequest">
+            <summary>
+            디바이스 쓰기 요청
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetWriteRequest.#ctor(VagabondK.Protocols.LSElectric.FEnet.FEnetDataType)">
+            <summary>
+            생성자
+            </summary>
+            <param name="dataType">커맨드 데이터 타입</param>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.FEnet.FEnetWriteIndividualRequest">
+            <summary>
+            개별 디바이스 변수 쓰기 요청
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetWriteIndividualRequest.#ctor(VagabondK.Protocols.LSElectric.DataType)">
+            <summary>
+            생성자
+            </summary>
+            <param name="dataType">커맨드 데이터 타입</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetWriteIndividualRequest.#ctor(VagabondK.Protocols.LSElectric.DataType,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceValue}})">
+            <summary>
+            생성자
+            </summary>
+            <param name="dataType">커맨드 데이터 타입</param>
+            <param name="values">디바이스 변수에 쓸 값들</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetWriteIndividualRequest.#ctor(VagabondK.Protocols.LSElectric.DataType,System.ValueTuple{VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceValue},System.ValueTuple{VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceValue}[])">
+            <summary>
+            생성자
+            </summary>
+            <param name="dataType">커맨드 데이터 타입</param>
+            <param name="valueTuple">디바이스 변수에 쓸 값</param>
+            <param name="moreValueTuples">추가 디바이스 변수에 쓸 값들</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetWriteIndividualRequest.#ctor(System.ValueTuple{VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceValue},System.ValueTuple{VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceValue}[])">
+            <summary>
+            생성자
+            </summary>
+            <param name="valueTuple">디바이스 변수에 쓸 값</param>
+            <param name="moreValueTuples">추가 디바이스 변수에 쓸 값들</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetWriteIndividualRequest.#ctor(VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceValue)">
+            <summary>
+            생성자
+            </summary>
+            <param name="deviceVariable">디바이스 변수</param>
+            <param name="deviceValue">디바이스 변수에 쓸 값</param>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.FEnetWriteIndividualRequest.BlockCount">
+            <summary>
+            블록 수
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetWriteIndividualRequest.Clone">
+            <summary>
+            요청 메시지 복제
+            </summary>
+            <returns>복제된 요청 메시지</returns>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.FEnetWriteIndividualRequest.Keys">
+            <summary>
+            키로 사용되는 디바이스 변수들
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.FEnetWriteIndividualRequest.Values">
+            <summary>
+            쓰기 요청할 디바이스 변수 값들
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.FEnetWriteIndividualRequest.Count">
+            <summary>
+            쓰기 요청할 디바이스 값 개수
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.FEnetWriteIndividualRequest.IsReadOnly">
+            <summary>
+            디바이스 변수/디바이스 값 쌍 컬렉션이 읽기 전용인지 여부를 나타내는 값을 가져옵니다.
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetWriteIndividualRequest.Contains(System.Collections.Generic.KeyValuePair{VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceValue})">
+            <summary>
+            디바이스 변수/디바이스 값 쌍이 존재하는지 여부를 가져옵니다.
+            </summary>
+            <param name="item">디바이스 변수</param>
+            <returns>디바이스 변수 존재 여부</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetWriteIndividualRequest.ContainsKey(VagabondK.Protocols.LSElectric.DeviceVariable)">
+            <summary>
+            지정한 디바이스 변수가 포함하는지 여부를 가져옵니다.
+            </summary>
+            <param name="deviceVariable">디바이스 변수</param>
+            <returns>디바이스 변수 포함 여부</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetWriteIndividualRequest.CopyTo(System.Collections.Generic.KeyValuePair{VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceValue}[],System.Int32)">
+            <summary>
+            대상 배열의 지정된 인덱스에서 시작하여 전체 항목들을 복사합니다.
+            </summary>
+            <param name="array">디바이스 변수/디바이스 값 쌍 배열</param>
+            <param name="arrayIndex">시작 인덱스</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetWriteIndividualRequest.GetEnumerator">
+            <summary>
+            디바이스 변수/디바이스 값 쌍을 반복하는 열거자을 반환합니다.
+            </summary>
+            <returns>디바이스 변수/디바이스 값 쌍을 반복하는 열거자</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetWriteIndividualRequest.TryGetValue(VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceValue@)">
+            <summary>
+            지정한 디바이스 변수의 값을 가져옵니다.
+            </summary>
+            <param name="deviceVariable">디바이스 변수</param>
+            <param name="deviceValue">디바이스 값</param>
+            <returns>디바이스 변수 포함 여부</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetWriteIndividualRequest.Clear">
+            <summary>
+            모든 디바이스 변수 값들을 제거합니다.
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.FEnetWriteIndividualRequest.Item(VagabondK.Protocols.LSElectric.DeviceVariable)">
+            <summary>
+            지정한 디바이스 변수의 값을 가져오거나 설정합니다.
+            </summary>
+            <param name="deviceVariable">디바이스 변수</param>
+            <returns>디바이스 값</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetWriteIndividualRequest.Add(VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceValue)">
+            <summary>
+            디바이스 변수 값을 추가합니다.
+            </summary>
+            <param name="deviceVariable">디바이스 변수</param>
+            <param name="deviceValue">디바이스 값</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetWriteIndividualRequest.Add(System.Collections.Generic.KeyValuePair{VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceValue})">
+            <summary>
+            디바이스 변수 값을 추가합니다.
+            </summary>
+            <param name="item">디바이스 변수/디바이스 값 쌍</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetWriteIndividualRequest.Remove(VagabondK.Protocols.LSElectric.DeviceVariable)">
+            <summary>
+            디바이스 변수 및 값을 제거합니다.
+            </summary>
+            <param name="deviceVariable">디바이스 변수</param>
+            <returns>제거 여부</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetWriteIndividualRequest.Remove(System.Collections.Generic.KeyValuePair{VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceValue})">
+            <summary>
+            디바이스 변수/디바이스 값 쌍을 제거합니다.
+            </summary>
+            <param name="item">디바이스 변수/디바이스 값 쌍</param>
+            <returns>제거 여부</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetWriteIndividualRequest.OnCreateDataFrame">
+            <summary>
+            데이터 프레임 생성
+            </summary>
+            <returns>데이터의 직렬화 된 바이트 열거</returns>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.FEnet.FEnetWriteContinuousRequest">
+            <summary>
+            연속 디바이스 변수 쓰기 요청
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetWriteContinuousRequest.#ctor(VagabondK.Protocols.LSElectric.DeviceType,System.UInt32)">
+            <summary>
+            생성자
+            </summary>
+            <param name="deviceType">읽기 요청 시작 디바이스</param>
+            <param name="index">읽기 요청 시작 디바이스 인덱스</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetWriteContinuousRequest.#ctor(VagabondK.Protocols.LSElectric.DeviceType,System.UInt32,System.Collections.Generic.IEnumerable{System.Byte})">
+            <summary>
+            생성자
+            </summary>
+            <param name="deviceType">읽기 요청 시작 디바이스</param>
+            <param name="index">읽기 요청 시작 디바이스 인덱스</param>
+            <param name="deviceValues">쓰기 요청할 디바이스 값들</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetWriteContinuousRequest.#ctor(VagabondK.Protocols.LSElectric.DeviceType,System.UInt32,System.Byte,System.Byte[])">
+            <summary>
+            생성자
+            </summary>
+            <param name="deviceType">읽기 요청 시작 디바이스</param>
+            <param name="index">읽기 요청 시작 디바이스 인덱스</param>
+            <param name="value">쓰기 요청할 바이트 값</param>
+            <param name="moreValues">추가 쓰기 요청할 바이트 값들</param>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.FEnetWriteContinuousRequest.BlockCount">
+            <summary>
+            블록 수
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetWriteContinuousRequest.Clone">
+            <summary>
+            요청 메시지 복제
+            </summary>
+            <returns>복제된 요청 메시지</returns>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.FEnetWriteContinuousRequest.StartDeviceVariable">
+            <summary>
+            쓰기 요청 시작 디바이스 변수
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.FEnetWriteContinuousRequest.StartDeviceType">
+            <summary>
+            쓰기 요청할 디바이스 영역
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.FEnetWriteContinuousRequest.StartDeviceIndex">
+            <summary>
+            쓰기 요청 시작 디바이스 인덱스
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.FEnetWriteContinuousRequest.Count">
+            <summary>
+            쓰기 요청할 디바이스 값 개수
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.FEnetWriteContinuousRequest.IsReadOnly">
+            <summary>
+            디바이스 값 컬렉션이 읽기 전용인지 여부를 나타내는 값을 가져옵니다.
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetWriteContinuousRequest.Contains(System.Byte)">
+            <summary>
+            디바이스 값이 존재하는지 여부를 가져옵니다.
+            </summary>
+            <param name="deviceValue">디바이스 값</param>
+            <returns>디바이스 값 존재 여부</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetWriteContinuousRequest.IndexOf(System.Byte)">
+            <summary>
+            디바이스 값의 순서상 위치를 가져옵니다.
+            </summary>
+            <param name="deviceValue">디바이스 값</param>
+            <returns>디바이스 값의 순서상 위치</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetWriteContinuousRequest.GetEnumerator">
+            <summary>
+            디바이스 값을 반복하는 열거자를 반환합니다.
+            </summary>
+            <returns>디바이스 값을 반복하는 열거자</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetWriteContinuousRequest.CopyTo(System.Byte[],System.Int32)">
+            <summary>
+            대상 배열의 지정된 인덱스에서 시작하여 전체 디바이스 값들을 복사합니다.
+            </summary>
+            <param name="array">디바이스 값 배열</param>
+            <param name="arrayIndex">시작 인덱스</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetWriteContinuousRequest.Clear">
+            <summary>
+            모든 디바이스 값들을 제거합니다.
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.FEnetWriteContinuousRequest.Item(System.Int32)">
+            <summary>
+            디바이스 값을 지정된 인덱스에 지정하거나 제거합니다.
+            </summary>
+            <param name="index">인덱스</param>
+            <returns>디바이스 값</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetWriteContinuousRequest.Add(System.Byte)">
+            <summary>
+            디바이스 값을 추가합니다.
+            </summary>
+            <param name="deviceValue">디바이스 값</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetWriteContinuousRequest.Insert(System.Int32,System.Byte)">
+            <summary>
+            지정된 인덱스에 디바이스 값을 삽입합니다.
+            </summary>
+            <param name="index">인덱스</param>
+            <param name="deviceValue">디바이스 값</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetWriteContinuousRequest.Remove(System.Byte)">
+            <summary>
+            맨 처음 발견되는 디바이스 값을 제거합니다.
+            </summary>
+            <param name="deviceValue">디바이스 값</param>
+            <returns>제거 여부</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetWriteContinuousRequest.RemoveAt(System.Int32)">
+            <summary>
+            지정된 인덱스에 있는 디바이스 값을 제거합니다.
+            </summary>
+            <param name="index">인덱스</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetWriteContinuousRequest.OnCreateDataFrame">
+            <summary>
+            데이터 프레임 생성
+            </summary>
+            <returns>데이터의 직렬화 된 바이트 열거</returns>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.FEnet.FEnetResponse">
+            <summary>
+            LS ELECTRIC(구 LS산전) FEnet 프로토콜 응답 메시지
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.FEnetResponse.Request">
+            <summary>
+            LS ELECTRIC FEnet 프로토콜 요청 메시지
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.FEnetResponse.SourceOfFrame">
+            <summary>
+            통신 메시지의 소스. 서버(PLC): 0x11
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.FEnetResponse.PlcInfo">
+            <summary>
+            PLC의 CPU 타입 및 상태 정보. 요청 메시지에서는 의미가 없으며, 자세한 내용은 매뉴얼 참조 바람.
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.FEnetResponse.EthernetModuleSlot">
+            <summary>
+            이더넷 모듈의 슬롯(Slot) 번호. 요청 메시지에서는 의미가 없음.
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.FEnetResponse.EthernetModuleBase">
+            <summary>
+            이더넷 모듈의 베이스(Base) 번호. 요청 메시지에서는 의미가 없음.
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetResponse.OnCreateDataFrame">
+            <summary>
+            데이터 프레임 생성
+            </summary>
+            <returns>데이터의 직렬화 된 바이트 열거</returns>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.FEnet.FEnetACKResponse">
+            <summary>
+            정상 처리 응답 메시지
+            </summary>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.FEnet.FEnetReadIndividualResponse">
+            <summary>
+            개별 디바이스 변수 읽기 응답
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.FEnetReadIndividualResponse.Keys">
+            <summary>
+            키로 사용되는 디바이스 변수들
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.FEnetReadIndividualResponse.Values">
+            <summary>
+            읽은 디바이스 변수 값들
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.FEnetReadIndividualResponse.Count">
+            <summary>
+            디바이스 변수 및 값 개수
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.FEnetReadIndividualResponse.Item(VagabondK.Protocols.LSElectric.DeviceVariable)">
+            <summary>
+            지정한 디바이스 변수의 값을 가져옵니다.
+            </summary>
+            <param name="deviceVariable">디바이스 변수</param>
+            <returns>디바이스 값</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetReadIndividualResponse.ContainsKey(VagabondK.Protocols.LSElectric.DeviceVariable)">
+            <summary>
+            지정한 디바이스 변수가 포함하는지 여부를 가져옵니다.
+            </summary>
+            <param name="deviceVariable">디바이스 변수</param>
+            <returns>디바이스 변수 포함 여부</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetReadIndividualResponse.TryGetValue(VagabondK.Protocols.LSElectric.DeviceVariable,VagabondK.Protocols.LSElectric.DeviceValue@)">
+            <summary>
+            지정한 디바이스 변수의 값을 가져옵니다.
+            </summary>
+            <param name="deviceVariable">디바이스 변수</param>
+            <param name="deviceValue">디바이스 값</param>
+            <returns>디바이스 변수 포함 여부</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetReadIndividualResponse.GetEnumerator">
+            <summary>
+            디바이스 변수/디바이스 값 쌍을 반복하는 열거자을 반환합니다.
+            </summary>
+            <returns>디바이스 변수/디바이스 값 쌍을 반복하는 열거자</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetReadIndividualResponse.OnCreateDataFrame">
+            <summary>
+            데이터 프레임 생성
+            </summary>
+            <returns>데이터의 직렬화 된 바이트 열거</returns>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.FEnet.FEnetReadContinuousResponse">
+            <summary>
+            연속 디바이스 변수 읽기 응답
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.FEnetReadContinuousResponse.Count">
+            <summary>
+            바이트 값 개수
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.FEnetReadContinuousResponse.Item(System.Int32)">
+            <summary>
+            지정한 인덱스의 바이트 값을 가져옵니다.
+            </summary>
+            <param name="index">인덱스</param>
+            <returns>바이트 값</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetReadContinuousResponse.GetEnumerator">
+            <summary>
+            바이트 값을 반복하는 열거자을 반환합니다.
+            </summary>
+            <returns>바이트 값을 반복하는 열거자</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetReadContinuousResponse.OnCreateDataFrame">
+            <summary>
+            데이터 프레임 생성
+            </summary>
+            <returns>데이터의 직렬화 된 바이트 열거</returns>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.FEnetReadContinuousResponse.StartDeviceVariable">
+            <summary>
+            시작 디바이스 변수
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.FEnetReadContinuousResponse.DeviceValueCount">
+            <summary>
+            디바이스 값 개수
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.FEnetReadContinuousResponse.Item(VagabondK.Protocols.LSElectric.DataType,System.UInt32)">
+            <summary>
+            디바이스 값을 가져옵니다.
+            </summary>
+            <param name="dataType">데이터 형식</param>
+            <param name="index">데이터 인덱스(절대주소)</param>
+            <returns>디바이스 값</returns>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.FEnet.FEnetWriteResponse">
+            <summary>
+            디바이스 변수 쓰기 응답
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetWriteResponse.OnCreateDataFrame">
+            <summary>
+            데이터 프레임 생성
+            </summary>
+            <returns>데이터의 직렬화 된 바이트 열거</returns>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.FEnet.FEnetNAKResponse">
+            <summary>
+            오류 응답
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.FEnetNAKResponse.NAKCode">
+            <summary>
+            오류 코드
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.FEnetNAKResponse.NAKCodeValue">
+            <summary>
+            오류 코드 원본 값
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.FEnetNAKResponse.OnCreateDataFrame">
+            <summary>
+            데이터 프레임 생성
+            </summary>
+            <returns>데이터의 직렬화 된 바이트 열거</returns>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.FEnet.Simulation.FEnetSimulationService">
+            <summary>
+            LS ELECTRIC(구 LS산전) FEnet 프로토콜 시뮬레이터 서비스입니다.
+            FEnet 클라이언트를 테스트하는 용도로 사용 가능합니다.
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.Simulation.FEnetSimulationService.#ctor">
+            <summary>
+            생성자
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.Simulation.FEnetSimulationService.#ctor(VagabondK.Protocols.Channels.IChannel)">
+            <summary>
+            생성자
+            </summary>
+            <param name="channel">통신 채널</param>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.FEnet.Simulation.FEnetSimulationService.Dispose">
+            <summary>
+            리소스 해제
+            </summary>
+        </member>
+        <member name="E:VagabondK.Protocols.LSElectric.FEnet.Simulation.FEnetSimulationService.RequestedReadIndividual">
+            <summary>
+            개별 읽기 요청 이벤트
+            </summary>
+        </member>
+        <member name="E:VagabondK.Protocols.LSElectric.FEnet.Simulation.FEnetSimulationService.RequestedReadContinuous">
+            <summary>
+            연속 읽기 요청 이벤트
+            </summary>
+        </member>
+        <member name="E:VagabondK.Protocols.LSElectric.FEnet.Simulation.FEnetSimulationService.RequestedWriteIndividual">
+            <summary>
+            개별 쓰기 요청 이벤트
+            </summary>
+        </member>
+        <member name="E:VagabondK.Protocols.LSElectric.FEnet.Simulation.FEnetSimulationService.RequestedWriteContinuous">
+            <summary>
+            연속 쓰기 요청 이벤트
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.Simulation.FEnetSimulationService.Channel">
+            <summary>
+            통신 채널
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.Simulation.FEnetSimulationService.ChannelTimeout">
+            <summary>
+            채널 유지 제한시간(밀리세컨드 단위). 이 시간 동안 요청이 발생하지 않으면 채널을 닫습니다. 기본값은 10000(10초)이고, 0이면 채널을 항상 유지합니다.
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.Simulation.FEnetSimulationService.CompanyID">
+            <summary>
+            메시지 헤더의 CompanyID. 기본값은 LSIS-XGT. 단종된 모델에서는 LGIS-GLOFA를 사용할 수도 있음.
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.Simulation.FEnetSimulationService.UseChecksum">
+            <summary>
+            기본적으로 체크섬을 사용할 것인지 여부, 기본값은 true
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.Simulation.FEnetSimulationService.PlcInfo">
+            <summary>
+            PLC의 CPU 타입 및 상태 정보. 자세한 내용은 매뉴얼 참조 바람.
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.Simulation.FEnetSimulationService.EthernetModuleSlot">
+            <summary>
+            이더넷 모듈의 슬롯(Slot) 번호.
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.Simulation.FEnetSimulationService.EthernetModuleBase">
+            <summary>
+            이더넷 모듈의 베이스(Base) 번호.
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.Simulation.FEnetSimulationService.UseHexBitIndex">
+            <summary>
+            비트 변수의 인덱스를 16진수로 통신할지 여부를 결정합니다.
+            P, M, L, K, F 이면서 Bit일 경우 16진수로 인식합니다.
+            그 외에는 인덱스가 .으로 나누어져있고 Bit일 경우 마지막 자리만 16진수로 인식합니다.
+            </summary>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.FEnet.Simulation.FEnetRequestedEventArgs">
+            <summary>
+            FEnet 요청 발생 이벤트 매개변수
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.Simulation.FEnetRequestedEventArgs.Channel">
+            <summary>
+            통신 채널
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.Simulation.FEnetRequestedEventArgs.NAKCode">
+            <summary>
+            NAK 에러 코드
+            </summary>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.FEnet.Simulation.FEnetRequestedReadIndividualEventArgs">
+            <summary>
+            개별 읽기 요청 발생 이벤트 매개변수
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.Simulation.FEnetRequestedReadIndividualEventArgs.ResponseValues">
+            <summary>
+            응답할 값 목록
+            </summary>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.FEnet.Simulation.FEnetRequestedReadContinuousEventArgs">
+            <summary>
+            연속 읽기 요청 발생 이벤트 매개변수
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.Simulation.FEnetRequestedReadContinuousEventArgs.StartDeviceVariable">
+            <summary>
+            읽기 요청 시작 디바이스 변수
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.Simulation.FEnetRequestedReadContinuousEventArgs.Count">
+            <summary>
+            읽을 개수
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.Simulation.FEnetRequestedReadContinuousEventArgs.ResponseValues">
+            <summary>
+            응답할 값 목록
+            </summary>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.FEnet.Simulation.FEnetRequestedWriteIndividualEventArgs">
+            <summary>
+            개별 쓰기 요청 발생 이벤트 매개변수
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.Simulation.FEnetRequestedWriteIndividualEventArgs.Values">
+            <summary>
+            쓰기 위해 받은 값 목록
+            </summary>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.FEnet.Simulation.FEnetRequestedWriteContinuousEventArgs">
+            <summary>
+            연속 쓰기 요청 발생 이벤트 매개변수
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.Simulation.FEnetRequestedWriteContinuousEventArgs.StartDeviceVariable">
+            <summary>
+            쓰기 요청 시작 디바이스 변수
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.FEnet.Simulation.FEnetRequestedWriteContinuousEventArgs.Values">
+            <summary>
+            쓰기 위해 받은 값 목록
+            </summary>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.FEnet.Simulation.NamespaceDoc">
+            <summary>
+            LS ELECTRIC(구 LS산전) Cnet 프로토콜 시뮬레이션 관련 기능들을 제공합니다.
+            </summary>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.FEnet.NamespaceDoc">
+            <summary>
+            LS ELECTRIC(구 LS산전) FEnet 프로토콜 라이브러리에서 기본적으로 사용되는 프로그래밍 요소들이 포함되어 있습니다.
+            </summary>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.IContinuousAccessRequest">
+            <summary>
+            연속 디바이스 변수 액세스 요청 인터페이스
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.IContinuousAccessRequest.StartDeviceVariable">
+            <summary>
+            시작 디바이스 변수
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.IContinuousAccessRequest.Count">
+            <summary>
+            연속 액세스 개수
+            </summary>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.ContinuousRequestExtensions">
+            <summary>
+            연속 디바이스 변수 액세스 요청에 대한 확장 메서드 모음
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.ContinuousRequestExtensions.ToDeviceVariables(VagabondK.Protocols.LSElectric.IContinuousAccessRequest)">
+            <summary>
+            시작 디바이스 변수로부터 연속으로 읽을 변수들을 목록으로 변환
+            </summary>
+            <param name="request">연속 디바이스 변수 액세스 요청</param>
+            <returns>디바이스 변수 목록</returns>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.IDeviceDataBlock">
+            <summary>
+            LS ELECTRIC(구 LS산전) PLC의 연속 데이터 블록
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.IDeviceDataBlock.StartDeviceVariable">
+            <summary>
+            시작 디바이스 변수
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.IDeviceDataBlock.DeviceValueCount">
+            <summary>
+            디바이스 값 개수
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.LSElectric.IDeviceDataBlock.Item(VagabondK.Protocols.LSElectric.DataType,System.UInt32)">
+            <summary>
+            디바이스 값을 가져옵니다.
+            </summary>
+            <param name="dataType">데이터 형식</param>
+            <param name="index">데이터 인덱스(절대주소)</param>
+            <returns>디바이스 값</returns>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.IDeviceDataBlockExtensions">
+            <summary>
+            LS ELECTRIC(구 LS산전) PLC의 연속 데이터 블록과 관련한 확장 메서드
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.LSElectric.IDeviceDataBlockExtensions.Cast(VagabondK.Protocols.LSElectric.IDeviceDataBlock,VagabondK.Protocols.LSElectric.DataType)">
+            <summary>
+            LS ELECTRIC(구 LS산전) PLC의 연속 데이터 블록을 변환된 데이터 형식으로 열거함.
+            </summary>
+            <param name="deviceDataBlock">LS ELECTRIC(구 LS산전) PLC의 연속 데이터 블록</param>
+            <param name="dataType">데이터 형식</param>
+            <returns>변환된 데이터들</returns>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.NamespaceGroupDoc">
+            <summary>
+            LS ELECTRIC(구 LS산전) 제품 관련 기능을 모아놓은 라이브러리입니다.
+            </summary>
+        </member>
+        <member name="T:VagabondK.Protocols.LSElectric.NamespaceDoc">
+            <summary>
+            LS ELECTRIC(구 LS산전) 제품 관련 라이브러리에서 기본적으로 사용되는 프로그래밍 요소들이 포함되어 있습니다.
+            </summary>
+        </member>
+        <member name="T:VagabondK.Protocols.Logging.CnetNAKLog">
+            <summary>
+            LS ELECTRIC(구 LS산전) Cnet 프로토콜 오류 발생 Log
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Logging.CnetNAKLog.#ctor(VagabondK.Protocols.Channels.IChannel,VagabondK.Protocols.LSElectric.Cnet.CnetNAKResponse,System.Byte[],VagabondK.Protocols.Logging.CnetRequestLog)">
+            <summary>
+            생성자
+            </summary>
+            <param name="channel">통신 채널</param>
+            <param name="message">Cnet 오류 응답 메시지</param>
+            <param name="rawMessage">원본 메시지</param>
+            <param name="requestLog">관련 요청 메시지에 대한 Log</param>
+        </member>
+        <member name="P:VagabondK.Protocols.Logging.CnetNAKLog.NAKCode">
+            <summary>
+            Cnet Error 코드
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Logging.CnetNAKLog.ToString">
+            <summary>
+            이 인스턴스의 정규화된 형식 이름을 반환합니다.
+            </summary>
+            <returns>정규화된 형식 이름입니다.</returns>
+        </member>
+        <member name="T:VagabondK.Protocols.Logging.CnetRequestLog">
+            <summary>
+            LS ELECTRIC(구 LS산전) Cnet 프로토콜 요청 메시지 Log
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Logging.CnetRequestLog.#ctor(VagabondK.Protocols.Channels.IChannel,VagabondK.Protocols.LSElectric.Cnet.CnetRequest,System.Byte[])">
+            <summary>
+            생성자
+            </summary>
+            <param name="channel">통신 채널</param>
+            <param name="request">Cnet 요청 메시지</param>
+            <param name="rawMessage">원본 메시지</param>
+        </member>
+        <member name="P:VagabondK.Protocols.Logging.CnetRequestLog.CnetRequest">
+            <summary>
+            Cnet 요청 메시지
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Logging.CnetRequestLog.ToString">
+            <summary>
+            이 인스턴스의 정규화된 형식 이름을 반환합니다.
+            </summary>
+            <returns>정규화된 형식 이름입니다.</returns>
+        </member>
+        <member name="T:VagabondK.Protocols.Logging.CnetResponseLog">
+            <summary>
+            LS ELECTRIC(구 LS산전) Cnet 프로토콜 응답 메시지 Log
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Logging.CnetResponseLog.#ctor(VagabondK.Protocols.Channels.IChannel,VagabondK.Protocols.LSElectric.Cnet.CnetResponse,System.Byte[],VagabondK.Protocols.Logging.CnetRequestLog)">
+            <summary>
+            생성자
+            </summary>
+            <param name="channel">통신 채널</param>
+            <param name="response">Cnet 응답 메시지</param>
+            <param name="rawMessage">원본 메시지</param>
+            <param name="requestLog">관련 요청 메시지에 대한 Log</param>
+        </member>
+        <member name="P:VagabondK.Protocols.Logging.CnetResponseLog.CnetResponse">
+            <summary>
+            Cnet 응답 메시지
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Logging.CnetResponseLog.ToString">
+            <summary>
+            이 인스턴스의 정규화된 형식 이름을 반환합니다.
+            </summary>
+            <returns>정규화된 형식 이름입니다.</returns>
+        </member>
+        <member name="T:VagabondK.Protocols.Logging.FEnetNAKLog">
+            <summary>
+            LS ELECTRIC(구 LS산전) FEnet 프로토콜 오류 발생 Log
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Logging.FEnetNAKLog.#ctor(VagabondK.Protocols.Channels.IChannel,VagabondK.Protocols.LSElectric.FEnet.FEnetNAKResponse,System.Byte[],VagabondK.Protocols.Logging.FEnetRequestLog)">
+            <summary>
+            생성자
+            </summary>
+            <param name="channel">통신 채널</param>
+            <param name="message">FEnet 오류 응답 메시지</param>
+            <param name="rawMessage">원본 메시지</param>
+            <param name="requestLog">관련 요청 메시지에 대한 Log</param>
+        </member>
+        <member name="P:VagabondK.Protocols.Logging.FEnetNAKLog.NAKCode">
+            <summary>
+            FEnet Error 코드
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Logging.FEnetNAKLog.ToString">
+            <summary>
+            이 인스턴스의 정규화된 형식 이름을 반환합니다.
+            </summary>
+            <returns>정규화된 형식 이름입니다.</returns>
+        </member>
+        <member name="T:VagabondK.Protocols.Logging.FEnetRequestLog">
+            <summary>
+            LS ELECTRIC(구 LS산전) FEnet 프로토콜 요청 메시지 Log
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Logging.FEnetRequestLog.#ctor(VagabondK.Protocols.Channels.IChannel,VagabondK.Protocols.LSElectric.FEnet.FEnetRequest,System.Byte[])">
+            <summary>
+            생성자
+            </summary>
+            <param name="channel">통신 채널</param>
+            <param name="request">FEnet 요청 메시지</param>
+            <param name="rawMessage">원본 메시지</param>
+        </member>
+        <member name="P:VagabondK.Protocols.Logging.FEnetRequestLog.FEnetRequest">
+            <summary>
+            FEnet 요청 메시지
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Logging.FEnetRequestLog.ToString">
+            <summary>
+            이 인스턴스의 정규화된 형식 이름을 반환합니다.
+            </summary>
+            <returns>정규화된 형식 이름입니다.</returns>
+        </member>
+        <member name="T:VagabondK.Protocols.Logging.FEnetResponseLog">
+            <summary>
+            LS ELECTRIC(구 LS산전) FEnet 프로토콜 응답 메시지 Log
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Logging.FEnetResponseLog.#ctor(VagabondK.Protocols.Channels.IChannel,VagabondK.Protocols.LSElectric.FEnet.FEnetResponse,System.Byte[],VagabondK.Protocols.Logging.FEnetRequestLog)">
+            <summary>
+            생성자
+            </summary>
+            <param name="channel">통신 채널</param>
+            <param name="response">FEnet 응답 메시지</param>
+            <param name="rawMessage">원본 메시지</param>
+            <param name="requestLog">관련 요청 메시지에 대한 Log</param>
+        </member>
+        <member name="P:VagabondK.Protocols.Logging.FEnetResponseLog.FEnetResponse">
+            <summary>
+            FEnet 응답 메시지
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Logging.FEnetResponseLog.ToString">
+            <summary>
+            이 인스턴스의 정규화된 형식 이름을 반환합니다.
+            </summary>
+            <returns>정규화된 형식 이름입니다.</returns>
+        </member>
+        <member name="T:VagabondK.Protocols.Logging.NamespaceDoc">
+            <summary>
+            여러 프로토콜들의 통신 채널 로깅 관련 기능들을 제공합니다.
+            </summary>
+        </member>
+    </members>
+</doc>

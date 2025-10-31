@@ -1,0 +1,12 @@
+﻿
+newmtl Material-0
+Kd 0.7 0.7 0.7 
+Ka 0.01 0.01 0.01 
+Ks 0.01 0.01 0.01 
+d 1
+
+newmtl DefaultMaterial~1
+Kd 0.9 0.9 0.9 
+Ka 0.6 0.6 0.6 
+Ks 0.25 0.25 0.25 
+d 1
