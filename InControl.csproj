@@ -1,0 +1,1532 @@
+﻿<Project ToolsVersion="Current">
+  <!-- Generated file, do not modify, your changes will be overwritten (use AssetPostprocessor.OnGeneratedCSProject) -->
+  <PropertyGroup>
+    <BaseIntermediateOutputPath>Temp\obj\$(Configuration)\$(MSBuildProjectName)</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)</IntermediateOutputPath>
+  </PropertyGroup>
+  <Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk" />
+  <ItemGroup>
+    <ProjectCapability Include="Unity" />
+  </ItemGroup>
+  <PropertyGroup>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <LangVersion>9.0</LangVersion>
+    <Configurations>Debug;Release</Configurations>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <RootNamespace></RootNamespace>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <AssemblyName>InControl</AssemblyName>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <BaseDirectory>.</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\bin\Debug\</OutputPath>
+    <DefineConstants>UNITY_2021_3_30;UNITY_2021_3;UNITY_2021;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_RUNTIME_PERMISSIONS;ENABLE_ENGINE_CODE_STRIPPING;ENABLE_ONSCREEN_KEYBOARD;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;ENABLE_VIDEO;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;PLATFORM_ANDROID;TEXTCORE_1_0_OR_NEWER;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;UNITY_CAN_SHOW_SPLASH_SCREEN;UNITY_HAS_GOOGLEVR;UNITY_HAS_TANGO;ENABLE_SPATIALTRACKING;ENABLE_ETC_COMPRESSION;PLATFORM_EXTENDS_VULKAN_DEVICE;PLATFORM_HAS_MULTIPLE_SWAPCHAINS;UNITY_ANDROID_SUPPORTS_SHADOWFILES;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;NET_4_6;NET_UNITY_4_8;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_INPUT_SYSTEM;ENABLE_LEGACY_INPUT_MANAGER;TEXTCORE_FONT_ENGINE_1_5_OR_NEWER;INCONTROL_USE_NEW_UNITY_INPUT;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169;USG0001</NoWarn>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Temp\bin\Release\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169;USG0001</NoWarn>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoStandardLibraries>true</NoStandardLibraries>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
+    <MSBuildWarningsAsMessages>MSB3277</MSBuildWarningsAsMessages>
+  </PropertyGroup>
+  <PropertyGroup>
+    <UnityProjectGenerator>Package</UnityProjectGenerator>
+    <UnityProjectGeneratorVersion>2.0.22</UnityProjectGeneratorVersion>
+    <UnityProjectGeneratorStyle>SDK</UnityProjectGeneratorStyle>
+    <UnityProjectType>Game:1</UnityProjectType>
+    <UnityBuildTarget>Android:13</UnityBuildTarget>
+    <UnityVersion>2021.3.30f1</UnityVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Plugins\InControl\Source\Binding\PlayerActionSet.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\HoriXbox360GemPadExMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Windows\LogitechF710ModeXWindowsUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Mac\MogaProMacUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Android\GameSirG3wAndroidUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Android\RedSamuraiAndroidUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\HarmonixKeyboardMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Touch\TouchManager.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Other\AppleMFiUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\MadCatzSSF4FightStickTEMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Windows\GameCubeMayflashWindowsNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\MadCatzSF4FightStickSEMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Touch\Touch.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Windows\PCTWINSHOCKWindowsNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\MicrosoftXbox360ControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Control\DeadZone.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Utility\OptionalTypes\OptionalUInt16.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\RazerWildcatControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Control\InputControl.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\SDL\SDLLogitechF310ModeXNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Binding\Key.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Mac\LogitechF510ModeXMacUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Windows\EightBitdoNES30ProWindowsNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Windows\LogitechWingManWindowsUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\HyperkinX91MacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\MatCatzControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Windows\LogitechF510ModeDWindowsNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Windows\SteamWindowsNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Windows\XTR55_G2_WindowsUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\Xbox360ProEXControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Android\GameSirG4sAndroidUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Other\GameStickUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Binding\Mouse.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Windows\SteelSeriesStratusXLWindowsUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\AtPlayControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\MayflashMagicNSMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\HoriControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\UnityInputDeviceManager.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Binding\KeyBindingSourceListener.cs" />
+    <Compile Include="Assets\Plugins\InControl\Test\TestInputManager.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\WebGL\Mac\XboxOneMacFirefoxUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\iCade\ICadeDeviceManager.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\SDL\SDLXboxOneNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\MFi\AppleMFiExtendedGamepadNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\PDPTitanfall2XboxOneControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Touch\TouchType.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Utility\RingBuffer.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Control\InputRange.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Amazon\AmazonFireTVUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\PDPXboxOneControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\HORIFightingCommanderControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Windows\GoogleStadiaWindowsNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Android\BTC938AndroidUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\BrookPS2ConverterMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\MadCatzMicroConControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Android\MadCatzCTRLRAndroidUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Windows\XTR_G2_WindowsNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Device\InputDeviceInfo.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Android\FlarePlayAndroidUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Amazon\Xbox360AmazonUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Windows\BuffaloClassicWindowsNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\XInput\XInputDotNetPure\GamePad.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\PDPVersusControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\PDPBattlefieldXBoxOneControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Windows\Xbox360WirelessWindowsNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\SDL\SDLPlayStation3NativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\GUI\InControlInputModule.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Mac\AirFloWiredPS3MacUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Binding\MouseBindingSource.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Control\TwoAxisInputControl.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Mac\EightBitdoNES30ProMacUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Android\PlayStation4AndroidXperiaZ5UnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\HoriFightStickMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Windows\XboxOneEliteWindows10AENativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\MadCatzInnoControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Mac\LogitechF310ModeDMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Windows\MaxFireBlaze5WindowsUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Mac\PlayStation3MacUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Windows\NVidiaShieldWindows10UnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Binding\UnknownDeviceBindingSource.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Windows\NVidiaShieldWindowsNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\McbazelAdapterMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Binding\KeyInfo.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Android\FixXBG301AndroidUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\WebGL\Windows\PlayStation4WindowsChromeUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Linux\SteelSeriesFreeLinuxUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\HoriFightingStickMiniMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Windows\EightBitdoSFC30WindowsUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\ProEXXbox360ControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\MVCTEStickMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\PDPTronControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\HoriRealArcadeProEXPremiumVLXMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\MFi\SwitchProControllerMFiNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\HoriRealArcadeProVXMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\HoriEdgeFightingStickMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Binding\BindingSourceListener.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Windows\SteelSeriesFreeWindowsUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Plugins\InControlPluginsPath.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Windows\SpeedlinkStrikeWindowsUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Mac\PlayStation5USBMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Touch\TouchInputDevice.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Mac\XboxSeriesXBluetoothMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\BigBenControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Windows\PlayStation2WindowsUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\RazerOnzaTEControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\PowerASpectraIlluminatedControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\ArdwiinoControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Debug\Logger.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Linux\GenericLinuxUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Device\InputDeviceProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\iCade\ICadeDevice.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\HoriRealArcadeProHayabusaMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\MadCatzPortableDrumMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Compatibility\InspectorNameAttribute.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\MadCatzMicroControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Windows\NatecGenesisP44WindowsUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Touch\TouchUnitType.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\SDL\SDLXbox360NativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Android\PxnP30AndroidUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\MicrosoftXboxOneEliteControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Mac\LogitechF310ModeDMacUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\PDPAfterglowPrismaticControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Android\IpegaPG9025AndroidUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\UnityInputDeviceProfileAttribute.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Android\IpegaPG9023AndroidUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Android\EightBitdoSFC30AndroidUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Android\MogaXP5XPlusAndroidUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Utility\OptionalTypes\OptionalInputDeviceDriverType.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\UnityNew\NewUnityInputDevice.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Windows\GameCubeWindowsNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Mac\LogitechF710ModeDMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Android\PlayStation3AndroidUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Mac\PlayStation5BluetoothMacUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\FusionXboxOneControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Mac\EightBitdoNES30ProBTMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\ElecomControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Windows\XboxOneWindows10NativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Mac\BuffaloClassicMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Windows\PlayStation4WindowsNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\SDL\SDLNintendoSwitchNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\WebGL\Mac\PlayStation4MacFirefoxUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Mac\PlayStation4MacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Windows\KiwitataNESWindowsNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Android\FlareAndroidUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Windows\LogitechF310ModeDWindowsNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Binding\PlayerTwoAxisAction.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Windows\GameCubeMayflashWindowsUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\GuitarHeroControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\PowerAMiniProExControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Utility\OptionalTypes\OptionalFloat.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Windows\XboxOneWirelessAdapterWindowsNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\MFi\DualSenseMFiNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\KonamiDancePadMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Android\AndroidTVMiBoxRemoteUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Binding\UnknownDeviceBindingSourceListener.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Mac\EightBitdoSNES30MacUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\HoriRealArcadeProVKaiFightingStickMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Windows\PlayStation5USBWindowsNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\LogitechChillStreamControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Control\InputControlSource.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\LogitechF310ControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\Native.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\ThrustmasterGPXControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\WebGL\Mac\PlayStation4MacChromeUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Mac\EightBitdoSNES30MacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Android\NvidiaShieldRemoteAndroidUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Android\IpegaPG9068AndroidUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Utility\OptionalTypes\OptionalInputDeviceTransportType.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\MadCatzFPSProMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\EASportsControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Linux\GameStickLinuxUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\NativeInputDeviceManager.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Device\InputDeviceClass.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\MLGControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Mac\LogitechF510ModeDMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Mac\BuffaloClassicMacUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Android\PlayStation4AndroidUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Android\XboxOneBluetoothAndroidUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Windows\EightBitdoSNES30WindowsUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Linux\Xbox360LinuxUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\MicrosoftXboxControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\LogitechControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Android\NintendoSwitchProAndroidUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\RazerStrikeControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\BatarangControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Amazon\AmazonFireTVRemoteUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Binding\PlayerAction.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Device\InputDeviceProfileType.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Binding\BindingListenOptions.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Mac\EightBitdoNES30ProUSBMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Utility\IUpdateable.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Mouse\IMouseProvider.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Windows\PlayStation5BluetoothWindowsNativeProfile .cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Android\BetopBTPGenericAndroidUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\BETAOPControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\RockBandDrumsMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Compatibility\SpaceAttribute.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\BrookNeoGeoConverterMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Amazon\PlayStation4AmazonUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Windows\XboxOneWindows10AENativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Windows\XTR_G2_WindowsUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Mac\Xbox360MacUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\SaitekXbox360ControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\MadCatzSoulCaliberFightStickMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Utility\PreserveAttribute.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Windows\XboxOneEliteWindowsNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Windows\OUYAWindowsNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Android\EightBitdoSN30ProAndroidUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Amazon\OuyaAmazonUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\LogitechDriveFXRacingWheelMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\PDPMetallicsLEControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Linux\HavitHVG95WLinuxProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\MicrosoftAdaptiveControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Mac\XboxWirelessMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Amazon\LogitechModeDAmazonUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\XInput\XInputDeviceManager.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\MadCatzFightPadControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\HoriRealArcadeProEXSEMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\WebGL\Mac\Xbox360MacChromeUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Windows\PlayStation4WindowsUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Windows\GameCubeWindowsUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\WebGL\Mac\Xbox360MacFirefoxUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Other\PlayStation4UnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Windows\LogitechF310ModeXWindowsNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\ThrustmasterTMXMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\XInput\XInputDevice.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\MadCatzNeoFightStickMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Utility\CodeWriter.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Android\NexusPlayerAndroidUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\ThrustMasterFerrari458SpiderRacingWheelMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\LogitechThunderpadMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Mac\PlayStation5BluetoothMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Components\InControlManager.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Windows\LevelUpBlackHawkWindowsUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\ThrustMasterFerrari430RacingWheelMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Android\DroidBoxPS3AndroidUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Mac\GoogleStadiaMacUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Mac\SteelSeriesFreeMacUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\HoriRealArcadeProEXMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Mac\XTR_G2_MacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Touch\Controls\TouchStickControl.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\HoriFightingStickEX2MacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Utility\MarshalUtility.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\iCade\ICadeState.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\NaconGC100XFControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Windows\LogitechF710ModeDWindowsNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\MadCatzSF4FightStickTEMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\RedOctaneGuitarMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Windows\BetopBTP2175sWindowsUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\GameStopControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Windows\XboxSeriesXWindowsNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Mac\ExecutionerXMacUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\Xbox360MortalKombatFightStickMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Linux\PlayStation4LinuxUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Android\SteelSeriesFreeAndroidUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\POWERAFUS1ONTournamentControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Binding\BindingSourceRejectionType.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Touch\TouchControl.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Mac\GoogleStadiaMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\IonDrumRockerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Touch\Controls\TouchSwipeControl.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\VersionInfo.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Touch\TouchUtility.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Linux\PlayStation3LinuxUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\MadCatzSF4FightStickRound2TEMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Mac\PowerANintendoSwitchMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Windows\XTR55_G2_WindowsNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\RazerOnzaControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Mac\LogitechF510ModeDMacUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\RazerAtroxArcadeStickMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Android\PlayStation5AndroidUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Windows\HamaBlackForceWindowsUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Utility\Utility.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Other\GameCoreUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Android\NexusPlayerRemoteAndroidUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\WebGL\Windows\NintendoSwitchProWindowsChromeUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\RockCandyXbox360ControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\HoriDOA4ArcadeStickMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Linux\MogaProLinuxUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\ThrustmasterFerrari458RacingWheelMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Binding\KeyCombo.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Android\DroidBoxXboxAndroidUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Touch\TouchSprite.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\DragonRiseArcadeStickMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\PowerAMiniControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Android\EightBitdoSNES30AndroidUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Windows\LogitechF510ModeDWindowsUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\LogitechG920RacingWheelMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Windows\LogitechF510ModeXWindowsNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\MadCatzFightStickTESPlusMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Mac\PlayStation4MacUSBUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\UnityInputDeviceProfileList.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\SDL\SDLLogitechF510ModeXNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Other\PlayStationVitaPSMUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Binding\KeyBindingSource.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Windows\LogitechF310ModeXWindowsUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Amazon\AndroidTVAmazonUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Mac\XboxOneSBluetoothMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Control\InputControlState.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Android\MogaProPowerAndroidUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\ProEXXboxOneControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\TSZPelicanControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Utility\OptionalTypes\OptionalInt32.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\MadCatzBrawlStickMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\HoriEX2ControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Windows\XiaomiWinProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Mac\XTR_G2_MacUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Utility\OptionalTypes\OptionalInt16.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Utility\ThreadSafeQueue.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Mac\SteelseriesNimbusPlusMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Mac\XboxWirelessMacUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\SDL\SDLControllerNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Binding\BindingSource.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Windows\PlayStation3WindowsUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Utility\SingletonMonoBehavior.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\NativeInputDeviceProfileAttribute.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\ThrustmasterTXGIPMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Windows\PlayStation3BWindowsUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Windows\NVidiaShieldWindowsUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Android\NVidiaShield2017NVidiaShieldUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Other\PlayStation5UnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Android\NVidiaShield2016AndroidUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Windows\LogitechF710ModeDWindowsUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Android\IpegaPG9037AndroidUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Mac\XTR55_G2_MacUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Android\SteelSeriesStratusXLAndroidUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Android\BetopBTPAX1TAndroidUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Mac\Xbox360DriverMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\MKKlassikFightStickMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Utility\OptionalTypes\OptionalUInt32.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\MadCatzProControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Windows\EightBitdoSFC30WindowsNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Android\EightBitdoFC30ProAndroidUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Windows\EightBitdoSNES30WindowsNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\PDPAfterglowControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Windows\XboxOneWindowsUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Device\InputDeviceStyle.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\HoriPadUltimateMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Amazon\MadCatzCTRLRAmazonUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\AppleTV\AppleTVRemoteUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Windows\LogitechF310ModeDWindowsUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Mac\NexusPlayerMacUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Utility\Reflector.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\HoriFightingEdgeArcadeStickMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\AirFloControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Windows\RazerServalWindowsNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\SDL\SDLLogitechF710ModeXNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\MFi\XboxSeriesXMFiNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\MicrosoftXboxOneControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Android\EightBitdoGenericAndroidUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Android\IpegaPG9055AndroidUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\HarmonixGuitarMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Amazon\NykoPlayPadProAmazonUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Windows\Xbox360WiredWindowsNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Windows\AfterglowXbox360WindowsNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Windows\BuffaloClassicWindowsUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Mac\XboxOneMacUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\PDPXboxOneArcadeStickMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\HoneyBeeControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Control\InputRangeType.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Android\EasySmxEsm9101AndroidUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Mac\XTR55_G2_MacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Touch\TouchControlAnchor.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\MadCatzFightPadMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Mac\LogitechF310ModeXMacUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\HoriRealArcadeProVHayabusaMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\iCade\ICadeNative.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Device\InputDeviceDriverType.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Touch\TouchPool.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\MadCatzMLGFightStickTEMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Android\IpegaPG9021AndroidUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Mac\SpeedlinkStrikeMacUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Windows\NintendoSwitchProWindowsNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Android\GameSirG3sAndroidUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Compatibility\HeaderAttribute.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\OuyaEverywhere\OuyaEverywhereDevice.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Amazon\LogitechModeXAmazonUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\MadCatzControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Mac\LogitechF710MacUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\SDL\SDLGenericNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Windows\SaitekAviatorWindowsUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Mac\XboxOneDriverMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Linux\PlayStation2LinuxUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Android\NVidiaShield2017AndroidUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\WebGL\Windows\PlayStation4WindowsFirefoxUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Binding\DeviceBindingSourceListener.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Windows\NVidiaShieldWindows81UnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Windows\LogitechF710ModeXWindowsNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\MadCatzFightStickTE2MacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Mac\PlayStation4SteamLinkMacUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Mouse\UnityMouseProvider.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Android\AndroidTVRemoteUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Windows\NexusPlayerWindowsUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Other\GenericBlackBerryUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\RazerSabertoothEliteControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Amazon\BuffaloClassicAmazonUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Control\IInputControl.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\WebGL\Mac\NintendoSwitchProMacChromeUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\HoriFightingCommanderMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Windows\NintendoSwitchProWindowsUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\WebGL\Windows\XInputWindowsChromeUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Mac\EightBitdoSFC30MacUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Amazon\MadCatzMicroCTRLRAmazonUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Android\EightBitdoNES30ProAndroidUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Windows\PlayStation3ShenghicWindowsUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\LogitechF510ControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\PDPXbox360ControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\UnityNew\NewUnityInputDeviceManager.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Android\EightBitdoSF30ProAndroidUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\MFi\AppleMFiMicroGamepadNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\RockCandyPS3ControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Device\InputDeviceManager.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Windows\EightBitdoNES30ProWindowsUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Binding\BindingSourceType.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Device\InputDeviceStyleExtensions.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Control\InputControlMapping.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Control\OneAxisInputControl.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Android\Xbox360RockCandyAndroidUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Keyboard\IKeyboardProvider.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\PowerAMiniXboxOneControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\HoriBlueSoloControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Android\SamsungGP20AndroidUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Windows\AirFloPS3WindowsNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\RockCandyControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\WebGL\Mac\XboxOneMacChromeUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Touch\Controls\TouchButtonControl.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\MadCatzCODControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\MadCatzSaitekAV8R02MacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\RockCandyXboxOneControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\HoriRealArcadeProIVMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\MadCatzMC2ControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\HoriRAPNFightingStickMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Android\AndroidTVUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Windows\GoogleStadiaWindowsUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\SDL\SDLPlayStation5NativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\NativeInputDeviceProfileList.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\MadCatzSSF4ChunLiFightStickTEMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Mac\RazerServalMacUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\MFi\XboxOneMFiNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Binding\PlayerOneAxisAction.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\HoriPadEXTurboControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\OuyaEverywhere\OuyaEverywhereDeviceManager.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\MFi\DualShock4MFiNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\AppleTV\AppleTVWirelessControllerUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\NativeInputDevice.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Mac\XiaomiMacUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Mac\PlayStation4MacBluetoothUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Windows\XboxOneWindows10UnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Keyboard\UnityKeyboardProvider.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\RockBandGuitarMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\HoriRealArcadeProVXSAMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Mac\XboxOneSMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Android\IpegaPG9129AndroidUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\LogitechF710ControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Windows\MogaProWindowsUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Windows\XboxOneWindowsNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Device\InputDeviceMatcher.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\PowerAAirflowControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\MadCatzArcadeStickMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\MadCatzMC2RacingWheelMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Touch\Controls\TouchTrackControl.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\WebGL\Windows\XInputWindowsFirefoxUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Android\GenericAndroidUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\HarmonixDrumKitMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Android\RazerKishiAndroidUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Mac\SteelseriesNimbusMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Android\BeboncoolDA015CAAndroidUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Linux\LogitechF310LinuxUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\InjusticeFightStickMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\NativeVersionInfo.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Other\GoogleStadiaUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Windows\AirFloWiredPS3WindowsUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\TrustPredatorJoystickMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Binding\UnknownDeviceControl.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Mac\PlayStation3MacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Windows\ValveStreamingWindowsUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\PDPMarvelControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\RedOctaneControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Android\EightBitdoN30Pro2AndroidUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\UnityInputDevice.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Windows\OuyaWindowsUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\JoytekXbox360ControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\MadCatzBeatPadMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\NativeInputOptions.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\InputManager.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\HoriFightingStickVXMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Android\MogaProAndroidUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Control\InputControlType.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Linux\LogitechF510LinuxUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Windows\LogitechF510ModeXWindowsUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Binding\MouseBindingSourceListener.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\SDL\SDLXboxSeriesXNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\WebGL\Mac\XboxOneMacSafariUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Android\GreenThrottleAtlasAndroidUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Android\MogaHeroPowerAndroidUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Mac\NintendoSwitchProMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\UWP\UWPDevice.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Windows\XInputWindowsNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Compatibility\RangeAttribute.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\QanbaFightStickPlusMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Windows\EightBitdoSF30ProWindowsNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Windows\EightBitdoSN30ProWindowsNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Device\InputDeviceTransportType.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Windows\Xbox360WindowsUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\RazerWolverineUltimateControllerMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Generated\MadCatzGhostReconFightingStickMacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Mac\EightBitdoSFC30MacNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Other\XboxOneUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\Windows\PlayStationAnalogJoystickWindowsNativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Windows\ExecutionerXWindowsUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Native\DeviceProfiles\SDL\SDLPlayStation4NativeProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\UWP\UWPDeviceManager.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Android\Xbox360AndroidUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Debug\InControlException.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Binding\DeviceBindingSource.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Linux\LogitechF710LinuxUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\WebGL\Mac\Xbox360MacSafariUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Linux\OuyaLinuxUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Device\InputDevice.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Windows\XboxOneWindows10AEUnityProfile.cs" />
+    <Compile Include="Assets\Plugins\InControl\Source\Unity\DeviceProfiles\Other\RazerServalForgeTVUnityProfile.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Plugins\InControl\Plugins\x86_64\XInputInterface64.dll" />
+    <None Include="Assets\Plugins\InControl\Readme\README.txt" />
+    <None Include="Assets\Plugins\InControl\Plugins\x86\InControlNative.dll" />
+    <None Include="Assets\Plugins\InControl\InControl.asmdef" />
+    <None Include="Assets\Plugins\InControl\Plugins\x86_64\InControlNative.dll" />
+    <None Include="Assets\Plugins\InControl\Readme\CHANGELOG.txt" />
+    <None Include="Assets\Plugins\InControl\Plugins\x86\XInputInterface32.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="UnityEngine">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AIModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.AIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ARModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.ARModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AccessibilityModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.AccessibilityModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AndroidJNIModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.AndroidJNIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.AnimationModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.AssetBundleModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.AudioModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ClothModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.ClothModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CrashReportingModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.CrashReportingModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.DSPGraphModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.DSPGraphModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.DirectorModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.DirectorModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.GIModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.GIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.GameCenterModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.GameCenterModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.GridModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.GridModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.HotReloadModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.HotReloadModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.ImageConversionModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.InputModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.InputModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.InputLegacyModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.JSONSerializeModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.JSONSerializeModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.LocalizationModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.LocalizationModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.ParticleSystemModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.PerformanceReportingModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.PerformanceReportingModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.PhysicsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.Physics2DModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.Physics2DModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ProfilerModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.ProfilerModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ScreenCaptureModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.ScreenCaptureModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.SharedInternalsModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.SharedInternalsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteMaskModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.SpriteMaskModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteShapeModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.SpriteShapeModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.StreamingModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.StreamingModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.SubstanceModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.SubstanceModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.SubsystemsModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.SubsystemsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TLSModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.TLSModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.TerrainModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainPhysicsModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.TerrainPhysicsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextCoreFontEngineModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.TextCoreFontEngineModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextCoreTextEngineModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.TextCoreTextEngineModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.TextRenderingModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TilemapModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.TilemapModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.UIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.UIElementsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsNativeModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.UIElementsNativeModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UNETModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.UNETModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UmbraModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.UmbraModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityAnalyticsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsCommonModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityAnalyticsCommonModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityConnectModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityConnectModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityCurlModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityCurlModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityTestProtocolModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityTestProtocolModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityWebRequestModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestTextureModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.VFXModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.VFXModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.VRModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.VRModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.VehiclesModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.VehiclesModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.VideoModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.VideoModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.WindModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.WindModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.XRModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEngine.XRModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEditor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.CoreModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEditor.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.DeviceSimulatorModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEditor.DeviceSimulatorModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.DiagnosticsModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEditor.DiagnosticsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.GraphViewModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEditor.GraphViewModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.PackageManagerUIModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEditor.PackageManagerUIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.QuickSearchModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEditor.QuickSearchModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.SceneTemplateModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEditor.SceneTemplateModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.TextCoreFontEngineModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEditor.TextCoreFontEngineModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.TextCoreTextEngineModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEditor.TextCoreTextEngineModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.UIBuilderModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIBuilderModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.UIElementsModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.UIElementsSamplesModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsSamplesModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.UIServiceModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEditor.UIServiceModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.UnityConnectModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.Graphs">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\Managed\UnityEditor.Graphs.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.Android.Extensions">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\PlaybackEngines\AndroidPlayer\UnityEditor.Android.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.WindowsStandalone.Extensions">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.LinuxStandalone.Extensions">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\PlaybackEngines\LinuxStandaloneSupport\UnityEditor.LinuxStandalone.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MathNet.Numerics">
+      <HintPath>Assets\Packages\MathNet.Numerics.5.0.0\lib\netstandard2.0\MathNet.Numerics.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Kinect.BodyTracking">
+      <HintPath>Assets\Packages\Microsoft.Azure.Kinect.BodyTracking.1.1.2\lib\netstandard2.0\Microsoft.Azure.Kinect.BodyTracking.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="log4netPlastic">
+      <HintPath>Library\PackageCache\com.unity.collab-proxy@2.0.7\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ReportGeneratorMerged">
+      <HintPath>Library\PackageCache\com.unity.testtools.codecoverage@1.2.4\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe">
+      <HintPath>Assets\Packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Kinect.Sensor">
+      <HintPath>Assets\Packages\Microsoft.Azure.Kinect.Sensor.1.4.2\lib\netstandard2.0\Microsoft.Azure.Kinect.Sensor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Plastic.Newtonsoft.Json">
+      <HintPath>Library\PackageCache\com.unity.collab-proxy@2.0.7\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="NuGetForUnity.PluginAPI">
+      <HintPath>Library\PackageCache\com.github-glitchenzo.nugetforunity@90fa6db024\Editor\PluginAPI\NuGetForUnity.PluginAPI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Plastic.Antlr3.Runtime">
+      <HintPath>Library\PackageCache\com.unity.collab-proxy@2.0.7\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.TextureAssets">
+      <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
+      <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.0\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="VagabondK.Protocols.LSElectric">
+      <HintPath>Assets\Packages\VagabondK.Protocols.LSElectric.1.1.11\lib\netstandard2.0\VagabondK.Protocols.LSElectric.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="VagabondK.Protocols.Channels">
+      <HintPath>Assets\Packages\VagabondK.Protocols.Channels.1.0.11\lib\netstandard2.0\VagabondK.Protocols.Channels.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.IonicZip">
+      <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1\Runtime\Newtonsoft.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="unityplastic">
+      <HintPath>Library\PackageCache\com.unity.collab-proxy@2.0.7\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.YamlDotNet">
+      <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FSharp.Core">
+      <HintPath>Assets\Packages\FSharp.Core.6.0.2\lib\netstandard2.1\FSharp.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="VagabondK.Protocols.Abstractions">
+      <HintPath>Assets\Packages\VagabondK.Protocols.Abstractions.1.0.6\lib\netstandard2.0\VagabondK.Protocols.Abstractions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MathNet.Numerics.FSharp">
+      <HintPath>Assets\Packages\MathNet.Numerics.FSharp.5.0.0\lib\netstandard2.0\MathNet.Numerics.FSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Android.Types">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Android.Gradle">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Gradle.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="mscorlib">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\mscorlib.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.Runtime.Serialization.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.Xml.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.Xml.Linq.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Numerics">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.Numerics.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Numerics.Vectors">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.Numerics.Vectors.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.Net.Http.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.IO.Compression.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Microsoft.CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.Data.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.Data.DataSetExtensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.Drawing.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression.FileSystem">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.IO.Compression.FileSystem.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.ComponentModel.Composition.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Transactions">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.Transactions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Primitives">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\Microsoft.Win32.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="netstandard">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\netstandard.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.AppContext">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.AppContext.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Buffers">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Buffers.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Collections.Concurrent">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Collections.Concurrent.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Collections">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Collections.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Collections.NonGeneric">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Collections.NonGeneric.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Collections.Specialized">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Collections.Specialized.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.ComponentModel.Annotations.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.ComponentModel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.EventBasedAsync">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.ComponentModel.EventBasedAsync.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.Primitives">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.ComponentModel.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.TypeConverter">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.ComponentModel.TypeConverter.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Console">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Console.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data.Common">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Data.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.Contracts">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Diagnostics.Contracts.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.Debug">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Diagnostics.Debug.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.FileVersionInfo">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Diagnostics.FileVersionInfo.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.Process">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Diagnostics.Process.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.StackTrace">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Diagnostics.StackTrace.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.TextWriterTraceListener">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Diagnostics.TextWriterTraceListener.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.Tools">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Diagnostics.Tools.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.TraceSource">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Diagnostics.TraceSource.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing.Primitives">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Drawing.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Dynamic.Runtime">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Dynamic.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Globalization.Calendars">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Globalization.Calendars.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Globalization">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Globalization.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Globalization.Extensions">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Globalization.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression.ZipFile">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.IO.Compression.ZipFile.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.IO.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.FileSystem">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.IO.FileSystem.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.DriveInfo">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.IO.FileSystem.DriveInfo.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Primitives">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.IO.FileSystem.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Watcher">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.IO.FileSystem.Watcher.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.IsolatedStorage">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.IO.IsolatedStorage.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.MemoryMappedFiles">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.IO.MemoryMappedFiles.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.Pipes">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.IO.Pipes.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.UnmanagedMemoryStream">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.IO.UnmanagedMemoryStream.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Linq">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Linq.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Linq.Expressions">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Linq.Expressions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Linq.Parallel">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Linq.Parallel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Linq.Queryable">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Linq.Queryable.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Memory">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Memory.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Rtc">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Net.Http.Rtc.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.NameResolution">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Net.NameResolution.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.NetworkInformation">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Net.NetworkInformation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.Ping">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Net.Ping.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.Primitives">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Net.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.Requests">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Net.Requests.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.Security">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Net.Security.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.Sockets">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Net.Sockets.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.WebHeaderCollection">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Net.WebHeaderCollection.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.WebSockets.Client">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Net.WebSockets.Client.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.WebSockets">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Net.WebSockets.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ObjectModel">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.ObjectModel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Reflection.DispatchProxy">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Reflection.DispatchProxy.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Reflection">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Reflection.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Reflection.Emit">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Reflection.Emit.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Reflection.Emit.ILGeneration">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Reflection.Emit.ILGeneration.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Reflection.Emit.Lightweight">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Reflection.Emit.Lightweight.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Reflection.Extensions">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Reflection.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Reflection.Primitives">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Reflection.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Resources.Reader">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Resources.Reader.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Resources.ResourceManager">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Resources.ResourceManager.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Resources.Writer">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Resources.Writer.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.VisualC">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Runtime.CompilerServices.VisualC.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Extensions">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Runtime.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Handles">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Runtime.Handles.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Runtime.InteropServices.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.WindowsRuntime">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Runtime.InteropServices.WindowsRuntime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Numerics">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Runtime.Numerics.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Formatters">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Runtime.Serialization.Formatters.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Json">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Runtime.Serialization.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Primitives">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Runtime.Serialization.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Xml">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Runtime.Serialization.Xml.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security.Claims">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Security.Claims.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Csp">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Security.Cryptography.Csp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Security.Cryptography.Encoding.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Security.Cryptography.X509Certificates.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security.Principal">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Security.Principal.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security.SecureString">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Security.SecureString.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ServiceModel.Duplex">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.ServiceModel.Duplex.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ServiceModel.Http">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.ServiceModel.Http.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ServiceModel.NetTcp">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.ServiceModel.NetTcp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ServiceModel.Primitives">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.ServiceModel.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ServiceModel.Security">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.ServiceModel.Security.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Text.Encoding">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Text.Encoding.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Text.Encoding.Extensions">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Text.Encoding.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Text.RegularExpressions">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Text.RegularExpressions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Threading.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading.Overlapped">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Threading.Overlapped.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading.Tasks">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Threading.Tasks.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Threading.Tasks.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Parallel">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Threading.Tasks.Parallel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading.Thread">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Threading.Thread.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading.ThreadPool">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Threading.ThreadPool.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading.Timer">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Threading.Timer.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ValueTuple">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.ValueTuple.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.ReaderWriter">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Xml.ReaderWriter.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.XDocument">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Xml.XDocument.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.XmlDocument">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Xml.XmlDocument.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.XmlSerializer">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Xml.XmlSerializer.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.XPath">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Xml.XPath.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.XPath.XDocument">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.30f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Xml.XPath.XDocument.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Unity.InputSystem.csproj" />
+    <ProjectReference Include="UnityEditor.UI.csproj" />
+    <ProjectReference Include="UnityEngine.UI.csproj" />
+  </ItemGroup>
+  <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
+  <ItemGroup>
+    <ProjectCapability Remove="LaunchProfiles" />
+    <ProjectCapability Remove="SharedProjectReferences" />
+    <ProjectCapability Remove="ReferenceManagerSharedProjects" />
+    <ProjectCapability Remove="ProjectReferences" />
+    <ProjectCapability Remove="ReferenceManagerProjects" />
+    <ProjectCapability Remove="COMReferences" />
+    <ProjectCapability Remove="ReferenceManagerCOM" />
+    <ProjectCapability Remove="AssemblyReferences" />
+    <ProjectCapability Remove="ReferenceManagerAssemblies" />
+  </ItemGroup>
+</Project>

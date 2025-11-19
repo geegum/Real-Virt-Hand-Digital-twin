@@ -1,0 +1,688 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>VagabondK.Protocols.Abstractions</name>
+    </assembly>
+    <members>
+        <member name="T:VagabondK.Protocols.Channels.Channel">
+            <summary>
+            통신 채널
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.Channels.Channel.IsDisposed">
+            <summary>
+            리소스 해제 여부
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Channels.Channel.Dispose">
+            <summary>
+            리소스 해제
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Channels.Channel.Write(System.Byte[])">
+            <summary>
+            바이트 배열 쓰기
+            </summary>
+            <param name="bytes">바이트 배열</param>
+        </member>
+        <member name="M:VagabondK.Protocols.Channels.Channel.Read(System.Int32)">
+            <summary>
+            1 바이트 읽기
+            </summary>
+            <param name="timeout">제한시간(밀리초)</param>
+            <returns>읽은 바이트</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.Channels.Channel.Read(System.UInt32,System.Int32)">
+            <summary>
+            여러 개의 바이트 읽기
+            </summary>
+            <param name="count">읽을 개수</param>
+            <param name="timeout">제한시간(밀리초)</param>
+            <returns>읽은 바이트 열거</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.Channels.Channel.ReadAllRemain">
+            <summary>
+            채널에 남아있는 모든 바이트 읽기
+            </summary>
+            <returns>읽은 바이트 열거</returns>
+        </member>
+        <member name="P:VagabondK.Protocols.Channels.Channel.Logger">
+            <summary>
+            통신 채널 Logger
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.Channels.Channel.Description">
+            <summary>
+            채널 설명
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.Channels.Channel.BytesToRead">
+            <summary>
+            수신 버퍼에 있는 데이터의 바이트 수입니다.
+            </summary>
+        </member>
+        <member name="T:VagabondK.Protocols.Channels.ChannelProvider">
+            <summary>
+            통신 채널 공급자
+            </summary>
+        </member>
+        <member name="E:VagabondK.Protocols.Channels.ChannelProvider.Created">
+            <summary>
+            채널 생성 이벤트
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.Channels.ChannelProvider.Channels">
+            <summary>
+            생성된 채널 목록
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.Channels.ChannelProvider.IsDisposed">
+            <summary>
+            리소스 해제 여부
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.Channels.ChannelProvider.Logger">
+            <summary>
+            통신 채널 Logger
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.Channels.ChannelProvider.Description">
+            <summary>
+            채널 공급자 설명
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Channels.ChannelProvider.Start">
+            <summary>
+            채널 생성 시작
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Channels.ChannelProvider.Stop">
+            <summary>
+            채널 생성 정지
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Channels.ChannelProvider.Dispose">
+            <summary>
+            리소스 해제
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Channels.ChannelProvider.RaiseCreatedEvent(VagabondK.Protocols.Channels.ChannelCreatedEventArgs)">
+            <summary>
+            채널 생성 이벤트 호출
+            </summary>
+            <param name="eventArgs">이벤트 매개변수</param>
+        </member>
+        <member name="M:VagabondK.Protocols.Channels.ChannelProvider.OnSelectPrimaryChannel">
+            <summary>
+            ChannelProvider로 생성된 통신 채널 중 하나를 선택
+            </summary>
+            <returns>선택된 통신 채널</returns>
+        </member>
+        <member name="P:VagabondK.Protocols.Channels.ChannelProvider.PrimaryChannel">
+            <summary>
+            주요 사용 채널
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Channels.ChannelProvider.Write(System.Byte[])">
+            <summary>
+            바이트 배열 쓰기
+            </summary>
+            <param name="bytes">바이트 배열</param>
+        </member>
+        <member name="M:VagabondK.Protocols.Channels.ChannelProvider.Read(System.Int32)">
+            <summary>
+            1 바이트 읽기
+            </summary>
+            <param name="timeout">제한시간(밀리초)</param>
+            <returns>읽은 바이트</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.Channels.ChannelProvider.Read(System.UInt32,System.Int32)">
+            <summary>
+            여러 개의 바이트 읽기
+            </summary>
+            <param name="count">읽을 개수</param>
+            <param name="timeout">제한시간(밀리초)</param>
+            <returns>읽은 바이트 열거</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.Channels.ChannelProvider.ReadAllRemain">
+            <summary>
+            채널에 남아있는 모든 바이트 읽기
+            </summary>
+            <returns>읽은 바이트 열거</returns>
+        </member>
+        <member name="P:VagabondK.Protocols.Channels.ChannelProvider.BytesToRead">
+            <summary>
+            수신 버퍼에 있는 데이터의 바이트 수입니다.
+            </summary>
+        </member>
+        <member name="T:VagabondK.Protocols.Channels.ChannelCreatedEventArgs">
+            <summary>
+            통신 채널 생성 이벤트 매개변수
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Channels.ChannelCreatedEventArgs.#ctor(VagabondK.Protocols.Channels.Channel)">
+            <summary>
+            생성자
+            </summary>
+            <param name="channel">통신 채널</param>
+        </member>
+        <member name="P:VagabondK.Protocols.Channels.ChannelCreatedEventArgs.Channel">
+            <summary>
+            통신 채널
+            </summary>
+        </member>
+        <member name="T:VagabondK.Protocols.Channels.IChannel">
+            <summary>
+            통신 채널 인터페이스
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.Channels.IChannel.IsDisposed">
+            <summary>
+            리소스 해제 여부
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.Channels.IChannel.Logger">
+            <summary>
+            통신 채널 Logger
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.Channels.IChannel.Description">
+            <summary>
+            채널 설명
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Channels.IChannel.Write(System.Byte[])">
+            <summary>
+            바이트 배열 쓰기
+            </summary>
+            <param name="bytes">바이트 배열</param>
+        </member>
+        <member name="M:VagabondK.Protocols.Channels.IChannel.Read(System.Int32)">
+            <summary>
+            1 바이트 읽기
+            </summary>
+            <param name="timeout">제한시간(밀리초)</param>
+            <returns>읽은 바이트</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.Channels.IChannel.Read(System.UInt32,System.Int32)">
+            <summary>
+            여러 개의 바이트 읽기
+            </summary>
+            <param name="count">읽을 개수</param>
+            <param name="timeout">제한시간(밀리초)</param>
+            <returns>읽은 바이트 열거</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.Channels.IChannel.ReadAllRemain">
+            <summary>
+            채널에 남아있는 모든 바이트 읽기
+            </summary>
+            <returns>읽은 바이트 열거</returns>
+        </member>
+        <member name="P:VagabondK.Protocols.Channels.IChannel.BytesToRead">
+            <summary>
+            수신 버퍼에 있는 데이터의 바이트 수입니다.
+            </summary>
+        </member>
+        <member name="T:VagabondK.Protocols.Channels.NamespaceDoc">
+            <summary>
+            여러 프로토콜들의 통신 채널 관련 기능들을 제공합니다.
+            </summary>
+        </member>
+        <member name="T:VagabondK.Protocols.ErrorCodeException`1">
+            <summary>
+            오류 코드를 포함하는 예외
+            </summary>
+            <typeparam name="TErrorCode">오류 코드 형식</typeparam>
+        </member>
+        <member name="M:VagabondK.Protocols.ErrorCodeException`1.#ctor(`0)">
+            <summary>
+            생성자
+            </summary>
+            <param name="code">Error Code</param>
+        </member>
+        <member name="M:VagabondK.Protocols.ErrorCodeException`1.#ctor(`0,System.Exception)">
+            <summary>
+            생성자
+            </summary>
+            <param name="code">Error Code</param>
+            <param name="innerException">내부 예외</param>
+        </member>
+        <member name="P:VagabondK.Protocols.ErrorCodeException`1.Code">
+            <summary>
+            오류 코드
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.ErrorCodeException`1.Message">
+            <summary>
+            예외 메시지
+            </summary>
+        </member>
+        <member name="T:VagabondK.Protocols.IProtocolMessage">
+            <summary>
+            프로토콜 메시지
+            </summary>
+        </member>
+        <member name="T:VagabondK.Protocols.IRequest">
+            <summary>
+            프로토콜 요청 메시지
+            </summary>
+        </member>
+        <member name="T:VagabondK.Protocols.IRequest`1">
+            <summary>
+            프로토콜 요청 메시지
+            </summary>
+            <typeparam name="TErrorCode">프로토콜 요청시 발생 오류 코드 형식</typeparam>
+        </member>
+        <member name="T:VagabondK.Protocols.IResponse">
+            <summary>
+            프로토콜 응답 메시지
+            </summary>
+        </member>
+        <member name="T:VagabondK.Protocols.IResponse`1">
+            <summary>
+            프로토콜 응답 메시지
+            </summary>
+            <typeparam name="TErrorCode">프로토콜 요청시 발생 오류 코드 형식</typeparam>
+        </member>
+        <member name="T:VagabondK.Protocols.Logging.ChannelCloseEventLog">
+            <summary>
+            채널 닫음 이벤트 Log
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Logging.ChannelCloseEventLog.#ctor(VagabondK.Protocols.Channels.IChannel)">
+            <summary>
+            생성자
+            </summary>
+            <param name="channel">통신 채널</param>
+        </member>
+        <member name="M:VagabondK.Protocols.Logging.ChannelCloseEventLog.ToString">
+            <summary>
+            이 인스턴스의 정규화된 형식 이름을 반환합니다.
+            </summary>
+            <returns>정규화된 형식 이름입니다.</returns>
+        </member>
+        <member name="T:VagabondK.Protocols.Logging.ChannelErrorLog">
+            <summary>
+            통신 채널 오류 Log
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Logging.ChannelErrorLog.#ctor(VagabondK.Protocols.Channels.IChannel,System.Exception)">
+            <summary>
+            생성자
+            </summary>
+            <param name="channel">통신 채널</param>
+            <param name="exception">통신 오류 예외</param>
+        </member>
+        <member name="P:VagabondK.Protocols.Logging.ChannelErrorLog.Exception">
+            <summary>
+            통신 오류 예외
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Logging.ChannelErrorLog.ToString">
+            <summary>
+            이 인스턴스의 정규화된 형식 이름을 반환합니다.
+            </summary>
+            <returns>정규화된 형식 이름입니다.</returns>
+        </member>
+        <member name="T:VagabondK.Protocols.Logging.ChannelLog">
+            <summary>
+            채널 Log
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Logging.ChannelLog.#ctor(VagabondK.Protocols.Channels.IChannel)">
+            <summary>
+            생성자
+            </summary>
+            <param name="channel">통신 채널</param>
+        </member>
+        <member name="P:VagabondK.Protocols.Logging.ChannelLog.TimeStamp">
+            <summary>
+            타임 스탬프
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.Logging.ChannelLog.ChannelDescription">
+            <summary>
+            채널 설명
+            </summary>
+        </member>
+        <member name="T:VagabondK.Protocols.Logging.ChannelLoggerGroup">
+            <summary>
+            채널 Logger 그룹
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Logging.ChannelLoggerGroup.#ctor">
+            <summary>
+            생성자
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Logging.ChannelLoggerGroup.#ctor(System.Collections.Generic.IEnumerable{VagabondK.Protocols.Logging.IChannelLogger})">
+            <summary>
+            생성자
+            </summary>
+            <param name="channelLoggers">채널 Logger 열거</param>
+        </member>
+        <member name="M:VagabondK.Protocols.Logging.ChannelLoggerGroup.AddChannelLogger(VagabondK.Protocols.Logging.IChannelLogger)">
+            <summary>
+            통신 채널 Logger 추가
+            </summary>
+            <param name="channelLogger">통신 채널 Logger</param>
+        </member>
+        <member name="M:VagabondK.Protocols.Logging.ChannelLoggerGroup.RemoveChannelLogger(VagabondK.Protocols.Logging.IChannelLogger)">
+            <summary>
+            통신 채널 Logger 제거
+            </summary>
+            <param name="channelLogger">통신 채널 Logger</param>
+            <returns>제거 여부</returns>
+        </member>
+        <member name="M:VagabondK.Protocols.Logging.ChannelLoggerGroup.Log(VagabondK.Protocols.Logging.ChannelLog)">
+            <summary>
+            통신 채널 Log 기록
+            </summary>
+            <param name="log">통신 채널 Log</param>
+        </member>
+        <member name="M:VagabondK.Protocols.Logging.ChannelLoggerGroup.GetEnumerator">
+            <summary>
+            통신 채널 Logger 열거
+            </summary>
+            <returns>통신 채널 Logger 열거자</returns>
+        </member>
+        <member name="T:VagabondK.Protocols.Logging.ChannelLogListener">
+            <summary>
+            통신 채널 Log 수신기
+            </summary>
+        </member>
+        <member name="E:VagabondK.Protocols.Logging.ChannelLogListener.Logged">
+            <summary>
+            통신 채널 Log 발생 이벤트
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Logging.ChannelLogListener.Log(VagabondK.Protocols.Logging.ChannelLog)">
+            <summary>
+            통신 채널 Log 기록
+            </summary>
+            <param name="log">통신 채널 Log</param>
+        </member>
+        <member name="T:VagabondK.Protocols.Logging.ChannelLoggedEventArgs">
+            <summary>
+            통신 채널 Log 발생 이벤트 매개변수
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.Logging.ChannelLoggedEventArgs.Log">
+            <summary>
+            통신 채널 Log
+            </summary>
+        </member>
+        <member name="T:VagabondK.Protocols.Logging.ChannelMessageLog">
+            <summary>
+            통신 채널을 통해 주고 받은 메시지에 대한 Log
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Logging.ChannelMessageLog.#ctor(VagabondK.Protocols.Channels.IChannel,VagabondK.Protocols.IProtocolMessage,System.Byte[])">
+            <summary>
+            생성자
+            </summary>
+            <param name="channel">통신 채널</param>
+            <param name="message">프로토콜 메시지 인스턴스</param>
+            <param name="rawMessage">원본 메시지</param>
+        </member>
+        <member name="P:VagabondK.Protocols.Logging.ChannelMessageLog.Message">
+            <summary>
+            프로토콜 메시지 인스턴스
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.Logging.ChannelMessageLog.RawMessage">
+            <summary>
+            원본 메시지
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Logging.ChannelMessageLog.ToString">
+            <summary>
+            이 인스턴스의 정규화된 형식 이름을 반환합니다.
+            </summary>
+            <returns>정규화된 형식 이름입니다.</returns>
+        </member>
+        <member name="T:VagabondK.Protocols.Logging.ChannelOpenEventLog">
+            <summary>
+            채널 열림 이벤트 Log
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Logging.ChannelOpenEventLog.#ctor(VagabondK.Protocols.Channels.IChannel)">
+            <summary>
+            생성자
+            </summary>
+            <param name="channel">통신 채널</param>
+        </member>
+        <member name="M:VagabondK.Protocols.Logging.ChannelOpenEventLog.ToString">
+            <summary>
+            이 인스턴스의 정규화된 형식 이름을 반환합니다.
+            </summary>
+            <returns>정규화된 형식 이름입니다.</returns>
+        </member>
+        <member name="T:VagabondK.Protocols.Logging.ChannelRequestLog">
+            <summary>
+            통신 채널을 통해 주고 받은 요청 메시지에 대한 Log
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Logging.ChannelRequestLog.#ctor(VagabondK.Protocols.Channels.IChannel,VagabondK.Protocols.IRequest,System.Byte[])">
+            <summary>
+            생성자
+            </summary>
+            <param name="channel">통신 채널</param>
+            <param name="request">요청 메시지 인스턴스</param>
+            <param name="rawMessage">원본 메시지</param>
+        </member>
+        <member name="P:VagabondK.Protocols.Logging.ChannelRequestLog.Request">
+            <summary>
+            요청 메시지 인스턴스
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Logging.ChannelRequestLog.ToString">
+            <summary>
+            이 인스턴스의 정규화된 형식 이름을 반환합니다.
+            </summary>
+            <returns>정규화된 형식 이름입니다.</returns>
+        </member>
+        <member name="T:VagabondK.Protocols.Logging.ChannelResponseLog">
+            <summary>
+            통신 채널을 통해 주고 받은 응답 메시지에 대한 Log
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Logging.ChannelResponseLog.#ctor(VagabondK.Protocols.Channels.IChannel,VagabondK.Protocols.IResponse,System.Byte[],VagabondK.Protocols.Logging.ChannelRequestLog)">
+            <summary>
+            생성자
+            </summary>
+            <param name="channel">통신 채널</param>
+            <param name="response">응답 메시지 인스턴스</param>
+            <param name="rawMessage">원본 메시지</param>
+            <param name="requestLog">관련 요청 메시지에 대한 Log</param>
+        </member>
+        <member name="P:VagabondK.Protocols.Logging.ChannelResponseLog.RequestLog">
+            <summary>
+            관련 요청 메시지에 대한 Log
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.Logging.ChannelResponseLog.Response">
+            <summary>
+            응답 메시지 인스턴스
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Logging.ChannelResponseLog.ToString">
+            <summary>
+            이 인스턴스의 정규화된 형식 이름을 반환합니다.
+            </summary>
+            <returns>정규화된 형식 이름입니다.</returns>
+        </member>
+        <member name="T:VagabondK.Protocols.Logging.CollectionChannelLogger">
+            <summary>
+            컬렉션 기반 통신 채널 Logger
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Logging.CollectionChannelLogger.#ctor(System.Collections.Generic.ICollection{VagabondK.Protocols.Logging.ChannelLog})">
+            <summary>
+            생성자
+            </summary>
+            <param name="collection">통신 채널 Log 컬렉션</param>
+        </member>
+        <member name="P:VagabondK.Protocols.Logging.CollectionChannelLogger.Collection">
+            <summary>
+            통신 채널 Log 컬렉션
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Logging.CollectionChannelLogger.Log(VagabondK.Protocols.Logging.ChannelLog)">
+            <summary>
+            통신 채널 Log 기록
+            </summary>
+            <param name="log">통신 채널 Log</param>
+        </member>
+        <member name="T:VagabondK.Protocols.Logging.ConsoleChannelLogger">
+            <summary>
+            콘솔 기반 통신 채널 Logger
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Logging.ConsoleChannelLogger.Log(VagabondK.Protocols.Logging.ChannelLog)">
+            <summary>
+            통신 채널 Log 기록
+            </summary>
+            <param name="log">통신 채널 Log</param>
+        </member>
+        <member name="T:VagabondK.Protocols.Logging.IChannelLogger">
+            <summary>
+            통신 채널 Logger 인터페이스
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Logging.IChannelLogger.Log(VagabondK.Protocols.Logging.ChannelLog)">
+            <summary>
+            통신 채널 Log 기록
+            </summary>
+            <param name="log">통신 채널 Log</param>
+        </member>
+        <member name="T:VagabondK.Protocols.Logging.StreamChannelLogger">
+            <summary>
+            스트림 기반 통신 채널 Logger
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Logging.StreamChannelLogger.#ctor(System.IO.Stream,System.Text.Encoding)">
+            <summary>
+            생성자
+            </summary>
+            <param name="stream">스트림</param>
+            <param name="encoding">인코딩</param>
+        </member>
+        <member name="P:VagabondK.Protocols.Logging.StreamChannelLogger.InnerStream">
+            <summary>
+            내부 스트림
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Logging.StreamChannelLogger.Dispose">
+            <summary>
+            리소스 해제
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Logging.StreamChannelLogger.Log(VagabondK.Protocols.Logging.ChannelLog)">
+            <summary>
+            통신 채널 Log 기록
+            </summary>
+            <param name="log">통신 채널 Log</param>
+        </member>
+        <member name="M:VagabondK.Protocols.Logging.StreamChannelLogger.WriteToStream(System.IO.StreamWriter,VagabondK.Protocols.Logging.ChannelLog)">
+            <summary>
+            스트림에 통신 채널 Log 쓰기
+            </summary>
+            <param name="writer">StreamWriter</param>
+            <param name="log">통신 채널 Log</param>
+        </member>
+        <member name="T:VagabondK.Protocols.Logging.UnrecognizedErrorLog">
+            <summary>
+            인식할 수 없는 메시지 수신 오류 Log
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Logging.UnrecognizedErrorLog.#ctor(VagabondK.Protocols.Channels.IChannel,System.Byte[])">
+            <summary>
+            생성자
+            </summary>
+            <param name="channel">통신 채널</param>
+            <param name="rawMessage">원본 메시지</param>
+        </member>
+        <member name="P:VagabondK.Protocols.Logging.UnrecognizedErrorLog.RawMessage">
+            <summary>
+            원본 메시지
+            </summary>
+        </member>
+        <member name="M:VagabondK.Protocols.Logging.UnrecognizedErrorLog.ToString">
+            <summary>
+            이 인스턴스의 정규화된 형식 이름을 반환합니다.
+            </summary>
+            <returns>정규화된 형식 이름입니다.</returns>
+        </member>
+        <member name="T:VagabondK.Protocols.Logging.NamespaceDoc">
+            <summary>
+            여러 프로토콜들의 통신 채널 로깅 관련 기능들을 제공합니다.
+            </summary>
+        </member>
+        <member name="T:VagabondK.Protocols.NamespaceGroupDoc">
+            <summary>
+            여러 프로토콜들의 관련 기능을 모아놓은 라이브러리입니다.
+            </summary>
+        </member>
+        <member name="T:VagabondK.Protocols.NamespaceDoc">
+            <summary>
+            여러 프로토콜들의 관련 기능을 모아놓은 라이브러리입니다.
+            </summary>
+        </member>
+        <member name="T:VagabondK.Protocols.RequestException`1">
+            <summary>
+            통신 요청 오류 예외
+            </summary>
+            <typeparam name="TErrorCode">오류 코드</typeparam>
+        </member>
+        <member name="M:VagabondK.Protocols.RequestException`1.#ctor(`0,System.Exception)">
+            <summary>
+            생성자
+            </summary>
+            <param name="errorCode">통신 요청 오류 코드</param>
+            <param name="innerException">내부 예외</param>
+        </member>
+        <member name="M:VagabondK.Protocols.RequestException`1.#ctor(System.Exception,VagabondK.Protocols.IRequest{`0})">
+            <summary>
+            생성자
+            </summary>
+            <param name="innerException">내부 예외</param>
+            <param name="request">요청</param>
+        </member>
+        <member name="M:VagabondK.Protocols.RequestException`1.#ctor(System.Collections.Generic.IEnumerable{System.Byte},System.Exception,VagabondK.Protocols.IRequest{`0})">
+            <summary>
+            생성자
+            </summary>
+            <param name="receivedMessage">응답 메시지</param>
+            <param name="innerException">내부 예외</param>
+            <param name="request">요청</param>
+        </member>
+        <member name="M:VagabondK.Protocols.RequestException`1.#ctor(`0,System.Collections.Generic.IEnumerable{System.Byte},VagabondK.Protocols.IRequest{`0})">
+            <summary>
+            생성자
+            </summary>
+            <param name="errorCode">통신 요청 오류 코드</param>
+            <param name="receivedMessage">응답 메시지</param>
+            <param name="request">요청</param>
+        </member>
+        <member name="M:VagabondK.Protocols.RequestException`1.#ctor(`0,System.Collections.Generic.IEnumerable{System.Byte},System.Exception,VagabondK.Protocols.IRequest{`0})">
+            <summary>
+            생성자
+            </summary>
+            <param name="errorCode">통신 요청 오류 코드</param>
+            <param name="receivedMessage">받은 메시지</param>
+            <param name="innerException">내부 예외</param>
+            <param name="request">요청</param>
+        </member>
+        <member name="P:VagabondK.Protocols.RequestException`1.ReceivedBytes">
+            <summary>
+            받은 메시지
+            </summary>
+        </member>
+        <member name="P:VagabondK.Protocols.RequestException`1.Request">
+            <summary>
+            요청
+            </summary>
+        </member>
+    </members>
+</doc>

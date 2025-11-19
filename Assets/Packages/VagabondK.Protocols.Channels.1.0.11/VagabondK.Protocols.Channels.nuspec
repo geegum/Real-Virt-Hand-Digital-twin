@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>VagabondK.Protocols.Channels</id>
+    <version>1.0.11</version>
+    <authors>Vagabond K</authors>
+    <license type="expression">LGPL-2.1-only</license>
+    <licenseUrl>https://licenses.nuget.org/LGPL-2.1-only</licenseUrl>
+    <icon>nugetIcon.png</icon>
+    <projectUrl>https://github.com/Vagabond-K/VagabondK.Protocols/tree/master/VagabondK.Protocols.Channels</projectUrl>
+    <description>프로토콜 라이브러리들에 사용되는 이더넷 기반 채널 라이브러리입니다.</description>
+    <repository type="git" url="https://github.com/Vagabond-K/VagabondK.Protocols/tree/master/VagabondK.Protocols.Channels" />
+    <dependencies>
+      <group targetFramework=".NETFramework4.6.1">
+        <dependency id="VagabondK.Protocols.Abstractions" version="1.0.6" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETCoreApp3.1">
+        <dependency id="VagabondK.Protocols.Abstractions" version="1.0.6" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="VagabondK.Protocols.Abstractions" version="1.0.6" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>

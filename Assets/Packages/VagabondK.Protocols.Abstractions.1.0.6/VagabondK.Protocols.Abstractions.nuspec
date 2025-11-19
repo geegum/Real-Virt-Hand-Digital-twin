@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>VagabondK.Protocols.Abstractions</id>
+    <version>1.0.6</version>
+    <authors>Vagabond K</authors>
+    <license type="expression">LGPL-2.1-only</license>
+    <licenseUrl>https://licenses.nuget.org/LGPL-2.1-only</licenseUrl>
+    <icon>nugetIcon.png</icon>
+    <projectUrl>https://github.com/Vagabond-K/VagabondK.Protocols/tree/master/VagabondK.Protocols.Abstractions</projectUrl>
+    <description>프로토콜 관련 라이브러리들의 추상화 정의 라이브러리입니다.</description>
+    <repository type="git" url="https://github.com/Vagabond-K/VagabondK.Protocols/tree/master/VagabondK.Protocols.Abstractions" />
+    <dependencies>
+      <group targetFramework=".NETFramework4.6.1" />
+      <group targetFramework=".NETCoreApp3.1" />
+      <group targetFramework=".NETStandard2.0" />
+    </dependencies>
+  </metadata>
+</package>

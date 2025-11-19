@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Microsoft.Azure.Kinect.BodyTracking.ONNXRuntime</id>
+    <version>1.10.0</version>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <license type="file">LICENSE.txt</license>
+    <licenseUrl>https://aka.ms/deprecateLicenseUrl</licenseUrl>
+    <projectUrl>https://azure.microsoft.com/en-us/services/kinect-dk/</projectUrl>
+    <iconUrl>https://github.com/Microsoft/Azure-Kinect-Sensor-SDK/raw/develop/docs/logo.png</iconUrl>
+    <description>The ONNXRuntime binaries that are required to use Azure Kinect Body Tracking SDK</description>
+    <copyright>© Microsoft Corporation. All rights reserved.</copyright>
+    <language>en-US</language>
+    <tags>native</tags>
+  </metadata>
+</package>
