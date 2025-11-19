@@ -3,9 +3,8 @@
 
 > **Author:** Gigeom Lee (이기검)  
 > **Affiliation:** UST-KAERI School (Dept. of AI), Korea Atomic Energy Research Institute (KAERI)
+<img width="3200" height="4399" alt="poster_krs2025" src="https://github.com/user-attachments/assets/a2d3554b-e9dc-4104-a541-15bce94d1dc9" />
 
-![Project Poster](슬라이드1.PNG) 
-*(Please ensure the image file name matches the one in your repository)*
 
 ---
 
